@@ -66,7 +66,7 @@ services:
       retries: 20
   rabbitmq:
     <<: *security
-    image: rabbitmq:4.1.4-management-alpine@sha256:5cbd7145b0306399ad68422c3350b6cbd1bb95704b39f5896480e5b6d4238a04
+    image: rabbitmq:4.3.5-management-alpine@sha256:b3b8b7f95f5382a19f9ea33540e604f30aad081d37ad9aba72255135765373a1
     user: "999:999"
     hostname: rabbitmq
     restart: unless-stopped
