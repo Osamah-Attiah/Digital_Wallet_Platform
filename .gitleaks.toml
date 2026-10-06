@@ -1,0 +1,13 @@
+[extend]
+useDefault = true
+
+# The upstream Sourcegraph legacy rule also matches SHA-1 hex when that package name appears anywhere.
+# Retain the rule; exclude only exact Trivy checksum JSON lines in this one evidence file.
+[[rules]]
+id = "sourcegraph-access-token"
+[[rules.allowlists]]
+description = "Verified Trivy SHA-1 file checksums and exact upstream commit URL; never credential or arbitrary JSON values"
+condition = "AND"
+paths = ['''(^|/)ops/validation/phase14/infra-grafana\.scan\.json$''']
+regexTarget = "line"
+regexes = ['''^\s*"Digest": "sha1:[a-f0-9]{40}",?\s*$''', '''^\s*"https://github\.com/nghttp2/nghttp2/commit/[a-f0-9]{40}",?\s*$''']

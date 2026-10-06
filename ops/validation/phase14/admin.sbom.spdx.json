@@ -1,0 +1,389 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "digitalwallet/admin",
+  "documentNamespace": "https://anchore.com/syft/image/digitalwallet/admin-e19fc49b-93df-41da-9325-958ca9826887",
+  "creationInfo": {
+    "licenseListVersion": "3.27",
+    "creators": [
+      "Organization: Anchore, Inc",
+      "Tool: syft-1.33.0"
+    ],
+    "created": "2026-10-06T00:41:35Z"
+  },
+  "packages": [
+    {
+      "name": "digitalwallet.local/web",
+      "SPDXID": "SPDXRef-Package-go-module-digitalwallet.local-web-fd673a6b3685a6aa",
+      "versionInfo": "UNKNOWN",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from go module information: /wallet-web",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/digitalwallet.local/web"
+        }
+      ]
+    },
+    {
+      "name": "stdlib",
+      "SPDXID": "SPDXRef-Package-go-module-stdlib-73170c315cb03f38",
+      "versionInfo": "go1.26.8",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from go module information: /wallet-web",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "BSD-3-Clause",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:golang:go:1.26.8:-:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/stdlib@1.26.8"
+        }
+      ]
+    },
+    {
+      "name": "digitalwallet/admin",
+      "SPDXID": "SPDXRef-DocumentRoot-Image-digitalwallet-admin",
+      "versionInfo": "14.0.0-local",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "472816326580ca42c7c536a8e5a9d7de0c62585451eacc337576c3229574f542"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:oci/digitalwallet%2Fadmin@sha256%3A472816326580ca42c7c536a8e5a9d7de0c62585451eacc337576c3229574f542?arch=arm64&tag=14.0.0-local"
+        }
+      ],
+      "primaryPackagePurpose": "CONTAINER"
+    },
+    {
+      "name": "digital-wallet-admin",
+      "SPDXID": "SPDXRef-Frontend-Package-digital-wallet-admin-1.0.0",
+      "versionInfo": "1.0.0",
+      "packageFileName": "",
+      "primaryPackagePurpose": "LIBRARY",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "homepage": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/digital-wallet-admin@1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "cookie",
+      "SPDXID": "SPDXRef-Frontend-Package-cookie-1.1.1",
+      "versionInfo": "1.1.1",
+      "packageFileName": "node_modules/cookie",
+      "downloadLocation": "https://registry.npmjs.org/cookie/-/cookie-1.1.1.tgz",
+      "filesAnalyzed": false,
+      "homepage": "NOASSERTION",
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/cookie@1.1.1"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "7a2f00a2cee36b4c1e469173267100f541c9ffb5d09aa8256d1c277f60138dc07d5aaf3be15287f647e38e2acce94854dbf1397c561a77297284595d72a4a275"
+        }
+      ]
+    },
+    {
+      "name": "react",
+      "SPDXID": "SPDXRef-Frontend-Package-react-19.2.0",
+      "versionInfo": "19.2.0",
+      "packageFileName": "node_modules/react",
+      "downloadLocation": "https://registry.npmjs.org/react/-/react-19.2.0.tgz",
+      "filesAnalyzed": false,
+      "homepage": "NOASSERTION",
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/react@19.2.0"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "b666d683a5b7d6d40b781e5c74804e89c2432514762b35ec57bb922bd88d7cb590e5b2197f1b8f107a7b33cc221f21e79f40c3d62ef0dd99a29f416d92bc2809"
+        }
+      ]
+    },
+    {
+      "name": "react-dom",
+      "SPDXID": "SPDXRef-Frontend-Package-react-dom-19.2.0",
+      "versionInfo": "19.2.0",
+      "packageFileName": "node_modules/react-dom",
+      "downloadLocation": "https://registry.npmjs.org/react-dom/-/react-dom-19.2.0.tgz",
+      "filesAnalyzed": false,
+      "homepage": "NOASSERTION",
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/react-dom@19.2.0"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "5256d1bb87008866887b090fca2446264d229833764f726389e4fab29a0bd947927f9a1de27e4b07f990e1e8e6c610854f5b587bc22f685ba5cf29d6a2fb0415"
+        }
+      ]
+    },
+    {
+      "name": "react-router",
+      "SPDXID": "SPDXRef-Frontend-Package-react-router-7.18.4",
+      "versionInfo": "7.18.4",
+      "packageFileName": "node_modules/react-router",
+      "downloadLocation": "https://registry.npmjs.org/react-router/-/react-router-7.18.4.tgz",
+      "filesAnalyzed": false,
+      "homepage": "NOASSERTION",
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/react-router@7.18.4"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "3d43d070c84c19102c94b72fb653f3fe49b304458f84b7602c5acbee92cd7a904be9d5f49568f8583d9c518560602b93de3c6f82160583cd5c0d38f8e0385eb5"
+        }
+      ]
+    },
+    {
+      "name": "react-router-dom",
+      "SPDXID": "SPDXRef-Frontend-Package-react-router-dom-7.18.4",
+      "versionInfo": "7.18.4",
+      "packageFileName": "node_modules/react-router-dom",
+      "downloadLocation": "https://registry.npmjs.org/react-router-dom/-/react-router-dom-7.18.4.tgz",
+      "filesAnalyzed": false,
+      "homepage": "NOASSERTION",
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/react-router-dom@7.18.4"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "cab7e62472290c6eed682a6a2a34f51b907aab73b62be44df3f7e035fd254e30b088f6d0d1e8babd75fd663411fbb95df13afb679c66c8c9d9f1826ba6159053"
+        }
+      ]
+    },
+    {
+      "name": "scheduler",
+      "SPDXID": "SPDXRef-Frontend-Package-scheduler-0.27.0",
+      "versionInfo": "0.27.0",
+      "packageFileName": "node_modules/scheduler",
+      "downloadLocation": "https://registry.npmjs.org/scheduler/-/scheduler-0.27.0.tgz",
+      "filesAnalyzed": false,
+      "homepage": "NOASSERTION",
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/scheduler@0.27.0"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "78dbfe5ab55b2aed5fdef6d8253ff1b62179b320391cf20cb5ff48818fe72a0d2c5aacc0504bea63fc66ece71973fa9a7cbc7f88ef4580e99e480a78bf9b62fd"
+        }
+      ]
+    },
+    {
+      "name": "set-cookie-parser",
+      "SPDXID": "SPDXRef-Frontend-Package-set-cookie-parser-2.7.2",
+      "versionInfo": "2.7.2",
+      "packageFileName": "node_modules/set-cookie-parser",
+      "downloadLocation": "https://registry.npmjs.org/set-cookie-parser/-/set-cookie-parser-2.7.2.tgz",
+      "filesAnalyzed": false,
+      "homepage": "NOASSERTION",
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/set-cookie-parser@2.7.2"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "a1e33596953f52f853c70fa0ddc21fc571f225173fba275ddf22b53f6e368331ddb34b9d401633b37cbc8f8802096f9927b69dd3272d95df1160ef9b76eae5bf"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "fileName": "wallet-web",
+      "SPDXID": "SPDXRef-File-wallet-web-4f256514275ed87f",
+      "fileTypes": [
+        "APPLICATION",
+        "BINARY"
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "446b05a2246780f16bdac0dd171c79a4c5395201"
+        },
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "78e9b29f53615f5e8a8b9999b07ceeffd4a759ab1cf1e498c2fa527635a7c22c"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION",
+      "comment": "layerID: sha256:8cb8af697c7e8423ed00b5cebe7fd2652e320ea123dac040a105d1201d2aab76"
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-Package-go-module-stdlib-73170c315cb03f38",
+      "relatedSpdxElement": "SPDXRef-Package-go-module-digitalwallet.local-web-fd673a6b3685a6aa",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-go-module-stdlib-73170c315cb03f38",
+      "relatedSpdxElement": "SPDXRef-File-wallet-web-4f256514275ed87f",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-go-module-digitalwallet.local-web-fd673a6b3685a6aa",
+      "relatedSpdxElement": "SPDXRef-File-wallet-web-4f256514275ed87f",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Image-digitalwallet-admin",
+      "relatedSpdxElement": "SPDXRef-Package-go-module-digitalwallet.local-web-fd673a6b3685a6aa",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Image-digitalwallet-admin",
+      "relatedSpdxElement": "SPDXRef-Package-go-module-stdlib-73170c315cb03f38",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-DocumentRoot-Image-digitalwallet-admin",
+      "relationshipType": "DESCRIBES"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-Frontend-Package-digital-wallet-admin-1.0.0",
+      "relationshipType": "DESCRIBES"
+    },
+    {
+      "spdxElementId": "SPDXRef-Frontend-Package-react-19.2.0",
+      "relatedSpdxElement": "SPDXRef-Frontend-Package-digital-wallet-admin-1.0.0",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Frontend-Package-react-dom-19.2.0",
+      "relatedSpdxElement": "SPDXRef-Frontend-Package-digital-wallet-admin-1.0.0",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Frontend-Package-react-router-dom-7.18.4",
+      "relatedSpdxElement": "SPDXRef-Frontend-Package-digital-wallet-admin-1.0.0",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Frontend-Package-react-19.2.0",
+      "relatedSpdxElement": "SPDXRef-Frontend-Package-react-dom-19.2.0",
+      "relationshipType": "PREREQUISITE_FOR"
+    },
+    {
+      "spdxElementId": "SPDXRef-Frontend-Package-scheduler-0.27.0",
+      "relatedSpdxElement": "SPDXRef-Frontend-Package-react-dom-19.2.0",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Frontend-Package-react-19.2.0",
+      "relatedSpdxElement": "SPDXRef-Frontend-Package-react-router-7.18.4",
+      "relationshipType": "PREREQUISITE_FOR"
+    },
+    {
+      "spdxElementId": "SPDXRef-Frontend-Package-react-dom-19.2.0",
+      "relatedSpdxElement": "SPDXRef-Frontend-Package-react-router-7.18.4",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Frontend-Package-cookie-1.1.1",
+      "relatedSpdxElement": "SPDXRef-Frontend-Package-react-router-7.18.4",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Frontend-Package-set-cookie-parser-2.7.2",
+      "relatedSpdxElement": "SPDXRef-Frontend-Package-react-router-7.18.4",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Frontend-Package-react-19.2.0",
+      "relatedSpdxElement": "SPDXRef-Frontend-Package-react-router-dom-7.18.4",
+      "relationshipType": "PREREQUISITE_FOR"
+    },
+    {
+      "spdxElementId": "SPDXRef-Frontend-Package-react-dom-19.2.0",
+      "relatedSpdxElement": "SPDXRef-Frontend-Package-react-router-dom-7.18.4",
+      "relationshipType": "PREREQUISITE_FOR"
+    },
+    {
+      "spdxElementId": "SPDXRef-Frontend-Package-react-router-7.18.4",
+      "relatedSpdxElement": "SPDXRef-Frontend-Package-react-router-dom-7.18.4",
+      "relationshipType": "DEPENDENCY_OF"
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "SchemaVersion": 2,
+  "CreatedAt": "2026-10-05T23:36:47.107195469Z",
+  "ArtifactName": "digitalwallet/admin:13.0.0-local",
+  "ArtifactType": "container_image",
+  "Metadata": {
+    "Size": 6621184,
+    "ImageID": "sha256:29414a82159769e82f91dedd3038907e4563fc663e726f5e40861df8eba05025",
+    "DiffIDs": [
+      "sha256:8cb8af697c7e8423ed00b5cebe7fd2652e320ea123dac040a105d1201d2aab76"
+    ],
+    "RepoTags": [
+      "digitalwallet/admin:13.0.0-local"
+    ],
+    "ImageConfig": {
+      "architecture": "arm64",
+      "created": "2026-10-05T23:13:52.686957805Z",
+      "history": [
+        {
+          "created": "2026-10-05T23:13:52Z",
+          "created_by": "ARG VERSION=13.0.0-local",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2026-10-05T23:13:52Z",
+          "created_by": "ARG GIT_SHA=11a6fc9da785b24719ae59392ed795e80b448104",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2026-10-05T23:13:52Z",
+          "created_by": "ARG BUILD_DATE=2026-10-05T23:26:06.735834+00:00",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2026-10-05T23:13:52Z",
+          "created_by": "LABEL org.opencontainers.image.title=DigitalWallet.Admin org.opencontainers.image.version=13.0.0-local org.opencontainers.image.revision=11a6fc9da785b24719ae59392ed795e80b448104 org.opencontainers.image.created=2026-10-05T23:26:06.735834+00:00",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2026-10-05T23:13:52Z",
+          "created_by": "COPY /wallet-web /wallet-web # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2026-10-05T23:13:52Z",
+          "created_by": "USER 1654:1654",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2026-10-05T23:13:52Z",
+          "created_by": "EXPOSE [8080/tcp]",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2026-10-05T23:13:52Z",
+          "created_by": "HEALTHCHECK {Test:[CMD /wallet-web --healthcheck] Interval:10s Timeout:4s StartPeriod:10s StartInterval:0s Retries:12}",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2026-10-05T23:13:52Z",
+          "created_by": "ENTRYPOINT [\"/wallet-web\"]",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        }
+      ],
+      "os": "linux",
+      "rootfs": {
+        "type": "layers",
+        "diff_ids": [
+          "sha256:8cb8af697c7e8423ed00b5cebe7fd2652e320ea123dac040a105d1201d2aab76"
+        ]
+      },
+      "config": {
+        "Healthcheck": {
+          "Test": [
+            "CMD",
+            "/wallet-web",
+            "--healthcheck"
+          ],
+          "Interval": 10000000000,
+          "Timeout": 4000000000,
+          "StartPeriod": 10000000000,
+          "Retries": 12
+        },
+        "Entrypoint": [
+          "/wallet-web"
+        ],
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+        ],
+        "Labels": {
+          "org.opencontainers.image.created": "2026-10-05T23:26:06.735834+00:00",
+          "org.opencontainers.image.revision": "11a6fc9da785b24719ae59392ed795e80b448104",
+          "org.opencontainers.image.title": "DigitalWallet.Admin",
+          "org.opencontainers.image.version": "13.0.0-local"
+        },
+        "User": "1654:1654",
+        "WorkingDir": "/",
+        "ExposedPorts": {
+          "8080/tcp": {}
+        }
+      }
+    },
+    "Layers": [
+      {
+        "Size": 6621184,
+        "DiffID": "sha256:8cb8af697c7e8423ed00b5cebe7fd2652e320ea123dac040a105d1201d2aab76"
+      }
+    ]
+  },
+  "Results": [
+    {
+      "Target": "wallet-web",
+      "Class": "lang-pkgs",
+      "Type": "gobinary",
+      "Packages": [
+        {
+          "ID": "digitalwallet.local/web",
+          "Name": "digitalwallet.local/web",
+          "Identifier": {
+            "PURL": "pkg:golang/digitalwallet.local/web",
+            "UID": "7e5b0938d1abd673"
+          },
+          "Relationship": "root",
+          "DependsOn": [
+            "stdlib@v1.26.8"
+          ],
+          "Layer": {
+            "DiffID": "sha256:8cb8af697c7e8423ed00b5cebe7fd2652e320ea123dac040a105d1201d2aab76"
+          }
+        },
+        {
+          "ID": "stdlib@v1.26.8",
+          "Name": "stdlib",
+          "Identifier": {
+            "PURL": "pkg:golang/stdlib@v1.26.8",
+            "UID": "9876d33bfdc85631"
+          },
+          "Version": "v1.26.8",
+          "Relationship": "direct",
+          "Layer": {
+            "DiffID": "sha256:8cb8af697c7e8423ed00b5cebe7fd2652e320ea123dac040a105d1201d2aab76"
+          }
+        }
+      ]
+    }
+  ]
+}

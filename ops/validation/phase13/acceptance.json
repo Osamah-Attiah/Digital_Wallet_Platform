@@ -1,0 +1,180 @@
+{
+  "status": "accepted-locally-with-scoped-high-exception",
+  "recordedAtUtc": "2026-10-05T23:43:22.404414+00:00",
+  "acceptanceDateRiyadh": "2026-10-06",
+  "toolchain": {
+    "dotnetSdk": "10.0.400",
+    "node": "v24.19.0",
+    "dockerServer": "29.8.0",
+    "compose": "5.5.1",
+    "nugetLockedProjects": 32
+  },
+  "release": {
+    "VERSION": "13.0.0-local",
+    "GIT_SHA": "11a6fc9da785b24719ae59392ed795e80b448104",
+    "BUILD_DATE": "2026-10-05T23:26:06.735834+00:00"
+  },
+  "sourceFingerprint": "7702af8aeed4d450b46b35492f1116e1e333b0a5b468a238b1cdfb8982827e14",
+  "workingTreeDirty": true,
+  "baseline": {
+    "backend": 534,
+    "frontend": 14
+  },
+  "backend": {
+    "passed": 542,
+    "failed": 0,
+    "skipped": 0,
+    "added": 8
+  },
+  "frontend": {
+    "passed": 14,
+    "failed": 0,
+    "skipped": 0,
+    "typescript": "passed",
+    "productionBuild": "passed"
+  },
+  "smoke": {
+    "passed": 22,
+    "failed": 0,
+    "skipped": 0,
+    "postgresRecoveryReadAttempts": 1,
+    "reconciliationFindings": 0
+  },
+  "migrations": {
+    "passed": 5,
+    "failed": 0,
+    "skipped": 0,
+    "contexts": 13,
+    "pending": 0,
+    "snapshotScope": "locally generated phase12 frozen schema/data; no external production backup"
+  },
+  "runtime": {
+    "runningHealthyNonRoot": 10,
+    "nonRootSuccessfulMigrator": 1
+  },
+  "observability": {
+    "status": "passed",
+    "healthyServices": 3,
+    "dashboards": 5,
+    "rules": 19,
+    "apiAndWorkerMetricsReceived": true,
+    "datasourceUidResolved": true
+  },
+  "supplyChain": {
+    "images": [
+      {
+        "image": "api",
+        "imageId": "sha256:b3a6824f76b15b1ffae6aaa08b7e23cbc8485feb38d2ddcb5cebe115dd3e3364",
+        "scanImageIdMatched": true,
+        "provenanceConfigMatched": true,
+        "sbom": "api.sbom.spdx.json",
+        "provenance": "api.provenance.json",
+        "signed": false
+      },
+      {
+        "image": "worker",
+        "imageId": "sha256:c57da1ae25c5e790a6dc71b8c8cf0de5ab1a82a11fcbda32700140b3e472ab40",
+        "scanImageIdMatched": true,
+        "provenanceConfigMatched": true,
+        "sbom": "worker.sbom.spdx.json",
+        "provenance": "worker.provenance.json",
+        "signed": false
+      },
+      {
+        "image": "migrator",
+        "imageId": "sha256:b4f0b3bad60df35035bb9c434692e24ee078808a891553a88f19b09bd6b62f65",
+        "scanImageIdMatched": true,
+        "provenanceConfigMatched": true,
+        "sbom": "migrator.sbom.spdx.json",
+        "provenance": "migrator.provenance.json",
+        "signed": false
+      },
+      {
+        "image": "admin",
+        "imageId": "sha256:29414a82159769e82f91dedd3038907e4563fc663e726f5e40861df8eba05025",
+        "scanImageIdMatched": true,
+        "provenanceConfigMatched": true,
+        "sbom": "admin.sbom.spdx.json",
+        "provenance": "admin.provenance.json",
+        "signed": false
+      }
+    ],
+    "findings": {
+      "api": {
+        "findings": {
+          "MEDIUM": 12,
+          "LOW": 17,
+          "HIGH": 2
+        },
+        "imageLayerSecrets": 0,
+        "sbomPackages": 80,
+        "highCves": [
+          "CVE-2026-84782"
+        ]
+      },
+      "worker": {
+        "findings": {
+          "MEDIUM": 12,
+          "LOW": 17,
+          "HIGH": 2
+        },
+        "imageLayerSecrets": 0,
+        "sbomPackages": 81,
+        "highCves": [
+          "CVE-2026-84782"
+        ]
+      },
+      "migrator": {
+        "findings": {
+          "MEDIUM": 12,
+          "LOW": 17,
+          "HIGH": 2
+        },
+        "imageLayerSecrets": 0,
+        "sbomPackages": 81,
+        "highCves": [
+          "CVE-2026-84782"
+        ]
+      },
+      "admin": {
+        "findings": {},
+        "imageLayerSecrets": 0,
+        "sbomPackages": 11,
+        "highCves": []
+      }
+    },
+    "highExceptions": 3,
+    "exceptionExpires": "2026-10-20",
+    "critical": 0,
+    "npm": {
+      "info": 0,
+      "low": 0,
+      "moderate": 2,
+      "high": 0,
+      "critical": 0,
+      "total": 2
+    },
+    "vendorInfrastructureScanned": false,
+    "localProvenanceSigned": false,
+    "releaseOciAttestationsConfigured": true
+  },
+  "notExecuted": {
+    "cloudDeployment": true,
+    "registryPush": true,
+    "externalGitHubWorkflows": true,
+    "externalCodeQL": true,
+    "oidcSigning": true,
+    "pullRequestCreation": true,
+    "productionBackupRestore": true,
+    "localCoverageCollection": true
+  },
+  "requiredBeforeProduction": [
+    "patched OpenSSL base and removal of High exception",
+    "vendor infrastructure vulnerability review",
+    "TLS/network/trusted-proxy policies",
+    "external secret manager and IAM",
+    "registry-release protection and reviewed external CI execution",
+    "backup/restore recovery and reconciliation",
+    "alerting retention and SLO"
+  ]
+}

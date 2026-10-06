@@ -1,0 +1,71 @@
+name: Security and supply chain
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: security-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  scan:
+    name: Dependency image and workflow scans
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with: {persist-credentials: false}
+      - name: Fresh evidence for this CI run
+        run: python3 ops/scripts/prepare-ci.py
+      - uses: actions/setup-dotnet@26b0ec14cb23fa6904739307f278c14f94c95bf1 # v5
+        with: {global-json-file: global.json}
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with: {node-version-file: .nvmrc}
+      - name: Restore locked dependencies
+        run: |
+          dotnet restore --locked-mode
+          npm ci --ignore-scripts --prefix apps/admin
+      - name: Build once for local scanning
+        run: |
+          make init
+          docker compose build
+      - name: Secrets, dependencies, containers, Dockerfiles, SBOM and licenses
+        run: |
+          make scan
+          python3 ops/scripts/verify-no-secrets.py
+      - name: Workflow static analysis
+        run: |
+          python3 ops/scripts/validate-workflows.py
+          docker run --rm -v "$PWD:/repo:ro" -w /repo rhysd/actionlint:1.7.7@sha256:887a259a5a534f3c4f36cb02dca341673c6089431057242cdc931e9f133147e9
+          pipx run --spec zizmor==1.16.3 zizmor --offline .github/workflows
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: security-evidence
+          path: |
+            ops/validation/phase13/*.json
+            ops/validation/phase13/*.txt
+          if-no-files-found: error
+          retention-days: 7
+  codeql:
+    name: CodeQL analysis
+    # SARIF upload needs write; this isolated job has no repository secrets or image publishing.
+    permissions:
+      contents: read
+      security-events: write # Upload SARIF only from this isolated CodeQL job.
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    strategy:
+      matrix:
+        language: [csharp, javascript-typescript]
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with: {persist-credentials: false}
+      - uses: actions/setup-dotnet@26b0ec14cb23fa6904739307f278c14f94c95bf1 # v5
+        with: {global-json-file: global.json}
+      - uses: github/codeql-action/init@1190a975f95ce23525efb6a3fc21ea29567c1b52 # v3
+        with: {languages: '${{ matrix.language }}', build-mode: none}
+      - uses: github/codeql-action/analyze@1190a975f95ce23525efb6a3fc21ea29567c1b52 # v3
+        with: {category: '/language:${{ matrix.language }}'}

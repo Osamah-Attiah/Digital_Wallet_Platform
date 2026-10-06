@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-06",
+  "method": "Production Vite preview: actual HTTP headers plus Codex browser reload",
+  "url": "http://127.0.0.1:4173/login",
+  "headers": {
+    "Content-Security-Policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'",
+    "X-Content-Type-Options": "nosniff",
+    "Referrer-Policy": "no-referrer",
+    "X-Frame-Options": "DENY",
+    "Permissions-Policy": "camera=(), microphone=(), geolocation=(), payment=()"
+  },
+  "rendered": "Arabic React login entry with email/password fields and sign-in button",
+  "consoleWarningsOrErrors": 0,
+  "authenticatedWorkflowExercised": false,
+  "reactTestsPassed": 14,
+  "typescriptCheck": "Passed",
+  "productionBuild": "Passed",
+  "verificationNodeVersion": "24.19.0"
+}

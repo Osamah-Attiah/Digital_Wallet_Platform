@@ -1,0 +1,71 @@
+name: Protected cloud demonstration deployment
+on:
+  workflow_dispatch:
+    inputs:
+      release_run_id:
+        description: Successful approved cloud-package workflow run ID
+        type: string
+        required: true
+      manifest_sha256:
+        description: SHA256 of the reviewed signed release manifest
+        type: string
+        required: true
+permissions:
+  contents: read
+concurrency:
+  group: cloud-demo
+  cancel-in-progress: false
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    environment: cloud-demo
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      actions: read
+      packages: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with: {persist-credentials: false}
+      - name: Validate approval and trusted package workflow run
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          RELEASE_RUN_ID: ${{ inputs.release_run_id }}
+          MANIFEST_SHA: ${{ inputs.manifest_sha256 }}
+          APPROVED: ${{ vars.CLOUD_DEPLOYMENT_APPROVED }}
+        run: |
+          python3 ops/cloud/runtime/verify-package-run.py
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: signed-cloud-release
+          path: .local/cloud-download
+          github-token: ${{ github.token }}
+          run-id: ${{ inputs.release_run_id }}
+      - uses: sigstore/cosign-installer@398d4b0eeef1380460a10c8013a76f728fb906ac
+        with: {cosign-release: v2.6.0}
+      - name: Verify immutable signatures and exact reviewed manifest
+        env:
+          MANIFEST_SHA: ${{ inputs.manifest_sha256 }}
+          REPOSITORY: ${{ github.repository }}
+          GH_TOKEN: ${{ github.token }}
+          REGISTRY_ACTOR: ${{ github.actor }}
+        run: python3 ops/cloud/runtime/verify-signatures.py
+      - uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093
+        with:
+          workload_identity_provider: ${{ vars.GCP_WIF_PROVIDER }}
+          service_account: ${{ vars.GCP_DEPLOY_SERVICE_ACCOUNT }}
+      - uses: google-github-actions/setup-gcloud@aa5489c8933f4cc7a4f7d45035b3b1440c9c10db
+        with: {version: '550.0.0'}
+      - name: Ship approved release and run one-shot migration before runtime
+        env:
+          CLOUD_EXECUTION_APPROVED: 'true'
+          APPROVED_MANIFEST_SHA256: ${{ inputs.manifest_sha256 }}
+          GH_TOKEN: ${{ github.token }}
+          REGISTRY_ACTOR: ${{ github.actor }}
+          GCP_PROJECT: ${{ vars.GCP_PROJECT }}
+          GCP_ZONE: ${{ vars.GCP_ZONE }}
+          GCP_INSTANCE: ${{ vars.GCP_INSTANCE }}
+        run: python3 ops/cloud/runtime/ship-release.py

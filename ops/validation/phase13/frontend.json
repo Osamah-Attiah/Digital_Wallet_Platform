@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "passed": 14,
+  "failed": 0,
+  "skipped": 0,
+  "node": "v24.19.0",
+  "typescript": "passed",
+  "productionBuild": "passed",
+  "reportSha256": "6603ccfeb2250186ffbf5597218835a87ed456e27e90dfeaa324a38c42525589",
+  "lockSha256": "1ba826afe58c9d751bb7f8de8d3bc62995276db4adafa422f9fea024833c0c9f"
+}

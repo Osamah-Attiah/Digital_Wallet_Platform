@@ -1,0 +1,210 @@
+{
+  "rule_files": [
+    "alerts.rules.json"
+  ],
+  "evaluation_interval": "1m",
+  "tests": [
+    {
+      "interval": "1m",
+      "input_series": [
+        {
+          "series": "wallet_ledger_imbalance",
+          "values": "1+0x10"
+        },
+        {
+          "series": "wallet_reconciliation_last_success",
+          "values": "0+60x10"
+        }
+      ],
+      "alert_rule_test": [
+        {
+          "eval_time": "3m",
+          "alertname": "LedgerImbalance",
+          "exp_alerts": [
+            {
+              "exp_labels": {
+                "severity": "critical",
+                "owner": "operations"
+              },
+              "exp_annotations": {
+                "summary": "Committed journal imbalance is above zero",
+                "runbook_url": "../../docs/runbooks/ledger-imbalance.md"
+              }
+            }
+          ]
+        },
+        {
+          "eval_time": "0m",
+          "alertname": "LedgerImbalance",
+          "exp_alerts": [
+            {
+              "exp_labels": {
+                "severity": "critical",
+                "owner": "operations"
+              },
+              "exp_annotations": {
+                "summary": "Committed journal imbalance is above zero",
+                "runbook_url": "../../docs/runbooks/ledger-imbalance.md"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "interval": "1m",
+      "input_series": [
+        {
+          "series": "wallet_ledger_projection_drift",
+          "values": "1+0x10"
+        },
+        {
+          "series": "wallet_reconciliation_last_success",
+          "values": "0+60x10"
+        }
+      ],
+      "alert_rule_test": [
+        {
+          "eval_time": "3m",
+          "alertname": "ProjectionDrift",
+          "exp_alerts": [
+            {
+              "exp_labels": {
+                "severity": "critical",
+                "owner": "operations"
+              },
+              "exp_annotations": {
+                "summary": "Account balance projection drift is above zero",
+                "runbook_url": "../../docs/runbooks/projection-drift.md"
+              }
+            }
+          ]
+        },
+        {
+          "eval_time": "0m",
+          "alertname": "ProjectionDrift",
+          "exp_alerts": [
+            {
+              "exp_labels": {
+                "severity": "critical",
+                "owner": "operations"
+              },
+              "exp_annotations": {
+                "summary": "Account balance projection drift is above zero",
+                "runbook_url": "../../docs/runbooks/projection-drift.md"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "interval": "1m",
+      "input_series": [
+        {
+          "series": "cache_connection_available",
+          "values": "0+0x10"
+        },
+        {
+          "series": "wallet_reconciliation_last_success",
+          "values": "0+60x10"
+        }
+      ],
+      "alert_rule_test": [
+        {
+          "eval_time": "3m",
+          "alertname": "RedisUnavailable",
+          "exp_alerts": [
+            {
+              "exp_labels": {
+                "severity": "warning",
+                "owner": "operations"
+              },
+              "exp_annotations": {
+                "summary": "Redis is unavailable; cache and rate coordination are degraded",
+                "runbook_url": "../../docs/runbooks/redis-outage.md"
+              }
+            }
+          ]
+        },
+        {
+          "eval_time": "0m",
+          "alertname": "RedisUnavailable",
+          "exp_alerts": []
+        }
+      ]
+    },
+    {
+      "interval": "1m",
+      "input_series": [
+        {
+          "series": "messaging_dlq",
+          "values": "1+0x10"
+        },
+        {
+          "series": "wallet_reconciliation_last_success",
+          "values": "0+60x10"
+        }
+      ],
+      "alert_rule_test": [
+        {
+          "eval_time": "3m",
+          "alertname": "DeadLetters",
+          "exp_alerts": [
+            {
+              "exp_labels": {
+                "severity": "warning",
+                "owner": "operations"
+              },
+              "exp_annotations": {
+                "summary": "Quarantined messages require review",
+                "runbook_url": "../../docs/runbooks/rabbitmq-dlq.md"
+              }
+            }
+          ]
+        },
+        {
+          "eval_time": "0m",
+          "alertname": "DeadLetters",
+          "exp_alerts": []
+        }
+      ]
+    },
+    {
+      "interval": "1m",
+      "input_series": [
+        {
+          "series": "messaging_broker_available",
+          "values": "0+0x10"
+        },
+        {
+          "series": "wallet_reconciliation_last_success",
+          "values": "0+60x10"
+        }
+      ],
+      "alert_rule_test": [
+        {
+          "eval_time": "3m",
+          "alertname": "RabbitUnavailable",
+          "exp_alerts": [
+            {
+              "exp_labels": {
+                "severity": "warning",
+                "owner": "operations"
+              },
+              "exp_annotations": {
+                "summary": "RabbitMQ is unavailable; committed money is unaffected",
+                "runbook_url": "../../docs/runbooks/outbox-backlog.md"
+              }
+            }
+          ]
+        },
+        {
+          "eval_time": "0m",
+          "alertname": "RabbitUnavailable",
+          "exp_alerts": []
+        }
+      ]
+    }
+  ]
+}

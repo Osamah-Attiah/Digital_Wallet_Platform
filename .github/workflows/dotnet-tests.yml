@@ -1,0 +1,16 @@
+# Full backend/architecture/integration validation is consolidated in pr.yml.
+name: Backend validation reference
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: backend-reference-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  reference:
+    name: Full validation workflow reference
+    runs-on: ubuntu-24.04
+    timeout-minutes: 1
+    steps:
+      - run: echo "Use Pull request validation for the full locked-toolchain test suite."

@@ -1,0 +1,434 @@
+{
+  "status": "passed-offline-plan",
+  "terraformVersion": "1.13.4",
+  "provider": "hashicorp/google 7.17.0",
+  "mode": "empty local state; -refresh=false; fake token; placeholder project/billing/repository/OS image",
+  "readyToApply": false,
+  "counts": {
+    "create": 70,
+    "update": 0,
+    "delete": 0
+  },
+  "resources": [
+    {
+      "address": "google_billing_budget.demo",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_compute_address.demo",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_compute_disk.data",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_compute_firewall.https",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_compute_firewall.iap",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_compute_instance.demo",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_compute_instance_iam_member.oslogin",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_compute_network.demo",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_compute_subnetwork.demo",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_iam_workload_identity_pool.github",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_iam_workload_identity_pool_provider.github",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_iap_tunnel_instance_iam_member.deploy",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_logging_project_bucket_config.logs",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_project_iam_custom_role.lookup",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_project_iam_member.lookup",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_project_service.api[\"billingbudgets.googleapis.com\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_project_service.api[\"cloudresourcemanager.googleapis.com\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_project_service.api[\"compute.googleapis.com\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_project_service.api[\"iam.googleapis.com\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_project_service.api[\"iamcredentials.googleapis.com\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_project_service.api[\"iap.googleapis.com\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_project_service.api[\"logging.googleapis.com\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_project_service.api[\"oslogin.googleapis.com\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_project_service.api[\"pubsub.googleapis.com\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_project_service.api[\"secretmanager.googleapis.com\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_project_service.api[\"storage.googleapis.com\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_project_service.api[\"sts.googleapis.com\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_pubsub_topic.budget",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret.runtime[\"api_db_password\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret.runtime[\"bootstrap_password\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret.runtime[\"cache_key\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret.runtime[\"demo_checker_password\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret.runtime[\"demo_customer_a_password\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret.runtime[\"demo_customer_b_password\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret.runtime[\"demo_maker_password\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret.runtime[\"dependency_tls\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret.runtime[\"edge_tls\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret.runtime[\"grafana_password\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret.runtime[\"jwt_key\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret.runtime[\"migrator_db_password\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret.runtime[\"otp_key\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret.runtime[\"rabbit_api_password\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret.runtime[\"rabbit_password\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret.runtime[\"redis_password\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret.runtime[\"token_key\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret.runtime[\"worker_db_password\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret_iam_member.host[\"api_db_password\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret_iam_member.host[\"bootstrap_password\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret_iam_member.host[\"cache_key\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret_iam_member.host[\"demo_checker_password\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret_iam_member.host[\"demo_customer_a_password\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret_iam_member.host[\"demo_customer_b_password\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret_iam_member.host[\"demo_maker_password\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret_iam_member.host[\"dependency_tls\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret_iam_member.host[\"edge_tls\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret_iam_member.host[\"grafana_password\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret_iam_member.host[\"jwt_key\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret_iam_member.host[\"migrator_db_password\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret_iam_member.host[\"otp_key\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret_iam_member.host[\"rabbit_api_password\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret_iam_member.host[\"rabbit_password\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret_iam_member.host[\"redis_password\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret_iam_member.host[\"token_key\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_secret_manager_secret_iam_member.host[\"worker_db_password\"]",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_service_account.deploy",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_service_account.host",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_service_account_iam_member.act_as",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_service_account_iam_member.oidc",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_storage_bucket.backup",
+      "actions": [
+        "create"
+      ]
+    },
+    {
+      "address": "google_storage_bucket_iam_member.backup_writer",
+      "actions": [
+        "create"
+      ]
+    }
+  ]
+}

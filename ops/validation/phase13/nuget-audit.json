@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "parameters": "--vulnerable --include-transitive",
+  "sources": [
+    "https://api.nuget.org/v3/index.json"
+  ],
+  "projects": [
+    {
+      "path": "/Users/osamahattiah/RiderProjects/Digital_Wallet_Platform/src/DigitalWallet.Api/DigitalWallet.Api.csproj"
+    },
+    {
+      "path": "/Users/osamahattiah/RiderProjects/Digital_Wallet_Platform/src/DigitalWallet.SharedKernel/DigitalWallet.SharedKernel.csproj"
+    },
+    {
+      "path": "/Users/osamahattiah/RiderProjects/Digital_Wallet_Platform/src/Modules/DigitalWallet.Identity/DigitalWallet.Identity.csproj"
+    },
+    {
+      "path": "/Users/osamahattiah/RiderProjects/Digital_Wallet_Platform/src/Modules/DigitalWallet.Customers/DigitalWallet.Customers.csproj"
+    },
+    {
+      "path": "/Users/osamahattiah/RiderProjects/Digital_Wallet_Platform/src/Modules/DigitalWallet.Wallets/DigitalWallet.Wallets.csproj"
+    },
+    {
+      "path": "/Users/osamahattiah/RiderProjects/Digital_Wallet_Platform/src/Modules/DigitalWallet.Beneficiaries/DigitalWallet.Beneficiaries.csproj"
+    },
+    {
+      "path": "/Users/osamahattiah/RiderProjects/Digital_Wallet_Platform/src/Modules/DigitalWallet.RiskLimits/DigitalWallet.RiskLimits.csproj"
+    },
+    {
+      "path": "/Users/osamahattiah/RiderProjects/Digital_Wallet_Platform/src/Modules/DigitalWallet.Transfers/DigitalWallet.Transfers.csproj"
+    },
+    {
+      "path": "/Users/osamahattiah/RiderProjects/Digital_Wallet_Platform/src/Modules/DigitalWallet.Ledger/DigitalWallet.Ledger.csproj"
+    },
+    {
+      "path": "/Users/osamahattiah/RiderProjects/Digital_Wallet_Platform/src/Modules/DigitalWallet.Transactions/DigitalWallet.Transactions.csproj"
+    },
+    {
+      "path": "/Users/osamahattiah/RiderProjects/Digital_Wallet_Platform/src/Modules/DigitalWallet.Notifications/DigitalWallet.Notifications.csproj"
+    },
+    {
+      "path": "/Users/osamahattiah/RiderProjects/Digital_Wallet_Platform/src/Modules/DigitalWallet.Administration/DigitalWallet.Administration.csproj"
+    },
+    {
+      "path": "/Users/osamahattiah/RiderProjects/Digital_Wallet_Platform/src/Modules/DigitalWallet.Reporting/DigitalWallet.Reporting.csproj"
+    },
+    {
+      "path": "/Users/osamahattiah/RiderProjects/Digital_Wallet_Platform/src/Modules/DigitalWallet.Audit/DigitalWallet.Audit.csproj"
+    },
+    {
+      "path": "/Users/osamahattiah/RiderProjects/Digital_Wallet_Platform/tests/DigitalWallet.ArchitectureTests/DigitalWallet.ArchitectureTests.csproj"
+    },
+    {
+      "path": "/Users/osamahattiah/RiderProjects/Digital_Wallet_Platform/tests/DigitalWallet.Api.Tests/DigitalWallet.Api.Tests.csproj"
+    },
+    {
+      "path": "/Users/osamahattiah/RiderProjects/Digital_Wallet_Platform/src/Modules/DigitalWallet.Customers.Contracts/DigitalWallet.Customers.Contracts.csproj"
+    },
+    {
+      "path": "/Users/osamahattiah/RiderProjects/Digital_Wallet_Platform/src/Modules/DigitalWallet.Ledger.Contracts/DigitalWallet.Ledger.Contracts.csproj"
+    },
+    {
+      "path": "/Users/osamahattiah/RiderProjects/Digital_Wallet_Platform/src/Modules/DigitalWallet.Identity.Contracts/DigitalWallet.Identity.Contracts.csproj"
+    },
+    {
+      "path": "/Users/osamahattiah/RiderProjects/Digital_Wallet_Platform/src/Modules/DigitalWallet.Wallets.Contracts/DigitalWallet.Wallets.Contracts.csproj"
+    },
+    {
+      "path": "/Users/osamahattiah/RiderProjects/Digital_Wallet_Platform/src/Modules/DigitalWallet.Beneficiaries.Contracts/DigitalWallet.Beneficiaries.Contracts.csproj"
+    },
+    {
+      "path": "/Users/osamahattiah/RiderProjects/Digital_Wallet_Platform/src/Modules/DigitalWallet.RiskLimits.Contracts/DigitalWallet.RiskLimits.Contracts.csproj"
+    },
+    {
+      "path": "/Users/osamahattiah/RiderProjects/Digital_Wallet_Platform/src/Modules/DigitalWallet.Transfers.Contracts/DigitalWallet.Transfers.Contracts.csproj"
+    },
+    {
+      "path": "/Users/osamahattiah/RiderProjects/Digital_Wallet_Platform/src/Modules/DigitalWallet.Messaging/DigitalWallet.Messaging.csproj"
+    },
+    {
+      "path": "/Users/osamahattiah/RiderProjects/Digital_Wallet_Platform/src/Modules/DigitalWallet.Messaging.Contracts/DigitalWallet.Messaging.Contracts.csproj"
+    },
+    {
+      "path": "/Users/osamahattiah/RiderProjects/Digital_Wallet_Platform/src/Modules/DigitalWallet.Audit.Contracts/DigitalWallet.Audit.Contracts.csproj"
+    },
+    {
+      "path": "/Users/osamahattiah/RiderProjects/Digital_Wallet_Platform/src/Modules/DigitalWallet.Reporting.Contracts/DigitalWallet.Reporting.Contracts.csproj"
+    },
+    {
+      "path": "/Users/osamahattiah/RiderProjects/Digital_Wallet_Platform/src/Modules/DigitalWallet.Transactions.Contracts/DigitalWallet.Transactions.Contracts.csproj"
+    },
+    {
+      "path": "/Users/osamahattiah/RiderProjects/Digital_Wallet_Platform/src/Modules/DigitalWallet.Caching.Contracts/DigitalWallet.Caching.Contracts.csproj"
+    },
+    {
+      "path": "/Users/osamahattiah/RiderProjects/Digital_Wallet_Platform/src/Modules/DigitalWallet.Caching/DigitalWallet.Caching.csproj"
+    },
+    {
+      "path": "/Users/osamahattiah/RiderProjects/Digital_Wallet_Platform/src/DigitalWallet.Worker/DigitalWallet.Worker.csproj"
+    },
+    {
+      "path": "/Users/osamahattiah/RiderProjects/Digital_Wallet_Platform/src/DigitalWallet.Migrator/DigitalWallet.Migrator.csproj"
+    }
+  ]
+}

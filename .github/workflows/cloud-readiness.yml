@@ -1,0 +1,20 @@
+name: Cloud readiness (no resource creation)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  plan:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with: {persist-credentials: false}
+      - uses: hashicorp/setup-terraform@b9cd54a3c349d3f38e8881555d616ced269862dd
+        with: {terraform_version: 1.13.4, terraform_wrapper: false}
+      - name: Offline plan with placeholder identities (never apply)
+        run: |
+          terraform -chdir=ops/cloud/terraform init -backend=false -input=false -lockfile=readonly
+          terraform -chdir=ops/cloud/terraform fmt -check
+          terraform -chdir=ops/cloud/terraform validate
+          terraform -chdir=ops/cloud/terraform plan -refresh=false -input=false -lock=false -var-file=review.example.tfvars

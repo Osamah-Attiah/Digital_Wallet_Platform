@@ -1,0 +1,58 @@
+{
+  "status": "passed",
+  "scope": "local OCI archives and transported runtime images; no registry publication",
+  "results": [
+    {
+      "image": "postgres",
+      "imageId": "sha256:19ea6d280e79d119d657a86fb25a5d0c12ec26a624404f69308f6fdc259180ce",
+      "ociIndexDigest": "sha256:fc314ebdc40b719e92389c7df739a0079da0edddc6979dabb6322e43a6a99e1b",
+      "ociArchiveSha256": "90dbe7d73a1b2fab2237d0b3661d8104e8a92647f627ef533f008ae6ab5d5900",
+      "runtimeConfigMatches": true,
+      "sbomAndProvenanceRetained": true,
+      "predicateTypes": [
+        "https://spdx.dev/Document",
+        "https://slsa.dev/provenance/v1"
+      ],
+      "dockerfileSha256": "45e6c453b1d8600300630aab7e25a8e1fec6a603d1a375b9ec35a176ce6d8316"
+    },
+    {
+      "image": "redis",
+      "imageId": "sha256:0c3288d584ab02aa52f66f82e6282613a54fc662c470dbf3bdd7205581e68776",
+      "ociIndexDigest": "sha256:d9514b3b7027ec5ef5bb7925cf5dc2e85fb7072f4b0a62cda397e97bb166db4b",
+      "ociArchiveSha256": "51ff41fe0229c3a324b987ff8449abe8f0a40ee0f4e56de45f0ccd312c3e16f8",
+      "runtimeConfigMatches": true,
+      "sbomAndProvenanceRetained": true,
+      "predicateTypes": [
+        "https://spdx.dev/Document",
+        "https://slsa.dev/provenance/v1"
+      ],
+      "dockerfileSha256": "c127289f43ccc64543ad7632df60f304a7488b1d20b63b5d063c064faab576f4"
+    },
+    {
+      "image": "grafana",
+      "imageId": "sha256:0d6306c08a41541d44eb39976a371d74437015ca63b4303aa75ef2e51c3bf143",
+      "ociIndexDigest": "sha256:f5ff48729466331485ecef3e8b855970ab1cb06a766e2dbcc510c5dc6ec184aa",
+      "ociArchiveSha256": "9e1085e77666400b3f72f09baa920058fc725f99b745da04293a27918c4ee557",
+      "runtimeConfigMatches": true,
+      "sbomAndProvenanceRetained": true,
+      "predicateTypes": [
+        "https://spdx.dev/Document",
+        "https://slsa.dev/provenance/v1"
+      ],
+      "dockerfileSha256": "05e12573670eaae3f48a0fce119fd20206b01626934b3927661b96654ec6faea"
+    },
+    {
+      "image": "alertmanager",
+      "imageId": "sha256:e4128b63222e7df7fbf77416a475004ed1c144662f42a7207b7dd2177f1487b8",
+      "ociIndexDigest": "sha256:f173c420e0c83a788b2ba1976b37888b3f420560f4510d7efd5c3928a06b7dec",
+      "ociArchiveSha256": "ca79360ab24fb9aa53a79ea906f1db0977232c4fabf38b76ff446245672426c2",
+      "runtimeConfigMatches": true,
+      "sbomAndProvenanceRetained": true,
+      "predicateTypes": [
+        "https://spdx.dev/Document",
+        "https://slsa.dev/provenance/v1"
+      ],
+      "dockerfileSha256": "85a43c054c4d8f8a3c75120e09bdf0591e9be3412f174e6c6630a676333ddfbc"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "buildx.build.provenance": {
+    "builder": {
+      "id": ""
+    },
+    "buildType": "https://mobyproject.org/buildkit@v1",
+    "materials": [
+      {
+        "uri": "pkg:docker/mcr.microsoft.com/dotnet/aspnet@10.0.11-noble-chiseled-extra?digest=sha256:f5b3b2e2e548828d50e349726f51a5de001286f02c4bbde77db0dd34eb9f55ff\u0026platform=linux%2Farm64",
+        "digest": {
+          "sha256": "f5b3b2e2e548828d50e349726f51a5de001286f02c4bbde77db0dd34eb9f55ff"
+        }
+      },
+      {
+        "uri": "pkg:docker/mcr.microsoft.com/dotnet/sdk@10.0.400-noble?digest=sha256:4beef5b8919dcaa2dc924233bd069257e883cc7a061e09088a97d152d6a48510\u0026platform=linux%2Farm64",
+        "digest": {
+          "sha256": "4beef5b8919dcaa2dc924233bd069257e883cc7a061e09088a97d152d6a48510"
+        }
+      }
+    ],
+    "invocation": {
+      "configSource": {
+        "entryPoint": "migrator.Dockerfile"
+      },
+      "parameters": {
+        "frontend": "dockerfile.v0",
+        "args": {
+          "build-arg:BUILD_DATE": "2026-10-05T23:26:06.735834+00:00",
+          "build-arg:GIT_SHA": "11a6fc9da785b24719ae59392ed795e80b448104",
+          "build-arg:VERSION": "13.0.0-local"
+        },
+        "locals": [
+          {
+            "name": "context"
+          },
+          {
+            "name": "dockerfile"
+          }
+        ],
+        "root": {
+          "configSource": {
+            "path": "migrator.Dockerfile"
+          },
+          "request": {
+            "args": {
+              "build-arg:BUILD_DATE": "2026-10-05T23:26:06.735834+00:00",
+              "build-arg:GIT_SHA": "11a6fc9da785b24719ae59392ed795e80b448104",
+              "build-arg:VERSION": "13.0.0-local",
+              "vcs:localdir:context": ".",
+              "vcs:localdir:dockerfile": "ops/containers",
+              "vcs:revision": "11a6fc9da785b24719ae59392ed795e80b448104"
+            }
+          }
+        },
+        "compatibilityVersion": 30
+      },
+      "environment": {
+        "dockerfileVersion": "1.27.0",
+        "platform": "linux/arm64"
+      }
+    }
+  },
+  "buildx.build.ref": "desktop-linux/desktop-linux/spc30tzbbc2gv6zkn5u06bbfh",
+  "containerimage.config.digest": "sha256:b4f0b3bad60df35035bb9c434692e24ee078808a891553a88f19b09bd6b62f65",
+  "containerimage.digest": "sha256:b4f0b3bad60df35035bb9c434692e24ee078808a891553a88f19b09bd6b62f65",
+  "image.name": "docker.io/digitalwallet/migrator:13.0.0-local"
+}

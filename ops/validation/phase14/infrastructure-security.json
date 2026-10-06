@@ -1,0 +1,76 @@
+{
+  "status": "passed",
+  "results": [
+    {
+      "image": "postgres",
+      "reference": "digitalwallet/cloud-postgres:14.0.0-local",
+      "imageId": "sha256:19ea6d280e79d119d657a86fb25a5d0c12ec26a624404f69308f6fdc259180ce",
+      "findings": {},
+      "imageSecrets": 0
+    },
+    {
+      "image": "redis",
+      "reference": "digitalwallet/cloud-redis:14.0.0-local",
+      "imageId": "sha256:0c3288d584ab02aa52f66f82e6282613a54fc662c470dbf3bdd7205581e68776",
+      "findings": {},
+      "imageSecrets": 0
+    },
+    {
+      "image": "rabbitmq",
+      "reference": "rabbitmq:4.1-management-alpine@sha256:b586ea9784425774ac56f3d4919e4f723edb3287ef8a6c4c8f0df8fe569747c3",
+      "imageId": "sha256:3ccc5e625d2164c8ba3de40634e867e4ba3b67540e4464543e9bcf7443614be8",
+      "findings": {},
+      "imageSecrets": 0
+    },
+    {
+      "image": "prometheus",
+      "reference": "prom/prometheus:v3.15.0@sha256:efd719c99d83b060d9daefdcf00360461adf279f45ef5391f8d111892118753e",
+      "imageId": "sha256:21cfe572fdc08ad4007adb5c556dd4ffb256ae2e2f484962c63090f60de9ce28",
+      "findings": {
+        "UNKNOWN": 2
+      },
+      "imageSecrets": 0
+    },
+    {
+      "image": "grafana",
+      "reference": "digitalwallet/cloud-grafana:14.0.0-local",
+      "imageId": "sha256:0d6306c08a41541d44eb39976a371d74437015ca63b4303aa75ef2e51c3bf143",
+      "findings": {
+        "MEDIUM": 1,
+        "LOW": 3,
+        "UNKNOWN": 4
+      },
+      "imageSecrets": 0
+    },
+    {
+      "image": "edge",
+      "reference": "caddy:2.11.7-alpine@sha256:1a81ac3d1a49b2b385a5bfafb8bd39fb40fa1d717461d825ee0d65df91a6e97b",
+      "imageId": "sha256:f6a2207268b0f0914df9d3569e1824d6adcfa7b59fbffe0f3cbc5d2d60423f71",
+      "findings": {
+        "UNKNOWN": 1
+      },
+      "imageSecrets": 0
+    },
+    {
+      "image": "alertmanager",
+      "reference": "digitalwallet/cloud-alertmanager:14.0.0-local",
+      "imageId": "sha256:e4128b63222e7df7fbf77416a475004ed1c144662f42a7207b7dd2177f1487b8",
+      "findings": {
+        "LOW": 8,
+        "MEDIUM": 4,
+        "UNKNOWN": 2
+      },
+      "imageSecrets": 0
+    },
+    {
+      "image": "collector",
+      "reference": "digitalwallet/collector:14.0.0-local",
+      "imageId": "sha256:b37f18c010bb1c6c0509d31e3097f69ab10a98a8734cff53eeb08902dd7bcd16",
+      "findings": {
+        "UNKNOWN": 1
+      },
+      "imageSecrets": 0
+    }
+  ],
+  "exceptions": 0
+}

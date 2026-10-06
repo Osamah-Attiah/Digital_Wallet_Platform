@@ -1,0 +1,2391 @@
+{
+  "date": "2026-10-06",
+  "runtime": ".NET 10.0.11",
+  "sdk": "10.0.400",
+  "command": "dotnet test Digital_Wallet_Platform.sln --no-restore -m:1 /nodeReuse:false /p:UseSharedCompilation=false",
+  "baselineCases": 480,
+  "newPhase12Cases": 54,
+  "totals": {
+    "total": 534,
+    "passed": 534,
+    "failed": 0,
+    "skipped": 0
+  },
+  "projects": [
+    {
+      "project": "DigitalWallet.ArchitectureTests",
+      "total": 45,
+      "passed": 45,
+      "failed": 0,
+      "skipped": 0,
+      "trxSha256": "505331e25e3b8cc730b4e1ef23881ea6f6c635d7abecc9ea2071d536ee752fc4",
+      "cases": [
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Modules_follow_the_documented_reference_policy",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Financial_composition_only_enlists_the_outbox_writer_and_never_contacts_RabbitMQ",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Wallet_has_no_financial_balance_and_modules_do_not_access_each_others_schemas",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Risk_limits_has_no_cross_schema_SQL_or_other_module_implementation_imports",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.RedisBoundaryTests.Financial_decisions_posting_and_job_outbox_transactions_cannot_use_cache",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Api_is_the_only_composition_root_for_modules",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Contracts_have_no_implementation_framework_or_persistence_dependencies",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Transfers_inner_layers_do_not_import_persistence_or_HTTP",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.RedisBoundaryTests.Caching_does_not_have_database_access_or_key_enumeration",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Shared_kernel_has_no_platform_project_references",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Ledger_inner_layers_do_not_import_infrastructure_or_HTTP",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Risk_contracts_do_not_leak_transactions_entities_or_allow_client_supplied_fees",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Phase10_modules_read_only_owned_schemas_and_value_contracts",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Transactions_inner_layers_do_not_import_persistence_or_HTTP",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Phase10_modules_read_only_owned_schemas_and_value_contracts",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Notifications_consume_contracts_without_financial_implementations_or_cross_schema_SQL",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Risk_limits_inner_layers_are_independent_of_persistence_and_HTTP",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Contracts_have_no_implementation_framework_or_persistence_dependencies",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.RedisBoundaryTests.Financial_decisions_posting_and_job_outbox_transactions_cannot_use_cache",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Transactions_never_queries_other_schemas_or_commits_participant_transactions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Messaging_infrastructure_cannot_depend_on_financial_implementations",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Contracts_have_no_implementation_framework_or_persistence_dependencies",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Contracts_have_no_implementation_framework_or_persistence_dependencies",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.RedisBoundaryTests.Cache_contract_is_closed_and_cannot_serialize_financial_or_sensitive_objects",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.RedisBoundaryTests.Financial_decisions_posting_and_job_outbox_transactions_cannot_use_cache",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Risk_limits_inner_layers_are_independent_of_persistence_and_HTTP",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.RedisBoundaryTests.Financial_decisions_posting_and_job_outbox_transactions_cannot_use_cache",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Ledger_inner_layers_do_not_import_infrastructure_or_HTTP",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Contracts_have_no_implementation_framework_or_persistence_dependencies",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.RedisBoundaryTests.Redis_client_is_only_available_to_the_caching_implementation",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.RedisBoundaryTests.Financial_decisions_posting_and_job_outbox_transactions_cannot_use_cache",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Report_job_outbox_and_audit_share_the_API_owned_transaction",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Transfers_inner_layers_do_not_import_persistence_or_HTTP",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Contracts_have_no_implementation_framework_or_persistence_dependencies",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.RedisBoundaryTests.Financial_decisions_posting_and_job_outbox_transactions_cannot_use_cache",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.RedisBoundaryTests.Financial_decisions_posting_and_job_outbox_transactions_cannot_use_cache",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Transactions_inner_layers_do_not_import_persistence_or_HTTP",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Contracts_have_no_implementation_framework_or_persistence_dependencies",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Transfers_has_no_cross_schema_access_or_independent_financial_transactions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Contracts_have_no_implementation_framework_or_persistence_dependencies",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Contracts_have_no_implementation_framework_or_persistence_dependencies",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Contracts_have_no_implementation_framework_or_persistence_dependencies",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Contracts_have_no_implementation_framework_or_persistence_dependencies",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Phase10_modules_read_only_owned_schemas_and_value_contracts",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.ArchitectureTests.ProjectReferenceRulesTests.Contracts_have_no_implementation_framework_or_persistence_dependencies",
+          "outcome": "Passed"
+        }
+      ]
+    },
+    {
+      "project": "DigitalWallet.Api.Tests",
+      "total": 489,
+      "passed": 489,
+      "failed": 0,
+      "skipped": 0,
+      "trxSha256": "be0eed3ec0e82155d35bf67a3b5ff1ca6f9975f75b1c7371769d776b4f5c3dc9",
+      "cases": [
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Posted_journals_and_entries_cannot_be_mutated_or_deleted",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.FoundationTests.Unhandled_exception_is_safely_mapped_to_problem_details",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Lost_commit_response_replays_exact_receipt_from_confirm_and_create",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.BeneficiariesPostgresTests.Concurrent_add_requests_are_idempotent_and_create_one_live_beneficiary",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisFinancialPhase11Tests.One_hundred_transfers_and_one_hundred_identical_retries_conserve_money_with_Redis_available_or_down",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Quote_is_read_only_and_repeated_quotes_do_not_reserve_usage_or_create_financial_records",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.PostgreSQL_prohibits_published_rule_mutation",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.One_hundred_identical_HTTP_requests_create_one_transfer_and_one_journal",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.BeneficiariesPostgresTests.Add_retry_recovers_the_same_pending_beneficiary_after_identity_fails_before_otp_creation",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Missing_rules_fail_closed",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Correction_is_a_new_exact_reversal_and_cannot_reverse_the_same_original_twice",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisSecurityPhase11Tests.Redis_outage_is_degraded_and_postgres_outage_is_not_ready",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Insufficient_recovery_funds_rejects_atomically_then_same_proof_can_recover",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Extra_sensitive_payload_fields_are_rejected_and_quarantined",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.BeneficiariesPhaseFiveAcceptanceTests.Beneficiary_rate_limits_partition_authenticated_users_by_sub_and_identity_anonymous_requests_by_ip",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Publisher_crash_and_worker_restart_reclaim_lease_with_same_event_id_and_single_logical_notification",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.IdentityPostgresTests.Sensitive_routes_enforce_their_real_rate_limits",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.CSV_formula_injection_is_neutralized",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Adjacent_versions_are_allowed_and_exact_boundary_uses_new_version",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.IdentityPostgresTests.Revoked_device_cannot_refresh_even_if_its_token_row_is_still_active",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Invalid_options_fail_at_startup",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.IdentityPostgresTests.Sensitive_routes_enforce_their_real_rate_limits",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Source_key_with_different_content_is_a_conflict",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Freeze_winning_the_wallet_lock_prevents_the_waiting_transfer",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.PostgreSQL_rejects_invalid_journals_even_when_application_is_bypassed",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Anonymous_and_customers_cannot_access_or_modify_arbitrary_rule_ids",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.Failed_Outbox_insert_rolls_back_report_job_and_creation_audit",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Quote_rejects_invalid_amount_currency",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.History_rejects_invalid_filters",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.Phase10_migrations_and_model_snapshots_match",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Administrative_permissions_are_separate",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.Audit_has_bounded_dates_filters_and_keysets",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Enlisted_success_is_invisible_until_outer_commit_and_keeps_connection_open",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.Report_execution_and_download_recheck_permissions_and_creator_scope",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.BeneficiariesPhaseFiveAcceptanceTests.Missing_and_ineligible_recipients_have_indistinguishable_not_found_responses",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Changed_fee_or_rule_versions_require_a_new_quote",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisPhase11Tests.Atomic_rate_decisions_across_two_replicas_allow_exactly_the_budget",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.Messaging_health_includes_reports_and_notifications_dead_letters",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Keyset_pages_are_stable_for_equal_timestamps_and_newer_inserts",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_secret_values_in_JSON_even_when_environment_overrides_them",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.IdentityPostgresTests.Security_changes_invalidate_existing_access_and_refresh_tokens",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Wallet_stays_pending_on_failure_and_retry_recovers_including_lost_acknowledgement",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisSecurityPhase11Tests.Database_version_change_alone_invalidates_access_and_refresh_despite_cache_hit",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.One_hundred_concurrent_debits_allow_only_ten_and_never_make_wallet_negative",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.IdentityPostgresTests.Register_verify_login_and_rotation_are_secure",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisPhase11Tests.Restricted_ACL_can_cache_and_coordinate_without_admin_or_enumeration_commands",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.PostgreSQL_rejects_invalid_journals_even_when_application_is_bypassed",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Minimum_maximum_and_one_halalah_boundary",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Used_quote_and_same_quote_under_another_key_are_rejected",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Invalid_rule_definitions_are_rejected",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisSecurityPhase11Tests.Settings_versions_publish_only_committed_values_and_rollback_keeps_old_key",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Journal_has_exact_balanced_liability_and_revenue_entries",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Freeze_waits_for_transfer_commit_and_no_partial_state_is_visible",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Actual_outbox_insert_failure_rolls_back_transfer_or_reversal",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Reversal_serialization_failures_retry_the_whole_transaction",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ObservabilityPhase12Tests.Json_logging_drops_bodies_credentials_PII_exceptions_and_unknown_fields",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Resend_HTTP_rate_limit_is_per_authenticated_owner",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.PostgreSQL_guards_terminal_state_financial_immutability_quote_and_idempotency",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Nonpositive_amount_is_rejected_without_usage",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Failed_participant_rolls_back_to_savepoint_without_aborting_callers_transaction",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Bigint_overflow_is_rejected_without_partial_posting",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisPhase11Tests.Corrupted_unknown_and_unsigned_payloads_are_ignored",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.BeneficiariesPhaseFiveAcceptanceTests.Target_wallet_id_is_immutable_after_beneficiary_creation",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisPhase11Tests.Keys_and_values_do_not_contain_PII_tokens_or_OTP",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Risk_decisions_retain_safe_reason_and_rule_version",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Reusing_operation_with_different_content_is_conflict",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.Audit_SQL_is_append_only",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.History_rejects_invalid_filters",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.History_rejects_invalid_filters",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.One_quote_concurrently_claimed_by_different_keys_has_one_intent",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.PostgreSQL_rejects_invalid_journals_even_when_application_is_bypassed",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Changed_fee_or_rule_versions_require_a_new_quote",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Failure_windows_roll_back_all_financial_state_and_OTP_receipt_recovers",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Idempotency_key_is_required_and_scoped_to_owner",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Ledger_participant_uses_external_transaction_and_savepoint_without_committing_or_closing_it",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Expired_and_foreign_quotes_cannot_create_an_intent",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.HttpPhase12Tests.Response_trace_correlation_security_headers_and_health_are_safe",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Notification_preferences_suppress_future_effects_and_replay_does_not_override_them",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Transfer_rollback_never_leaves_an_outbox_fact",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Messaging_health_reports_pending_age_attempts_DLQ_and_requires_staff_permission",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Fee_fixed_percentage_clamps_zero_and_rounding_preserve_version",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Fee_or_total_overflow_is_detected_before_bigint_conversion",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_insecure_export_endpoint",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Authoritative_states_are_revalidated_at_confirmation",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Wrong_currency_is_rejected",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Review_and_deny_preserve_money_and_do_not_consume_limits",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.BeneficiariesPostgresTests.Beneficiary_migrations_apply_and_model_has_no_pending_changes",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Concurrent_account_provisioning_creates_exactly_one_account_and_projection_per_wallet_currency",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Source_key_with_different_content_is_a_conflict",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Demo_endpoint_is_registered_only_in_explicit_nonproduction_environments",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Fee_fixed_percentage_clamps_zero_and_rounding_preserve_version",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.History_rejects_invalid_filters",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Invalid_rule_definitions_are_rejected",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.Freeze_requires_session_bound_recent_MFA_and_records_success",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisSecurityPhase11Tests.Dashboard_HTTP_marks_cached_data_and_retains_asOf",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Invalid_rule_definitions_are_rejected",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Demo_endpoint_is_registered_only_in_explicit_nonproduction_environments",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.BeneficiariesPhaseFiveAcceptanceTests.Concurrent_verify_performs_one_logical_transition_without_corrupting_the_beneficiary",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisPhase11Tests.Oversized_remote_values_are_rejected_before_transfer_to_the_client",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.One_hundred_distinct_10_SAR_debits_from_100_SAR_complete_exactly_ten",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.IdentityPostgresTests.Normal_rotation_keeps_access_valid_and_logout_only_revokes_its_own_family",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisPhase11Tests.Payload_copied_under_new_authorization_version_cannot_grant_old_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Source_key_with_different_content_is_a_conflict",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.HttpPhase12Tests.Oversized_body_is_rejected_and_forwarded_headers_from_unknown_peers_are_ignored",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.PostgreSQL_checks_reject_invalid_quote_financial_data",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisPhase11Tests.Server_clock_boundaries_expire_the_counter_without_client_clock_drift",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Period_amount_and_count_limits_reject_without_consumption",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Full_reversal_exactly_compensates_original_including_fees_and_keeps_usage",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ObservabilityPhase12Tests.Control_characters_cannot_create_additional_JSON_entries",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Notifications_enforce_BOLA_for_detail_mark_read_preferences_and_cursor",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ObservabilityPhase12Tests.Critical_operations_are_retained_when_normal_trace_sampling_is_zero",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Reconciliation_snapshot_does_not_report_false_drift_during_posting",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.History_rejects_invalid_filters",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.BOLA_matrix_hides_quotes_and_transfers_and_separates_sender_from_recipient",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisPhase11Tests.Conservative_fallback_keeps_healthy_attempts_and_caps_partition_memory",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.History_rejects_invalid_filters",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Authoritative_states_are_revalidated_at_confirmation",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Posted_journals_and_entries_cannot_be_mutated_or_deleted",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.IdentityPostgresTests.Forgot_and_reset_password_share_the_same_rate_limit",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.PostgreSQL_rejects_invalid_journals_even_when_application_is_bypassed",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.Audit_SQL_is_append_only",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.OTP_binds_every_financial_dimension_and_rejects_replay",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Transfer_expiry_and_quote_expiry_while_waiting_prevent_posting",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Retry_exhaustion_leaves_no_financial_state_and_returns_concurrency_conflict",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.BeneficiariesPhaseFiveAcceptanceTests.Verify_expired_beneficiary_otp_returns_otp_expired",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.CSV_formula_injection_is_neutralized",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Concurrent_same_source_retries_post_once_and_reordered_lines_replay_the_same_result",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.Report_job_outbox_and_audit_commit_together_and_key_replay_is_stable",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Application_rejects_nonpositive_or_unbalanced_journals",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.History_rejects_invalid_filters",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Invalid_rule_definitions_are_rejected",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Failed_outer_transaction_rolls_back_usage_and_receipt_and_retry_can_consume",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ObservabilityPhase12Tests.Exporter_failure_and_exception_are_bounded_safe_telemetry",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Rejected_request_is_retained_without_money_and_allows_new_request",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.FoundationTests.Invalid_platform_configuration_is_rejected",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.Settings_are_allowlisted_versioned_and_audited",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.HttpPhase12Tests.Cors_matches_exact_origins",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.IdentityPostgresTests.Security_changes_invalidate_existing_access_and_refresh_tokens",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Invalid_rule_definitions_are_rejected",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Poison_event_exhausts_bounded_retries_and_is_confirmed_into_durable_DLQ",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Funding_100_SAR_posts_10000_minor_units_with_balanced_immutable_history",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.HttpPhase12Tests.Cors_matches_exact_origins",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Upgrade_backfills_legacy_wallets_without_unfreezing_or_reopening_them",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Risk_override_cannot_relax_system_deny",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Failure_windows_roll_back_all_financial_state_and_OTP_receipt_recovers",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.OperationalAssetsPhase12Tests.Phase12_dashboards_have_valid_panels_units_descriptions_and_accessible_legends",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Currency_mixing_is_rejected_in_application_and_by_composite_foreign_keys",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Wrong_currency_is_rejected",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Changed_fee_or_rule_versions_require_a_new_quote",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisPhase11Tests.A_valid_time_frame_with_missing_payload_is_still_ignored_safely",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Fee_fixed_percentage_clamps_zero_and_rounding_preserve_version",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Fee_or_total_overflow_is_detected_before_bigint_conversion",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Balance_and_demo_funding_endpoints_enforce_permissions_ownership_and_conflict_contract",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.IdentityPostgresTests.Otp_rejects_wrong_expired_and_already_used_values",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.IdentityPostgresTests.Password_reset_otp_rejects_expiry_and_reuse",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Notification_preferences_suppress_future_effects_and_replay_does_not_override_them",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.IdentityPostgresTests.Permission_allow_deny_fallback_and_postgres_unique_constraints_work",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisPhase11Tests.Corrupted_unknown_and_unsigned_payloads_are_ignored",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.IdentityPostgresTests.Initialize_runs_real_migrations_and_seed_and_is_idempotent",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.History_rejects_invalid_filters",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisSecurityPhase11Tests.Database_version_change_alone_invalidates_access_and_refresh_despite_cache_hit",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.PostgreSQL_guards_terminal_state_financial_immutability_quote_and_idempotency",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.HttpPhase12Tests.Actual_Production_startup_fails_before_serving_unsafe_configuration",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Self_transfer_is_rejected_even_with_an_internal_self_beneficiary",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Nonpositive_amount_is_rejected_without_usage",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ObservabilityPhase12Tests.JSON_log_contains_the_active_W3C_trace_and_safe_correlation",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Delayed_OTP_issuance_responses_never_leave_a_superseded_challenge",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.BeneficiariesPhaseFiveAcceptanceTests.Invalid_beneficiary_configuration_prevents_application_startup",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.CustomersWalletsPostgresTests.Customer_wallet_lifecycle_ownership_masking_and_concurrent_provisioning_use_postgres",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.One_hundred_competing_operations_never_exceed_limits_across_wallets",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Changed_fee_or_rule_versions_require_a_new_quote",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Fee_fixed_percentage_clamps_zero_and_rounding_preserve_version",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.CustomersWalletsPostgresTests.Customers_and_wallets_migrations_apply_from_an_empty_database",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.History_rejects_invalid_filters",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.OTP_binds_every_financial_dimension_and_rejects_replay",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.IdentityPostgresTests.Concurrent_otp_verification_is_single_use",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Migrations_from_empty_database_have_no_pending_model_changes",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.BeneficiariesPhaseFiveAcceptanceTests.Add_retry_after_lost_otp_response_recovers_without_an_extra_beneficiary_or_challenge",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.BeneficiariesPhaseFiveAcceptanceTests.Resend_supersedes_the_previous_beneficiary_otp_and_the_old_code_is_invalid",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ObservabilityPhase12Tests.Trace_redaction_strips_sql_url_query_credentials_baggage_and_status_messages",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Decimal_intermediate_can_be_clamped_before_long_conversion",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisPhase11Tests.One_hundred_concurrent_misses_have_one_owner_load_per_replica",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Most_specific_fee_rule_wins_including_explicit_zero_override",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.FoundationTests.Health_endpoint_returns_and_echoes_a_valid_correlation_id",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Posted_journals_and_entries_cannot_be_mutated_or_deleted",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Reversal_requires_permissions_reason_completed_original_and_separate_approver",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisFinancialPhase11Tests.One_hundred_transfers_and_one_hundred_identical_retries_conserve_money_with_Redis_available_or_down",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisPhase11Tests.Telemetry_uses_only_bounded_nonpersonal_labels",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Concurrent_transfers_cannot_exceed_period_limits",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.PostgreSQL_prohibits_published_rule_mutation",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Minimum_maximum_and_one_halalah_boundary",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Direct_SQL_cannot_overdraw_a_wallet",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Usage_overflow_is_safe_and_other_subjects_have_independent_allowances",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisSecurityPhase11Tests.Role_commit_increases_version_and_immediately_revokes_permission_and_session",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Posted_journals_and_entries_cannot_be_mutated_or_deleted",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ObservabilityPhase12Tests.Cache_metric_dimensions_collapse_untrusted_values_to_a_finite_vocabulary",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Phase12_unreachable_OTLP_collector_cannot_change_a_financial_commit",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.PostgreSQL_guards_terminal_state_financial_immutability_quote_and_idempotency",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Risk_decisions_retain_safe_reason_and_rule_version",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Serialization_failure_retries_the_entire_shared_transaction",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Fee_fixed_percentage_clamps_zero_and_rounding_preserve_version",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.BeneficiariesPhaseFiveAcceptanceTests.BOLA_hides_resend_get_verify_activate_and_delete_from_other_users",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ObservabilityPhase12Tests.A_blocked_exporter_cannot_block_request_threads_and_overflow_is_counted",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Fee_fixed_percentage_clamps_zero_and_rounding_preserve_version",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Risk_decisions_retain_safe_reason_and_rule_version",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Database_enforces_unique_source_and_unique_wallet_currency_without_application_locks",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Posted_journals_and_entries_cannot_be_mutated_or_deleted",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Journal_has_exact_balanced_liability_and_revenue_entries",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.OperationalAssetsPhase12Tests.Phase12_alert_rules_have_windows_severity_and_existing_runbooks",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.OTP_issuance_failure_or_response_loss_is_recoverable_without_duplicate_intent",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Failure_windows_roll_back_all_financial_state_and_OTP_receipt_recovers",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.Report_creation_rollback_leaves_no_job_or_event",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisPhase11Tests.A_lost_lease_cannot_publish_or_delete_the_new_owners_lease",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.Report_consumer_crash_and_replay_create_one_file_and_one_inbox",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Published_version_changes_and_new_overrides_do_not_reset_period_allowance",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Staff_requires_explicit_view_any_permission",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.PostgreSQL_prohibits_published_rule_mutation",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.Report_date_bounds_idempotency_download_state_and_expiry_are_enforced",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Fee_fixed_percentage_clamps_zero_and_rounding_preserve_version",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.IdentityPostgresTests.Otp_is_bound_to_its_purpose",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Invalid_rule_definitions_are_rejected",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisPhase11Tests.Dashboard_exposes_snapshot_time_then_expiry_forces_owner_read",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisSecurityPhase11Tests.Two_API_replicas_share_login_budget_and_return_RetryAfter",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Riyadh_periods_are_half_open_UTC_and_persist_exact_calendar_boundaries",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_insecure_export_endpoint",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Reconciliation_detects_projection_drift_unbalanced_journals_and_missing_wallet_accounts",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.OTP_binds_every_financial_dimension_and_rejects_replay",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Source_key_with_different_content_is_a_conflict",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Cursor_preserves_from_only_range_even_when_next_request_would_exceed_the_maximum",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisSecurityPhase11Tests.Staff_role_assignment_leaves_old_cache_unused_and_revokes_the_session",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Quote_rejects_invalid_amount_currency",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Phase9_migrations_are_repeatable_and_models_match_PostgreSQL",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.IdentityPostgresTests.Otp_is_bound_to_its_purpose",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.Report_outage_preserves_queued_job_and_recovers_through_real_RabbitMQ",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Concurrent_transfers_cannot_exceed_period_limits",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.PostgresReadPlansPhase11Tests.Dense_read_tables_use_keyset_indexes_and_keep_reversal_lookup_in_one_SQL_query",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Application_rejects_nonpositive_or_unbalanced_journals",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Same_key_with_changed_request_is_a_conflict",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Minimum_maximum_and_one_halalah_boundary",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.PostgreSQL_retains_original_facts_and_reversal_decisions_and_rejects_partial_decisions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Phase8_migrations_and_backfill_are_idempotent_and_have_no_pending_model_changes",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Reusing_operation_with_different_content_is_conflict",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.BeneficiariesPhaseFiveAcceptanceTests.Keyset_pagination_is_stable_complete_validates_cursor_and_caps_page_size",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.FoundationTests.Unknown_route_returns_a_problem_details_contract_with_correlation_id",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.BeneficiariesPhaseFiveAcceptanceTests.Verify_after_maximum_beneficiary_otp_attempts_returns_otp_attempts_exceeded",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.History_is_participant_scoped_masked_and_shows_direction_and_fee_effect",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Wallet_stays_pending_on_failure_and_retry_recovers_including_lost_acknowledgement",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Concurrent_request_creation_is_idempotent_and_other_keys_cannot_duplicate_pending_request",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Reversal_serialization_failures_retry_the_whole_transaction",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Empty_database_migrations_have_no_pending_changes_and_seed_the_chart_idempotently",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.Report_creation_rollback_leaves_no_job_or_event",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_insecure_export_endpoint",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Same_key_with_changed_request_is_a_conflict",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.Concurrent_idempotent_report_requests_have_one_job_event_and_creation_audit",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Demo_endpoint_is_registered_only_in_explicit_nonproduction_environments",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Transaction_permissions_are_independent_of_transfer_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.IdentityPostgresTests.Revoked_device_cannot_refresh_even_if_its_token_row_is_still_active",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ObservabilityPhase12Tests.Metrics_contain_only_finite_labels_and_reconciliation_publishes_both_integrity_signals",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.PostgreSQL_checks_reject_invalid_quote_financial_data",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.Audit_SQL_is_append_only",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Transfer_rollback_never_leaves_an_outbox_fact",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.Unknown_resources_return_safe_404_after_permission_check",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisPhase11Tests.Cold_API_start_without_Redis_degrades_then_recovers_the_same_connection",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Wrong_currency_is_rejected",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Successful_approval_key_cannot_be_reused_for_another_request",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.CSV_formula_injection_is_neutralized",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.BeneficiariesPhaseFiveAcceptanceTests.Concurrent_activation_performs_one_transition_and_finishes_active",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_insecure_export_endpoint",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Balance_must_cover_amount_plus_fee_at_quote_and_under_posting_lock",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.All_scopes_combine_most_restrictive_limits_and_ignore_other_subjects_and_drafts",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Extra_sensitive_payload_fields_are_rejected_and_quarantined",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Reusing_operation_with_different_content_is_conflict",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Delayed_OTP_issuance_responses_never_leave_a_superseded_challenge",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Quote_and_intent_are_server_derived_and_have_no_financial_effect",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Resend_after_OTP_commit_preserves_durable_recovery_proof",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Concurrent_approve_and_reject_commit_exactly_one_terminal_decision",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.History_rejects_invalid_filters",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisSecurityPhase11Tests.Every_permission_required_by_PII_reveal_is_authoritative",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.PostgreSQL_checks_reject_invalid_quote_financial_data",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Rule_publication_cannot_change_an_in_flight_consumptions_configuration",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.PostgreSQL_exclusion_rejects_overlap_even_with_direct_concurrent_publication",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.BeneficiariesPostgresTests.Lifecycle_is_owned_bound_to_otp_cooled_and_soft_deleted",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Claim_skips_locked_rows_and_outbox_facts_cannot_be_changed_after_creation",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Authoritative_states_are_revalidated_at_confirmation",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Fee_fixed_percentage_clamps_zero_and_rounding_preserve_version",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_accepts_independent_secrets_from_a_provider_and_documented_worker_decisions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.Creating_and_changing_a_role_uses_concurrency_revokes_affected_sessions_and_audits",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.History_rejects_invalid_filters",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.One_hundred_concurrent_journals_use_real_row_locks_without_lost_updates",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.IdentityPostgresTests.Replay_of_an_ancestor_racing_with_descendant_rotation_revokes_every_descendant",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Notification_effect_and_inbox_roll_back_together_then_retry_queue_recovers",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Runtime_grants_allow_locks_and_keep_history_immutable",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.PostgreSQL_rejects_invalid_journals_even_when_application_is_bypassed",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ObservabilityPhase12Tests.Trace_context_headers_are_separate_from_the_financial_payload_and_invalid_context_is_ignored",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Period_amount_and_count_limits_reject_without_consumption",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Consumer_crash_after_notification_commit_before_ack_redelivers_without_duplicate",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.IdentityPostgresTests.Concurrent_refresh_requests_create_only_one_successor_and_replay_revokes_the_family",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.Customer_keysets_handle_equal_timestamps_and_bind_filters_and_actor",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.IdentityPostgresTests.Sensitive_routes_enforce_their_real_rate_limits",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Empty_database_migration_and_model_match_and_all_entities_belong_to_own_schema",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Invalid_options_fail_at_startup",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.HttpPhase12Tests.Actual_Production_startup_fails_before_serving_unsafe_configuration",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisPhase11Tests.Outage_before_and_during_read_then_restart_without_keys_preserves_owner_result",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Concurrent_idempotent_retries_return_original_snapshot_even_after_time_changes",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.PerformancePhase11Tests.Seven_read_paths_have_bounded_queries_and_produce_benchmark_evidence",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.OperationalAssetsPhase12Tests.Phase12_CSP_is_compatible_with_the_built_React_entrypoint_and_has_no_unsafe_inline_scripts",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Minimum_maximum_and_one_halalah_boundary",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Client_supplied_customer_target_wallet_and_fee_are_ignored",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Invalid_rule_definitions_are_rejected",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisSecurityPhase11Tests.Permission_resolution_inside_owner_transaction_bypasses_redis",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Mandatory_publish_waits_for_confirm_and_rejects_unroutable_messages",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Opposite_line_order_on_overlapping_accounts_does_not_deadlock",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ObservabilityPhase12Tests.Control_characters_cannot_create_additional_JSON_entries",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Quote_rejects_invalid_amount_currency",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Invalid_options_fail_at_startup",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.PostgreSQL_guards_terminal_state_financial_immutability_quote_and_idempotency",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Direct_SQL_approval_updates_projection_atomically_and_rollback_undoes_everything",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.History_rejects_invalid_filters",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.OTP_binds_every_financial_dimension_and_rejects_replay",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.IdentityPostgresTests.Sensitive_routes_enforce_their_real_rate_limits",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Admin_errors_pagination_and_immutable_endpoint_surface_follow_contract",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Fee_fixed_percentage_clamps_zero_and_rounding_preserve_version",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.Forged_report_events_cannot_claim_jobs_or_expand_their_specification",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.Report_rejects_execution_after_permission_revocation",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.IdentityPostgresTests.Sensitive_routes_enforce_their_real_rate_limits",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Invalid_rule_definitions_are_rejected",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Administrative_permissions_are_separate",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.PostgreSQL_prohibits_published_rule_mutation",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Reversal_otp_rejects_wrong_owner_wrong_resource_expiry_and_attempt_exhaustion",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.History_keyset_handles_ties_newer_inserts_filters_and_cursor_scope",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.PostgreSQL_guards_terminal_state_financial_immutability_quote_and_idempotency",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.OTP_binds_every_financial_dimension_and_rejects_replay",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Administrative_permissions_are_separate",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.Report_row_limit_is_enforced_without_publishing_partial_CSV",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.One_hundred_competing_operations_never_exceed_limits_across_wallets",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisPhase11Tests.Local_fallback_expiry_uses_monotonic_clock_boundaries",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisPhase11Tests.Corrupted_unknown_and_unsigned_payloads_are_ignored",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisPhase11Tests.Miss_hit_and_versioned_keys_use_only_opaque_identifiers",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.Masking_is_default_even_when_PII_permission_is_present_and_reveal_is_explicit_audited",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.OTP_binds_every_financial_dimension_and_rejects_replay",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Incorrect_reversal_and_reversal_without_funds_are_rejected_atomically",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Lost_reversal_commit_response_replays_the_committed_receipt",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.IdentityPostgresTests.Password_reset_otp_rejects_expiry_and_reuse",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Pending_legacy_wallet_cannot_be_activated_without_a_ledger_account",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Database_checks_reject_invalid_draft_values",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Transfer_rollback_never_leaves_an_outbox_fact",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.Audit_insert_failure_rolls_back_customer_state_and_history",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Reversal_fault_rolls_back_money_and_history_and_preserves_otp_recovery",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Transaction_projection_failure_rolls_back_the_transfer_and_limit_usage",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Publisher_crash_and_worker_restart_reclaim_lease_with_same_event_id_and_single_logical_notification",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Hosted_workers_resume_existing_pending_rows_after_application_restart",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.BeneficiariesPhaseFiveAcceptanceTests.List_does_not_expose_another_users_beneficiaries",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.New_day_resets_only_daily_bucket_and_month_changes_reset_monthly_bucket",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.CSV_formula_injection_is_neutralized",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Serialization_failure_retries_the_entire_shared_transaction",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.BeneficiariesPhaseFiveAcceptanceTests.PostgreSql_rejects_inconsistent_beneficiary_state_and_dates_with_check_constraints",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Reversal_fault_rolls_back_money_and_history_and_preserves_otp_recovery",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.CSV_formula_injection_is_neutralized",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.Report_consumer_crash_and_replay_create_one_file_and_one_inbox",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Cannot_append_a_new_entry_to_a_posted_journal_or_set_balance_directly",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.BeneficiariesPhaseFiveAcceptanceTests.Stale_concurrency_versions_in_verify_and_activate_return_concurrency_conflict",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Reversal_fault_rolls_back_money_and_history_and_preserves_otp_recovery",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Completed_transfer_has_one_safe_versioned_event_and_repeated_idempotent_request_has_no_duplicate",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.Report_consumer_crash_and_replay_create_one_file_and_one_inbox",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.Role_changes_cannot_grant_self_or_exceed_actor_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisSecurityPhase11Tests.Report_and_PII_authorization_always_query_database_even_with_old_permission_payload",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.IdentityPostgresTests.Logout_all_password_reset_and_device_ownership_are_enforced",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.OTP_binds_every_financial_dimension_and_rejects_replay",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.OTP_binds_every_financial_dimension_and_rejects_replay",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.RabbitMQ_outage_keeps_committed_money_and_pending_event_with_exponential_backoff",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Rejected_operation_is_idempotent_but_does_not_consume_usage",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Authoritative_states_are_revalidated_at_confirmation",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisSecurityPhase11Tests.Role_commit_increases_version_and_immediately_revokes_permission_and_session",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.PostgreSQL_checks_reject_invalid_quote_financial_data",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.HttpPhase12Tests.Production_redirects_HTTP_and_adds_HSTS_only_to_HTTPS",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisPhase11Tests.Two_replicas_coordinate_cache_misses_with_an_atomic_lease",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Review_and_deny_preserve_money_and_do_not_consume_limits",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Reversal_outbox_rollback_replay_and_notifications_preserve_maker_checker_and_money",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.PostgreSQL_rejects_invalid_journals_even_when_application_is_bypassed",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Demo_endpoint_is_registered_only_in_explicit_nonproduction_environments",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisPhase11Tests.Real_expiry_and_jitter_are_bounded_and_do_not_extend_on_reads",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RedisPhase11Tests.Oversized_payloads_and_disallowed_settings_are_never_written",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Notification_keyset_pagination_handles_equal_timestamps_new_inserts_and_foreign_cursors",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Many_concurrent_publishers_claim_each_event_once_and_inbox_handles_concurrent_duplicates",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Reusing_operation_with_different_content_is_conflict",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Expired_OTP_and_exhausted_attempts_cannot_post",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Authoritative_states_are_revalidated_at_confirmation",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Unknown_contract_is_quarantined_without_inbox_or_notification",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.IdentityPostgresTests.Security_changes_invalidate_existing_access_and_refresh_tokens",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.PerformancePhase11Tests.Seven_read_paths_have_bounded_queries_and_produce_benchmark_evidence",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.IdentityPostgresTests.Password_reset_otp_maximum_attempts_are_persisted",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.BeneficiariesPhaseFiveAcceptanceTests.Invalid_beneficiary_configuration_prevents_application_startup",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Riyadh_periods_are_half_open_UTC_and_persist_exact_calendar_boundaries",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.IdentityPostgresTests.Otp_resend_cooldown_superseding_and_resend_limit_are_enforced",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.Report_file_contains_only_masked_customer_fields_and_UTF8_versioned_columns",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Quote_rejects_invalid_amount_currency",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.PostgreSQL_rejects_invalid_journals_even_when_application_is_bypassed",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.Runtime_account_can_insert_audit_but_cannot_update_delete_or_truncate",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Opposite_directions_share_UUID_lock_order_and_conserve_value",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Recovery_and_a_new_transfer_cannot_spend_the_same_recipient_funds",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.CSV_formula_injection_is_neutralized",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Extra_sensitive_payload_fields_are_rejected_and_quarantined",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.One_hundred_concurrent_approvals_return_one_compensation_and_identical_receipts",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.IdentityPostgresTests.Security_changes_invalidate_existing_access_and_refresh_tokens",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Stopped_real_RabbitMQ_container_cannot_block_money_and_durable_delivery_survives_broker_restart",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.Report_consumer_crash_and_replay_create_one_file_and_one_inbox",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Reversal_can_arrive_before_transfer_and_reversal_preferences_are_applied_without_financial_dependencies",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Failure_windows_roll_back_all_financial_state_and_OTP_receipt_recovers",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Application_rejects_nonpositive_or_unbalanced_journals",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Full_reversal_exactly_compensates_original_including_fees_and_keeps_usage",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Riyadh_periods_are_half_open_UTC_and_persist_exact_calendar_boundaries",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.IdentityPostgresTests.Otp_maximum_attempts_rejects_the_correct_code_after_the_limit",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.BeneficiariesPostgresTests.Consumed_otp_receipt_recovers_a_failed_local_transition_and_cannot_be_replayed_afterwards",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.LedgerPostgresTests.Posted_journals_and_entries_cannot_be_mutated_or_deleted",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Actual_outbox_insert_failure_rolls_back_transfer_or_reversal",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Resend_has_cooldown_and_attempt_budget_and_supersedes_old_binding",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Phase12_HTTP_outbox_RabbitMQ_consumer_redelivery_preserves_trace_and_event_identity",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Period_amount_and_count_limits_reject_without_consumption",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.OTP_issuance_failure_or_response_loss_is_recoverable_without_duplicate_intent",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.HttpPhase12Tests.Cors_matches_exact_origins",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.PostgreSQL_guards_terminal_state_financial_immutability_quote_and_idempotency",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Period_amount_and_count_limits_reject_without_consumption",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Unknown_contract_is_quarantined_without_inbox_or_notification",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ObservabilityPhase12Tests.Export_boundary_removes_canaries_and_rejects_unsafe_activity_links",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.Explicit_PII_export_requires_permission_at_request_execution_and_download",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.All_admin_functions_reject_customer_and_body_permissions",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.RiskLimitsPostgresTests.Nonpositive_amount_is_rejected_without_usage",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.AdminPhase10PostgresTests.Audit_rejects_arbitrary_sensitive_payloads",
+          "outcome": "Passed"
+        },
+        {
+          "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+          "outcome": "Passed"
+        }
+      ]
+    }
+  ],
+  "phase12AcceptanceCases": [
+    {
+      "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_secret_values_in_JSON_even_when_environment_overrides_them",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ObservabilityPhase12Tests.Json_logging_drops_bodies_credentials_PII_exceptions_and_unknown_fields",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.HttpPhase12Tests.Response_trace_correlation_security_headers_and_health_are_safe",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_insecure_export_endpoint",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.HttpPhase12Tests.Oversized_body_is_rejected_and_forwarded_headers_from_unknown_peers_are_ignored",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ObservabilityPhase12Tests.Control_characters_cannot_create_additional_JSON_entries",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ObservabilityPhase12Tests.Critical_operations_are_retained_when_normal_trace_sampling_is_zero",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ObservabilityPhase12Tests.Exporter_failure_and_exception_are_bounded_safe_telemetry",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.HttpPhase12Tests.Cors_matches_exact_origins",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.HttpPhase12Tests.Cors_matches_exact_origins",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.OperationalAssetsPhase12Tests.Phase12_dashboards_have_valid_panels_units_descriptions_and_accessible_legends",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.HttpPhase12Tests.Actual_Production_startup_fails_before_serving_unsafe_configuration",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ObservabilityPhase12Tests.JSON_log_contains_the_active_W3C_trace_and_safe_correlation",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ObservabilityPhase12Tests.Trace_redaction_strips_sql_url_query_credentials_baggage_and_status_messages",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ObservabilityPhase12Tests.Cache_metric_dimensions_collapse_untrusted_values_to_a_finite_vocabulary",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Phase12_unreachable_OTLP_collector_cannot_change_a_financial_commit",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ObservabilityPhase12Tests.A_blocked_exporter_cannot_block_request_threads_and_overflow_is_counted",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.OperationalAssetsPhase12Tests.Phase12_alert_rules_have_windows_severity_and_existing_runbooks",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_insecure_export_endpoint",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_insecure_export_endpoint",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ObservabilityPhase12Tests.Metrics_contain_only_finite_labels_and_reconciliation_publishes_both_integrity_signals",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_insecure_export_endpoint",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_accepts_independent_secrets_from_a_provider_and_documented_worker_decisions",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ObservabilityPhase12Tests.Trace_context_headers_are_separate_from_the_financial_payload_and_invalid_context_is_ignored",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.HttpPhase12Tests.Actual_Production_startup_fails_before_serving_unsafe_configuration",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.OperationalAssetsPhase12Tests.Phase12_CSP_is_compatible_with_the_built_React_entrypoint_and_has_no_unsafe_inline_scripts",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ObservabilityPhase12Tests.Control_characters_cannot_create_additional_JSON_entries",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.HttpPhase12Tests.Production_redirects_HTTP_and_adds_HSTS_only_to_HTTPS",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.TransfersPostgresTests.Phase12_HTTP_outbox_RabbitMQ_consumer_redelivery_preserves_trace_and_event_identity",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.HttpPhase12Tests.Cors_matches_exact_origins",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ObservabilityPhase12Tests.Export_boundary_removes_canaries_and_rejects_unsafe_activity_links",
+      "outcome": "Passed"
+    },
+    {
+      "name": "DigitalWallet.Api.Tests.ProductionConfigurationPhase12Tests.Production_rejects_unsafe_configuration_without_echoing_values",
+      "outcome": "Passed"
+    }
+  ],
+  "credentialsAndRawLogsIncluded": false
+}

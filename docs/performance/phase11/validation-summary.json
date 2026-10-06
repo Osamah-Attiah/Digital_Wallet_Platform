@@ -1,0 +1,32 @@
+{
+  "validatedDateRiyadh": "2026-10-06",
+  "backend": {
+    "passed": 480,
+    "failed": 0,
+    "skipped": 0,
+    "apiIntegration": 435,
+    "architecture": 45,
+    "redisAcceptanceIncludedInApi": 36,
+    "performanceSmokeIncludedInApi": 3
+  },
+  "frontend": {
+    "passed": 14,
+    "failed": 0,
+    "skipped": 0,
+    "productionBuild": "passed",
+    "node": "24.19.0"
+  },
+  "detailedBenchmark": {
+    "passed": 2,
+    "failed": 0,
+    "skipped": 0,
+    "samplesPerPath": 100,
+    "includedInSmokeSuite": true
+  },
+  "financialParity": "100 concurrent transfers and 100 identical retries passed with Redis available and unavailable; reconciliation passed",
+  "baselineBackend": {
+    "passed": 430,
+    "failed": 0,
+    "skipped": 0
+  }
+}

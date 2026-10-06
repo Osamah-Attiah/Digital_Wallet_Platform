@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><TargetFramework>net10.0</TargetFramework><Nullable>enable</Nullable><ImplicitUsings>enable</ImplicitUsings></PropertyGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.11"><PrivateAssets>all</PrivateAssets></PackageReference>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.3" />
+    <ProjectReference Include="../../DigitalWallet.SharedKernel/DigitalWallet.SharedKernel.csproj" />
+    <ProjectReference Include="../DigitalWallet.Transfers.Contracts/DigitalWallet.Transfers.Contracts.csproj" />
+    <ProjectReference Include="../DigitalWallet.Customers.Contracts/DigitalWallet.Customers.Contracts.csproj" />
+    <ProjectReference Include="../DigitalWallet.Identity.Contracts/DigitalWallet.Identity.Contracts.csproj" />
+    <ProjectReference Include="../DigitalWallet.Ledger.Contracts/DigitalWallet.Ledger.Contracts.csproj" />
+  </ItemGroup>
+  <ItemGroup><EmbeddedResource Include="Infrastructure/Migrations/TransactionGuards.sql" /></ItemGroup>
+<ItemGroup><ProjectReference Include="../DigitalWallet.Transactions.Contracts/DigitalWallet.Transactions.Contracts.csproj" /></ItemGroup></Project>

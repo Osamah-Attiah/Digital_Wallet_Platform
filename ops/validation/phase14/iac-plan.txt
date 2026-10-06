@@ -1,0 +1,1404 @@
+OFFLINE REVIEW ONLY — no refresh, no apply, no real account validation.
+
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # google_billing_budget.demo will be created
+  + resource "google_billing_budget" "demo" {
+      + billing_account = "000000-000000-000000"
+      + display_name    = "wallet-demo-monthly"
+      + id              = (known after apply)
+      + name            = (known after apply)
+
+      + all_updates_rule {
+          + disable_default_iam_recipients  = true
+          + enable_project_level_recipients = false
+          + pubsub_topic                    = (known after apply)
+          + schema_version                  = "1.0"
+        }
+
+      + amount {
+          + specified_amount {
+              + currency_code = "USD"
+              + units         = "75"
+            }
+        }
+
+      + budget_filter {
+          + credit_types_treatment = "INCLUDE_ALL_CREDITS"
+          + labels                 = (known after apply)
+          + projects               = [
+              + "projects/123456789012",
+            ]
+          + services               = (known after apply)
+        }
+
+      + threshold_rules {
+          + spend_basis       = "CURRENT_SPEND"
+          + threshold_percent = 0.5
+        }
+      + threshold_rules {
+          + spend_basis       = "CURRENT_SPEND"
+          + threshold_percent = 0.8
+        }
+      + threshold_rules {
+          + spend_basis       = "CURRENT_SPEND"
+          + threshold_percent = 1
+        }
+    }
+
+  # google_compute_address.demo will be created
+  + resource "google_compute_address" "demo" {
+      + address            = (known after apply)
+      + address_type       = "EXTERNAL"
+      + creation_timestamp = (known after apply)
+      + effective_labels   = {
+          + "goog-terraform-provisioned" = "true"
+        }
+      + id                 = (known after apply)
+      + label_fingerprint  = (known after apply)
+      + name               = "wallet-demo"
+      + network_tier       = "STANDARD"
+      + prefix_length      = (known after apply)
+      + project            = "wallet-review-offline"
+      + purpose            = (known after apply)
+      + region             = (known after apply)
+      + self_link          = (known after apply)
+      + subnetwork         = (known after apply)
+      + terraform_labels   = {
+          + "goog-terraform-provisioned" = "true"
+        }
+      + users              = (known after apply)
+    }
+
+  # google_compute_disk.data will be created
+  + resource "google_compute_disk" "data" {
+      + access_mode                    = (known after apply)
+      + create_snapshot_before_destroy = false
+      + creation_timestamp             = (known after apply)
+      + disk_id                        = (known after apply)
+      + effective_labels               = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+      + enable_confidential_compute    = (known after apply)
+      + id                             = (known after apply)
+      + label_fingerprint              = (known after apply)
+      + labels                         = {
+          + "environment" = "synthetic-demo"
+        }
+      + last_attach_timestamp          = (known after apply)
+      + last_detach_timestamp          = (known after apply)
+      + licenses                       = (known after apply)
+      + name                           = "wallet-demo-data"
+      + physical_block_size_bytes      = (known after apply)
+      + project                        = "wallet-review-offline"
+      + provisioned_iops               = (known after apply)
+      + provisioned_throughput         = (known after apply)
+      + self_link                      = (known after apply)
+      + size                           = 40
+      + source_disk_id                 = (known after apply)
+      + source_image_id                = (known after apply)
+      + source_instant_snapshot_id     = (known after apply)
+      + source_snapshot_id             = (known after apply)
+      + terraform_labels               = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+      + type                           = "pd-standard"
+      + users                          = (known after apply)
+      + zone                           = (known after apply)
+
+      + guest_os_features (known after apply)
+    }
+
+  # google_compute_firewall.https will be created
+  + resource "google_compute_firewall" "https" {
+      + creation_timestamp = (known after apply)
+      + destination_ranges = (known after apply)
+      + direction          = "INGRESS"
+      + enable_logging     = (known after apply)
+      + id                 = (known after apply)
+      + name               = "wallet-demo-https"
+      + network            = (known after apply)
+      + priority           = 1000
+      + project            = "wallet-review-offline"
+      + self_link          = (known after apply)
+      + source_ranges      = [
+          + "192.0.2.10/32",
+        ]
+      + target_tags        = [
+          + "wallet-demo",
+        ]
+
+      + allow {
+          + ports    = [
+              + "443",
+            ]
+          + protocol = "tcp"
+        }
+    }
+
+  # google_compute_firewall.iap will be created
+  + resource "google_compute_firewall" "iap" {
+      + creation_timestamp = (known after apply)
+      + destination_ranges = (known after apply)
+      + direction          = "INGRESS"
+      + enable_logging     = (known after apply)
+      + id                 = (known after apply)
+      + name               = "wallet-demo-iap"
+      + network            = (known after apply)
+      + priority           = 1000
+      + project            = "wallet-review-offline"
+      + self_link          = (known after apply)
+      + source_ranges      = [
+          + "35.235.240.0/20",
+        ]
+      + target_tags        = [
+          + "wallet-demo",
+        ]
+
+      + allow {
+          + ports    = [
+              + "22",
+            ]
+          + protocol = "tcp"
+        }
+    }
+
+  # google_compute_instance.demo will be created
+  + resource "google_compute_instance" "demo" {
+      + can_ip_forward       = false
+      + cpu_platform         = (known after apply)
+      + creation_timestamp   = (known after apply)
+      + current_status       = (known after apply)
+      + deletion_protection  = true
+      + effective_labels     = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+      + id                   = (known after apply)
+      + instance_id          = (known after apply)
+      + label_fingerprint    = (known after apply)
+      + labels               = {
+          + "environment" = "synthetic-demo"
+        }
+      + machine_type         = "e2-standard-2"
+      + metadata             = {
+          + "block-project-ssh-keys"   = "TRUE"
+          + "disable-legacy-endpoints" = "TRUE"
+          + "enable-oslogin"           = "TRUE"
+          + "serial-port-enable"       = "FALSE"
+        }
+      + metadata_fingerprint = (known after apply)
+      + min_cpu_platform     = (known after apply)
+      + name                 = "wallet-demo"
+      + project              = "wallet-review-offline"
+      + self_link            = (known after apply)
+      + tags                 = [
+          + "wallet-demo",
+        ]
+      + tags_fingerprint     = (known after apply)
+      + terraform_labels     = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+      + zone                 = "us-central1-a"
+
+      + attached_disk {
+          + device_name                = "wallet-data"
+          + disk_encryption_key_sha256 = (known after apply)
+          + kms_key_self_link          = (known after apply)
+          + mode                       = "READ_WRITE"
+          + source                     = (known after apply)
+        }
+
+      + boot_disk {
+          + auto_delete                = true
+          + device_name                = (known after apply)
+          + disk_encryption_key_sha256 = (known after apply)
+          + guest_os_features          = (known after apply)
+          + kms_key_self_link          = (known after apply)
+          + mode                       = "READ_WRITE"
+          + source                     = (known after apply)
+
+          + initialize_params {
+              + architecture           = (known after apply)
+              + image                  = "projects/ubuntu-os-cloud/global/images/ubuntu-2404-review-required"
+              + labels                 = (known after apply)
+              + provisioned_iops       = (known after apply)
+              + provisioned_throughput = (known after apply)
+              + resource_policies      = (known after apply)
+              + size                   = 20
+              + snapshot               = (known after apply)
+              + type                   = "pd-standard"
+            }
+        }
+
+      + confidential_instance_config (known after apply)
+
+      + guest_accelerator (known after apply)
+
+      + network_interface {
+          + igmp_query                  = (known after apply)
+          + internal_ipv6_prefix_length = (known after apply)
+          + ipv6_access_type            = (known after apply)
+          + ipv6_address                = (known after apply)
+          + name                        = (known after apply)
+          + network                     = (known after apply)
+          + network_attachment          = (known after apply)
+          + network_ip                  = (known after apply)
+          + stack_type                  = (known after apply)
+          + subnetwork                  = (known after apply)
+          + subnetwork_project          = (known after apply)
+
+          + access_config {
+              + nat_ip       = (known after apply)
+              + network_tier = "STANDARD"
+            }
+        }
+
+      + reservation_affinity (known after apply)
+
+      + scheduling (known after apply)
+
+      + service_account {
+          + email  = "wallet-demo-host@wallet-review-offline.iam.gserviceaccount.com"
+          + scopes = [
+              + "https://www.googleapis.com/auth/cloud-platform",
+            ]
+        }
+
+      + shielded_instance_config {
+          + enable_integrity_monitoring = true
+          + enable_secure_boot          = true
+          + enable_vtpm                 = true
+        }
+    }
+
+  # google_compute_instance_iam_member.oslogin will be created
+  + resource "google_compute_instance_iam_member" "oslogin" {
+      + etag          = (known after apply)
+      + id            = (known after apply)
+      + instance_name = "wallet-demo"
+      + member        = "serviceAccount:wallet-demo-deploy@wallet-review-offline.iam.gserviceaccount.com"
+      + project       = (known after apply)
+      + role          = "roles/compute.osAdminLogin"
+      + zone          = (known after apply)
+    }
+
+  # google_compute_network.demo will be created
+  + resource "google_compute_network" "demo" {
+      + auto_create_subnetworks                   = false
+      + bgp_always_compare_med                    = (known after apply)
+      + bgp_best_path_selection_mode              = (known after apply)
+      + bgp_inter_region_cost                     = (known after apply)
+      + delete_bgp_always_compare_med             = false
+      + delete_default_routes_on_create           = false
+      + gateway_ipv4                              = (known after apply)
+      + id                                        = (known after apply)
+      + internal_ipv6_range                       = (known after apply)
+      + mtu                                       = (known after apply)
+      + name                                      = "wallet-demo"
+      + network_firewall_policy_enforcement_order = "AFTER_CLASSIC_FIREWALL"
+      + network_id                                = (known after apply)
+      + numeric_id                                = (known after apply)
+      + project                                   = "wallet-review-offline"
+      + routing_mode                              = (known after apply)
+      + self_link                                 = (known after apply)
+    }
+
+  # google_compute_subnetwork.demo will be created
+  + resource "google_compute_subnetwork" "demo" {
+      + creation_timestamp         = (known after apply)
+      + external_ipv6_prefix       = (known after apply)
+      + fingerprint                = (known after apply)
+      + gateway_address            = (known after apply)
+      + id                         = (known after apply)
+      + internal_ipv6_prefix       = (known after apply)
+      + ip_cidr_range              = "10.42.0.0/24"
+      + ipv6_cidr_range            = (known after apply)
+      + ipv6_gce_endpoint          = (known after apply)
+      + name                       = "wallet-demo"
+      + network                    = (known after apply)
+      + private_ip_google_access   = true
+      + private_ipv6_google_access = (known after apply)
+      + project                    = "wallet-review-offline"
+      + purpose                    = (known after apply)
+      + region                     = (known after apply)
+      + self_link                  = (known after apply)
+      + stack_type                 = (known after apply)
+      + state                      = (known after apply)
+      + subnetwork_id              = (known after apply)
+
+      + secondary_ip_range (known after apply)
+    }
+
+  # google_iam_workload_identity_pool.github will be created
+  + resource "google_iam_workload_identity_pool" "github" {
+      + display_name              = "Protected wallet demo deployment"
+      + id                        = (known after apply)
+      + name                      = (known after apply)
+      + project                   = "wallet-review-offline"
+      + state                     = (known after apply)
+      + workload_identity_pool_id = "wallet-demo"
+    }
+
+  # google_iam_workload_identity_pool_provider.github will be created
+  + resource "google_iam_workload_identity_pool_provider" "github" {
+      + attribute_condition                = "assertion.repository_id == '1234567890' && assertion.repository_owner_id == '1234567890' && assertion.ref == 'refs/heads/main' && assertion.environment == 'cloud-demo' && assertion.event_name == 'workflow_dispatch' && assertion.workflow_ref == 'review-owner/review-repository/.github/workflows/cloud-demo.yml@refs/heads/main'"
+      + attribute_mapping                  = {
+          + "attribute.repository_id" = "assertion.repository_id"
+          + "google.subject"          = "assertion.sub"
+        }
+      + id                                 = (known after apply)
+      + name                               = (known after apply)
+      + project                            = "wallet-review-offline"
+      + state                              = (known after apply)
+      + workload_identity_pool_id          = "wallet-demo"
+      + workload_identity_pool_provider_id = "github"
+
+      + oidc {
+          + issuer_uri = "https://token.actions.githubusercontent.com"
+        }
+    }
+
+  # google_iap_tunnel_instance_iam_member.deploy will be created
+  + resource "google_iap_tunnel_instance_iam_member" "deploy" {
+      + etag     = (known after apply)
+      + id       = (known after apply)
+      + instance = "wallet-demo"
+      + member   = "serviceAccount:wallet-demo-deploy@wallet-review-offline.iam.gserviceaccount.com"
+      + project  = (known after apply)
+      + role     = "roles/iap.tunnelResourceAccessor"
+      + zone     = (known after apply)
+    }
+
+  # google_logging_project_bucket_config.logs will be created
+  + resource "google_logging_project_bucket_config" "logs" {
+      + bucket_id       = "wallet-demo-logs"
+      + description     = (known after apply)
+      + id              = (known after apply)
+      + lifecycle_state = (known after apply)
+      + location        = "global"
+      + name            = (known after apply)
+      + project         = "wallet-review-offline"
+      + retention_days  = 7
+    }
+
+  # google_project_iam_custom_role.lookup will be created
+  + resource "google_project_iam_custom_role" "lookup" {
+      + deleted     = (known after apply)
+      + id          = (known after apply)
+      + name        = (known after apply)
+      + permissions = [
+          + "compute.instances.get",
+          + "compute.instances.list",
+          + "compute.projects.get",
+          + "compute.zones.get",
+          + "compute.zones.list",
+        ]
+      + project     = "wallet-review-offline"
+      + role_id     = "walletDemoLookup"
+      + stage       = "GA"
+      + title       = "Wallet demo SSH lookup"
+    }
+
+  # google_project_iam_member.lookup will be created
+  + resource "google_project_iam_member" "lookup" {
+      + etag    = (known after apply)
+      + id      = (known after apply)
+      + member  = "serviceAccount:wallet-demo-deploy@wallet-review-offline.iam.gserviceaccount.com"
+      + project = "wallet-review-offline"
+      + role    = (known after apply)
+    }
+
+  # google_project_service.api["billingbudgets.googleapis.com"] will be created
+  + resource "google_project_service" "api" {
+      + disable_on_destroy = false
+      + id                 = (known after apply)
+      + project            = "wallet-review-offline"
+      + service            = "billingbudgets.googleapis.com"
+    }
+
+  # google_project_service.api["cloudresourcemanager.googleapis.com"] will be created
+  + resource "google_project_service" "api" {
+      + disable_on_destroy = false
+      + id                 = (known after apply)
+      + project            = "wallet-review-offline"
+      + service            = "cloudresourcemanager.googleapis.com"
+    }
+
+  # google_project_service.api["compute.googleapis.com"] will be created
+  + resource "google_project_service" "api" {
+      + disable_on_destroy = false
+      + id                 = (known after apply)
+      + project            = "wallet-review-offline"
+      + service            = "compute.googleapis.com"
+    }
+
+  # google_project_service.api["iam.googleapis.com"] will be created
+  + resource "google_project_service" "api" {
+      + disable_on_destroy = false
+      + id                 = (known after apply)
+      + project            = "wallet-review-offline"
+      + service            = "iam.googleapis.com"
+    }
+
+  # google_project_service.api["iamcredentials.googleapis.com"] will be created
+  + resource "google_project_service" "api" {
+      + disable_on_destroy = false
+      + id                 = (known after apply)
+      + project            = "wallet-review-offline"
+      + service            = "iamcredentials.googleapis.com"
+    }
+
+  # google_project_service.api["iap.googleapis.com"] will be created
+  + resource "google_project_service" "api" {
+      + disable_on_destroy = false
+      + id                 = (known after apply)
+      + project            = "wallet-review-offline"
+      + service            = "iap.googleapis.com"
+    }
+
+  # google_project_service.api["logging.googleapis.com"] will be created
+  + resource "google_project_service" "api" {
+      + disable_on_destroy = false
+      + id                 = (known after apply)
+      + project            = "wallet-review-offline"
+      + service            = "logging.googleapis.com"
+    }
+
+  # google_project_service.api["oslogin.googleapis.com"] will be created
+  + resource "google_project_service" "api" {
+      + disable_on_destroy = false
+      + id                 = (known after apply)
+      + project            = "wallet-review-offline"
+      + service            = "oslogin.googleapis.com"
+    }
+
+  # google_project_service.api["pubsub.googleapis.com"] will be created
+  + resource "google_project_service" "api" {
+      + disable_on_destroy = false
+      + id                 = (known after apply)
+      + project            = "wallet-review-offline"
+      + service            = "pubsub.googleapis.com"
+    }
+
+  # google_project_service.api["secretmanager.googleapis.com"] will be created
+  + resource "google_project_service" "api" {
+      + disable_on_destroy = false
+      + id                 = (known after apply)
+      + project            = "wallet-review-offline"
+      + service            = "secretmanager.googleapis.com"
+    }
+
+  # google_project_service.api["storage.googleapis.com"] will be created
+  + resource "google_project_service" "api" {
+      + disable_on_destroy = false
+      + id                 = (known after apply)
+      + project            = "wallet-review-offline"
+      + service            = "storage.googleapis.com"
+    }
+
+  # google_project_service.api["sts.googleapis.com"] will be created
+  + resource "google_project_service" "api" {
+      + disable_on_destroy = false
+      + id                 = (known after apply)
+      + project            = "wallet-review-offline"
+      + service            = "sts.googleapis.com"
+    }
+
+  # google_pubsub_topic.budget will be created
+  + resource "google_pubsub_topic" "budget" {
+      + effective_labels           = {
+          + "goog-terraform-provisioned" = "true"
+        }
+      + id                         = (known after apply)
+      + message_retention_duration = "86400s"
+      + name                       = "wallet-demo-budget"
+      + project                    = "wallet-review-offline"
+      + terraform_labels           = {
+          + "goog-terraform-provisioned" = "true"
+        }
+
+      + message_storage_policy (known after apply)
+    }
+
+  # google_secret_manager_secret.runtime["api_db_password"] will be created
+  + resource "google_secret_manager_secret" "runtime" {
+      + create_time           = (known after apply)
+      + deletion_protection   = false
+      + effective_annotations = (known after apply)
+      + effective_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+      + expire_time           = (known after apply)
+      + id                    = (known after apply)
+      + labels                = {
+          + "environment" = "synthetic-demo"
+        }
+      + name                  = (known after apply)
+      + project               = "wallet-review-offline"
+      + secret_id             = "wallet-demo-api-db-password"
+      + terraform_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+
+      + replication {
+          + user_managed {
+              + replicas {
+                  + location = "us-central1"
+                }
+            }
+        }
+    }
+
+  # google_secret_manager_secret.runtime["bootstrap_password"] will be created
+  + resource "google_secret_manager_secret" "runtime" {
+      + create_time           = (known after apply)
+      + deletion_protection   = false
+      + effective_annotations = (known after apply)
+      + effective_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+      + expire_time           = (known after apply)
+      + id                    = (known after apply)
+      + labels                = {
+          + "environment" = "synthetic-demo"
+        }
+      + name                  = (known after apply)
+      + project               = "wallet-review-offline"
+      + secret_id             = "wallet-demo-bootstrap-password"
+      + terraform_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+
+      + replication {
+          + user_managed {
+              + replicas {
+                  + location = "us-central1"
+                }
+            }
+        }
+    }
+
+  # google_secret_manager_secret.runtime["cache_key"] will be created
+  + resource "google_secret_manager_secret" "runtime" {
+      + create_time           = (known after apply)
+      + deletion_protection   = false
+      + effective_annotations = (known after apply)
+      + effective_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+      + expire_time           = (known after apply)
+      + id                    = (known after apply)
+      + labels                = {
+          + "environment" = "synthetic-demo"
+        }
+      + name                  = (known after apply)
+      + project               = "wallet-review-offline"
+      + secret_id             = "wallet-demo-cache-key"
+      + terraform_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+
+      + replication {
+          + user_managed {
+              + replicas {
+                  + location = "us-central1"
+                }
+            }
+        }
+    }
+
+  # google_secret_manager_secret.runtime["demo_checker_password"] will be created
+  + resource "google_secret_manager_secret" "runtime" {
+      + create_time           = (known after apply)
+      + deletion_protection   = false
+      + effective_annotations = (known after apply)
+      + effective_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+      + expire_time           = (known after apply)
+      + id                    = (known after apply)
+      + labels                = {
+          + "environment" = "synthetic-demo"
+        }
+      + name                  = (known after apply)
+      + project               = "wallet-review-offline"
+      + secret_id             = "wallet-demo-demo-checker-password"
+      + terraform_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+
+      + replication {
+          + user_managed {
+              + replicas {
+                  + location = "us-central1"
+                }
+            }
+        }
+    }
+
+  # google_secret_manager_secret.runtime["demo_customer_a_password"] will be created
+  + resource "google_secret_manager_secret" "runtime" {
+      + create_time           = (known after apply)
+      + deletion_protection   = false
+      + effective_annotations = (known after apply)
+      + effective_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+      + expire_time           = (known after apply)
+      + id                    = (known after apply)
+      + labels                = {
+          + "environment" = "synthetic-demo"
+        }
+      + name                  = (known after apply)
+      + project               = "wallet-review-offline"
+      + secret_id             = "wallet-demo-demo-customer-a-password"
+      + terraform_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+
+      + replication {
+          + user_managed {
+              + replicas {
+                  + location = "us-central1"
+                }
+            }
+        }
+    }
+
+  # google_secret_manager_secret.runtime["demo_customer_b_password"] will be created
+  + resource "google_secret_manager_secret" "runtime" {
+      + create_time           = (known after apply)
+      + deletion_protection   = false
+      + effective_annotations = (known after apply)
+      + effective_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+      + expire_time           = (known after apply)
+      + id                    = (known after apply)
+      + labels                = {
+          + "environment" = "synthetic-demo"
+        }
+      + name                  = (known after apply)
+      + project               = "wallet-review-offline"
+      + secret_id             = "wallet-demo-demo-customer-b-password"
+      + terraform_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+
+      + replication {
+          + user_managed {
+              + replicas {
+                  + location = "us-central1"
+                }
+            }
+        }
+    }
+
+  # google_secret_manager_secret.runtime["demo_maker_password"] will be created
+  + resource "google_secret_manager_secret" "runtime" {
+      + create_time           = (known after apply)
+      + deletion_protection   = false
+      + effective_annotations = (known after apply)
+      + effective_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+      + expire_time           = (known after apply)
+      + id                    = (known after apply)
+      + labels                = {
+          + "environment" = "synthetic-demo"
+        }
+      + name                  = (known after apply)
+      + project               = "wallet-review-offline"
+      + secret_id             = "wallet-demo-demo-maker-password"
+      + terraform_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+
+      + replication {
+          + user_managed {
+              + replicas {
+                  + location = "us-central1"
+                }
+            }
+        }
+    }
+
+  # google_secret_manager_secret.runtime["dependency_tls"] will be created
+  + resource "google_secret_manager_secret" "runtime" {
+      + create_time           = (known after apply)
+      + deletion_protection   = false
+      + effective_annotations = (known after apply)
+      + effective_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+      + expire_time           = (known after apply)
+      + id                    = (known after apply)
+      + labels                = {
+          + "environment" = "synthetic-demo"
+        }
+      + name                  = (known after apply)
+      + project               = "wallet-review-offline"
+      + secret_id             = "wallet-demo-dependency-tls"
+      + terraform_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+
+      + replication {
+          + user_managed {
+              + replicas {
+                  + location = "us-central1"
+                }
+            }
+        }
+    }
+
+  # google_secret_manager_secret.runtime["edge_tls"] will be created
+  + resource "google_secret_manager_secret" "runtime" {
+      + create_time           = (known after apply)
+      + deletion_protection   = false
+      + effective_annotations = (known after apply)
+      + effective_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+      + expire_time           = (known after apply)
+      + id                    = (known after apply)
+      + labels                = {
+          + "environment" = "synthetic-demo"
+        }
+      + name                  = (known after apply)
+      + project               = "wallet-review-offline"
+      + secret_id             = "wallet-demo-edge-tls"
+      + terraform_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+
+      + replication {
+          + user_managed {
+              + replicas {
+                  + location = "us-central1"
+                }
+            }
+        }
+    }
+
+  # google_secret_manager_secret.runtime["grafana_password"] will be created
+  + resource "google_secret_manager_secret" "runtime" {
+      + create_time           = (known after apply)
+      + deletion_protection   = false
+      + effective_annotations = (known after apply)
+      + effective_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+      + expire_time           = (known after apply)
+      + id                    = (known after apply)
+      + labels                = {
+          + "environment" = "synthetic-demo"
+        }
+      + name                  = (known after apply)
+      + project               = "wallet-review-offline"
+      + secret_id             = "wallet-demo-grafana-password"
+      + terraform_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+
+      + replication {
+          + user_managed {
+              + replicas {
+                  + location = "us-central1"
+                }
+            }
+        }
+    }
+
+  # google_secret_manager_secret.runtime["jwt_key"] will be created
+  + resource "google_secret_manager_secret" "runtime" {
+      + create_time           = (known after apply)
+      + deletion_protection   = false
+      + effective_annotations = (known after apply)
+      + effective_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+      + expire_time           = (known after apply)
+      + id                    = (known after apply)
+      + labels                = {
+          + "environment" = "synthetic-demo"
+        }
+      + name                  = (known after apply)
+      + project               = "wallet-review-offline"
+      + secret_id             = "wallet-demo-jwt-key"
+      + terraform_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+
+      + replication {
+          + user_managed {
+              + replicas {
+                  + location = "us-central1"
+                }
+            }
+        }
+    }
+
+  # google_secret_manager_secret.runtime["migrator_db_password"] will be created
+  + resource "google_secret_manager_secret" "runtime" {
+      + create_time           = (known after apply)
+      + deletion_protection   = false
+      + effective_annotations = (known after apply)
+      + effective_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+      + expire_time           = (known after apply)
+      + id                    = (known after apply)
+      + labels                = {
+          + "environment" = "synthetic-demo"
+        }
+      + name                  = (known after apply)
+      + project               = "wallet-review-offline"
+      + secret_id             = "wallet-demo-migrator-db-password"
+      + terraform_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+
+      + replication {
+          + user_managed {
+              + replicas {
+                  + location = "us-central1"
+                }
+            }
+        }
+    }
+
+  # google_secret_manager_secret.runtime["otp_key"] will be created
+  + resource "google_secret_manager_secret" "runtime" {
+      + create_time           = (known after apply)
+      + deletion_protection   = false
+      + effective_annotations = (known after apply)
+      + effective_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+      + expire_time           = (known after apply)
+      + id                    = (known after apply)
+      + labels                = {
+          + "environment" = "synthetic-demo"
+        }
+      + name                  = (known after apply)
+      + project               = "wallet-review-offline"
+      + secret_id             = "wallet-demo-otp-key"
+      + terraform_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+
+      + replication {
+          + user_managed {
+              + replicas {
+                  + location = "us-central1"
+                }
+            }
+        }
+    }
+
+  # google_secret_manager_secret.runtime["rabbit_api_password"] will be created
+  + resource "google_secret_manager_secret" "runtime" {
+      + create_time           = (known after apply)
+      + deletion_protection   = false
+      + effective_annotations = (known after apply)
+      + effective_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+      + expire_time           = (known after apply)
+      + id                    = (known after apply)
+      + labels                = {
+          + "environment" = "synthetic-demo"
+        }
+      + name                  = (known after apply)
+      + project               = "wallet-review-offline"
+      + secret_id             = "wallet-demo-rabbit-api-password"
+      + terraform_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+
+      + replication {
+          + user_managed {
+              + replicas {
+                  + location = "us-central1"
+                }
+            }
+        }
+    }
+
+  # google_secret_manager_secret.runtime["rabbit_password"] will be created
+  + resource "google_secret_manager_secret" "runtime" {
+      + create_time           = (known after apply)
+      + deletion_protection   = false
+      + effective_annotations = (known after apply)
+      + effective_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+      + expire_time           = (known after apply)
+      + id                    = (known after apply)
+      + labels                = {
+          + "environment" = "synthetic-demo"
+        }
+      + name                  = (known after apply)
+      + project               = "wallet-review-offline"
+      + secret_id             = "wallet-demo-rabbit-password"
+      + terraform_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+
+      + replication {
+          + user_managed {
+              + replicas {
+                  + location = "us-central1"
+                }
+            }
+        }
+    }
+
+  # google_secret_manager_secret.runtime["redis_password"] will be created
+  + resource "google_secret_manager_secret" "runtime" {
+      + create_time           = (known after apply)
+      + deletion_protection   = false
+      + effective_annotations = (known after apply)
+      + effective_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+      + expire_time           = (known after apply)
+      + id                    = (known after apply)
+      + labels                = {
+          + "environment" = "synthetic-demo"
+        }
+      + name                  = (known after apply)
+      + project               = "wallet-review-offline"
+      + secret_id             = "wallet-demo-redis-password"
+      + terraform_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+
+      + replication {
+          + user_managed {
+              + replicas {
+                  + location = "us-central1"
+                }
+            }
+        }
+    }
+
+  # google_secret_manager_secret.runtime["token_key"] will be created
+  + resource "google_secret_manager_secret" "runtime" {
+      + create_time           = (known after apply)
+      + deletion_protection   = false
+      + effective_annotations = (known after apply)
+      + effective_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+      + expire_time           = (known after apply)
+      + id                    = (known after apply)
+      + labels                = {
+          + "environment" = "synthetic-demo"
+        }
+      + name                  = (known after apply)
+      + project               = "wallet-review-offline"
+      + secret_id             = "wallet-demo-token-key"
+      + terraform_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+
+      + replication {
+          + user_managed {
+              + replicas {
+                  + location = "us-central1"
+                }
+            }
+        }
+    }
+
+  # google_secret_manager_secret.runtime["worker_db_password"] will be created
+  + resource "google_secret_manager_secret" "runtime" {
+      + create_time           = (known after apply)
+      + deletion_protection   = false
+      + effective_annotations = (known after apply)
+      + effective_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+      + expire_time           = (known after apply)
+      + id                    = (known after apply)
+      + labels                = {
+          + "environment" = "synthetic-demo"
+        }
+      + name                  = (known after apply)
+      + project               = "wallet-review-offline"
+      + secret_id             = "wallet-demo-worker-db-password"
+      + terraform_labels      = {
+          + "environment"                = "synthetic-demo"
+          + "goog-terraform-provisioned" = "true"
+        }
+
+      + replication {
+          + user_managed {
+              + replicas {
+                  + location = "us-central1"
+                }
+            }
+        }
+    }
+
+  # google_secret_manager_secret_iam_member.host["api_db_password"] will be created
+  + resource "google_secret_manager_secret_iam_member" "host" {
+      + etag      = (known after apply)
+      + id        = (known after apply)
+      + member    = "serviceAccount:wallet-demo-host@wallet-review-offline.iam.gserviceaccount.com"
+      + project   = (known after apply)
+      + role      = "roles/secretmanager.secretAccessor"
+      + secret_id = (known after apply)
+    }
+
+  # google_secret_manager_secret_iam_member.host["bootstrap_password"] will be created
+  + resource "google_secret_manager_secret_iam_member" "host" {
+      + etag      = (known after apply)
+      + id        = (known after apply)
+      + member    = "serviceAccount:wallet-demo-host@wallet-review-offline.iam.gserviceaccount.com"
+      + project   = (known after apply)
+      + role      = "roles/secretmanager.secretAccessor"
+      + secret_id = (known after apply)
+    }
+
+  # google_secret_manager_secret_iam_member.host["cache_key"] will be created
+  + resource "google_secret_manager_secret_iam_member" "host" {
+      + etag      = (known after apply)
+      + id        = (known after apply)
+      + member    = "serviceAccount:wallet-demo-host@wallet-review-offline.iam.gserviceaccount.com"
+      + project   = (known after apply)
+      + role      = "roles/secretmanager.secretAccessor"
+      + secret_id = (known after apply)
+    }
+
+  # google_secret_manager_secret_iam_member.host["demo_checker_password"] will be created
+  + resource "google_secret_manager_secret_iam_member" "host" {
+      + etag      = (known after apply)
+      + id        = (known after apply)
+      + member    = "serviceAccount:wallet-demo-host@wallet-review-offline.iam.gserviceaccount.com"
+      + project   = (known after apply)
+      + role      = "roles/secretmanager.secretAccessor"
+      + secret_id = (known after apply)
+    }
+
+  # google_secret_manager_secret_iam_member.host["demo_customer_a_password"] will be created
+  + resource "google_secret_manager_secret_iam_member" "host" {
+      + etag      = (known after apply)
+      + id        = (known after apply)
+      + member    = "serviceAccount:wallet-demo-host@wallet-review-offline.iam.gserviceaccount.com"
+      + project   = (known after apply)
+      + role      = "roles/secretmanager.secretAccessor"
+      + secret_id = (known after apply)
+    }
+
+  # google_secret_manager_secret_iam_member.host["demo_customer_b_password"] will be created
+  + resource "google_secret_manager_secret_iam_member" "host" {
+      + etag      = (known after apply)
+      + id        = (known after apply)
+      + member    = "serviceAccount:wallet-demo-host@wallet-review-offline.iam.gserviceaccount.com"
+      + project   = (known after apply)
+      + role      = "roles/secretmanager.secretAccessor"
+      + secret_id = (known after apply)
+    }
+
+  # google_secret_manager_secret_iam_member.host["demo_maker_password"] will be created
+  + resource "google_secret_manager_secret_iam_member" "host" {
+      + etag      = (known after apply)
+      + id        = (known after apply)
+      + member    = "serviceAccount:wallet-demo-host@wallet-review-offline.iam.gserviceaccount.com"
+      + project   = (known after apply)
+      + role      = "roles/secretmanager.secretAccessor"
+      + secret_id = (known after apply)
+    }
+
+  # google_secret_manager_secret_iam_member.host["dependency_tls"] will be created
+  + resource "google_secret_manager_secret_iam_member" "host" {
+      + etag      = (known after apply)
+      + id        = (known after apply)
+      + member    = "serviceAccount:wallet-demo-host@wallet-review-offline.iam.gserviceaccount.com"
+      + project   = (known after apply)
+      + role      = "roles/secretmanager.secretAccessor"
+      + secret_id = (known after apply)
+    }
+
+  # google_secret_manager_secret_iam_member.host["edge_tls"] will be created
+  + resource "google_secret_manager_secret_iam_member" "host" {
+      + etag      = (known after apply)
+      + id        = (known after apply)
+      + member    = "serviceAccount:wallet-demo-host@wallet-review-offline.iam.gserviceaccount.com"
+      + project   = (known after apply)
+      + role      = "roles/secretmanager.secretAccessor"
+      + secret_id = (known after apply)
+    }
+
+  # google_secret_manager_secret_iam_member.host["grafana_password"] will be created
+  + resource "google_secret_manager_secret_iam_member" "host" {
+      + etag      = (known after apply)
+      + id        = (known after apply)
+      + member    = "serviceAccount:wallet-demo-host@wallet-review-offline.iam.gserviceaccount.com"
+      + project   = (known after apply)
+      + role      = "roles/secretmanager.secretAccessor"
+      + secret_id = (known after apply)
+    }
+
+  # google_secret_manager_secret_iam_member.host["jwt_key"] will be created
+  + resource "google_secret_manager_secret_iam_member" "host" {
+      + etag      = (known after apply)
+      + id        = (known after apply)
+      + member    = "serviceAccount:wallet-demo-host@wallet-review-offline.iam.gserviceaccount.com"
+      + project   = (known after apply)
+      + role      = "roles/secretmanager.secretAccessor"
+      + secret_id = (known after apply)
+    }
+
+  # google_secret_manager_secret_iam_member.host["migrator_db_password"] will be created
+  + resource "google_secret_manager_secret_iam_member" "host" {
+      + etag      = (known after apply)
+      + id        = (known after apply)
+      + member    = "serviceAccount:wallet-demo-host@wallet-review-offline.iam.gserviceaccount.com"
+      + project   = (known after apply)
+      + role      = "roles/secretmanager.secretAccessor"
+      + secret_id = (known after apply)
+    }
+
+  # google_secret_manager_secret_iam_member.host["otp_key"] will be created
+  + resource "google_secret_manager_secret_iam_member" "host" {
+      + etag      = (known after apply)
+      + id        = (known after apply)
+      + member    = "serviceAccount:wallet-demo-host@wallet-review-offline.iam.gserviceaccount.com"
+      + project   = (known after apply)
+      + role      = "roles/secretmanager.secretAccessor"
+      + secret_id = (known after apply)
+    }
+
+  # google_secret_manager_secret_iam_member.host["rabbit_api_password"] will be created
+  + resource "google_secret_manager_secret_iam_member" "host" {
+      + etag      = (known after apply)
+      + id        = (known after apply)
+      + member    = "serviceAccount:wallet-demo-host@wallet-review-offline.iam.gserviceaccount.com"
+      + project   = (known after apply)
+      + role      = "roles/secretmanager.secretAccessor"
+      + secret_id = (known after apply)
+    }
+
+  # google_secret_manager_secret_iam_member.host["rabbit_password"] will be created
+  + resource "google_secret_manager_secret_iam_member" "host" {
+      + etag      = (known after apply)
+      + id        = (known after apply)
+      + member    = "serviceAccount:wallet-demo-host@wallet-review-offline.iam.gserviceaccount.com"
+      + project   = (known after apply)
+      + role      = "roles/secretmanager.secretAccessor"
+      + secret_id = (known after apply)
+    }
+
+  # google_secret_manager_secret_iam_member.host["redis_password"] will be created
+  + resource "google_secret_manager_secret_iam_member" "host" {
+      + etag      = (known after apply)
+      + id        = (known after apply)
+      + member    = "serviceAccount:wallet-demo-host@wallet-review-offline.iam.gserviceaccount.com"
+      + project   = (known after apply)
+      + role      = "roles/secretmanager.secretAccessor"
+      + secret_id = (known after apply)
+    }
+
+  # google_secret_manager_secret_iam_member.host["token_key"] will be created
+  + resource "google_secret_manager_secret_iam_member" "host" {
+      + etag      = (known after apply)
+      + id        = (known after apply)
+      + member    = "serviceAccount:wallet-demo-host@wallet-review-offline.iam.gserviceaccount.com"
+      + project   = (known after apply)
+      + role      = "roles/secretmanager.secretAccessor"
+      + secret_id = (known after apply)
+    }
+
+  # google_secret_manager_secret_iam_member.host["worker_db_password"] will be created
+  + resource "google_secret_manager_secret_iam_member" "host" {
+      + etag      = (known after apply)
+      + id        = (known after apply)
+      + member    = "serviceAccount:wallet-demo-host@wallet-review-offline.iam.gserviceaccount.com"
+      + project   = (known after apply)
+      + role      = "roles/secretmanager.secretAccessor"
+      + secret_id = (known after apply)
+    }
+
+  # google_service_account.deploy will be created
+  + resource "google_service_account" "deploy" {
+      + account_id   = "wallet-demo-deploy"
+      + disabled     = false
+      + display_name = "Protected GitHub environment deployer"
+      + email        = "wallet-demo-deploy@wallet-review-offline.iam.gserviceaccount.com"
+      + id           = (known after apply)
+      + member       = "serviceAccount:wallet-demo-deploy@wallet-review-offline.iam.gserviceaccount.com"
+      + name         = (known after apply)
+      + project      = "wallet-review-offline"
+      + unique_id    = (known after apply)
+    }
+
+  # google_service_account.host will be created
+  + resource "google_service_account" "host" {
+      + account_id   = "wallet-demo-host"
+      + disabled     = false
+      + display_name = "Demo host secret fetch and backup creation only"
+      + email        = "wallet-demo-host@wallet-review-offline.iam.gserviceaccount.com"
+      + id           = (known after apply)
+      + member       = "serviceAccount:wallet-demo-host@wallet-review-offline.iam.gserviceaccount.com"
+      + name         = (known after apply)
+      + project      = "wallet-review-offline"
+      + unique_id    = (known after apply)
+    }
+
+  # google_service_account_iam_member.act_as will be created
+  + resource "google_service_account_iam_member" "act_as" {
+      + etag               = (known after apply)
+      + id                 = (known after apply)
+      + member             = "serviceAccount:wallet-demo-deploy@wallet-review-offline.iam.gserviceaccount.com"
+      + role               = "roles/iam.serviceAccountUser"
+      + service_account_id = (known after apply)
+    }
+
+  # google_service_account_iam_member.oidc will be created
+  + resource "google_service_account_iam_member" "oidc" {
+      + etag               = (known after apply)
+      + id                 = (known after apply)
+      + member             = (known after apply)
+      + role               = "roles/iam.workloadIdentityUser"
+      + service_account_id = (known after apply)
+    }
+
+  # google_storage_bucket.backup will be created
+  + resource "google_storage_bucket" "backup" {
+      + effective_labels            = {
+          + "goog-terraform-provisioned" = "true"
+        }
+      + force_destroy               = false
+      + id                          = (known after apply)
+      + location                    = "US-CENTRAL1"
+      + name                        = "wallet-review-offline-wallet-demo-backup"
+      + project                     = (known after apply)
+      + project_number              = (known after apply)
+      + public_access_prevention    = "enforced"
+      + rpo                         = (known after apply)
+      + self_link                   = (known after apply)
+      + storage_class               = "STANDARD"
+      + terraform_labels            = {
+          + "goog-terraform-provisioned" = "true"
+        }
+      + time_created                = (known after apply)
+      + uniform_bucket_level_access = true
+      + updated                     = (known after apply)
+      + url                         = (known after apply)
+
+      + lifecycle_rule {
+          + action {
+              + type          = "Delete"
+                # (1 unchanged attribute hidden)
+            }
+          + condition {
+              + age                    = 7
+              + matches_prefix         = []
+              + matches_storage_class  = []
+              + matches_suffix         = []
+              + with_state             = (known after apply)
+                # (3 unchanged attributes hidden)
+            }
+        }
+
+      + retention_policy {
+          + is_locked        = false
+          + retention_period = "86400"
+        }
+
+      + soft_delete_policy {
+          + effective_time             = (known after apply)
+          + retention_duration_seconds = 0
+        }
+
+      + versioning (known after apply)
+
+      + website (known after apply)
+    }
+
+  # google_storage_bucket_iam_member.backup_writer will be created
+  + resource "google_storage_bucket_iam_member" "backup_writer" {
+      + bucket = "wallet-review-offline-wallet-demo-backup"
+      + etag   = (known after apply)
+      + id     = (known after apply)
+      + member = "serviceAccount:wallet-demo-host@wallet-review-offline.iam.gserviceaccount.com"
+      + role   = "roles/storage.objectCreator"
+    }
+
+Plan: 70 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + backup_bucket          = "wallet-review-offline-wallet-demo-backup"
+  + demo_ip                = (known after apply)
+  + deploy_service_account = "wallet-demo-deploy@wallet-review-offline.iam.gserviceaccount.com"
+  + host_service_account   = "wallet-demo-host@wallet-review-offline.iam.gserviceaccount.com"
+  + instance               = "wallet-demo"
+  + oidc_provider          = (known after apply)
+  + secret_ids             = {
+      + api_db_password          = "wallet-demo-api-db-password"
+      + bootstrap_password       = "wallet-demo-bootstrap-password"
+      + cache_key                = "wallet-demo-cache-key"
+      + demo_checker_password    = "wallet-demo-demo-checker-password"
+      + demo_customer_a_password = "wallet-demo-demo-customer-a-password"
+      + demo_customer_b_password = "wallet-demo-demo-customer-b-password"
+      + demo_maker_password      = "wallet-demo-demo-maker-password"
+      + dependency_tls           = "wallet-demo-dependency-tls"
+      + edge_tls                 = "wallet-demo-edge-tls"
+      + grafana_password         = "wallet-demo-grafana-password"
+      + jwt_key                  = "wallet-demo-jwt-key"
+      + migrator_db_password     = "wallet-demo-migrator-db-password"
+      + otp_key                  = "wallet-demo-otp-key"
+      + rabbit_api_password      = "wallet-demo-rabbit-api-password"
+      + rabbit_password          = "wallet-demo-rabbit-password"
+      + redis_password           = "wallet-demo-redis-password"
+      + token_key                = "wallet-demo-token-key"
+      + worker_db_password       = "wallet-demo-worker-db-password"
+    }

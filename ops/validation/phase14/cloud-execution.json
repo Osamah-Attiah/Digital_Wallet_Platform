@@ -1,0 +1,17 @@
+{
+  "status": "Skipped",
+  "reason": "Explicit user approval of provider, budget and external operations has not yet been given.",
+  "resourcesCreated": 0,
+  "registryPushes": 0,
+  "repositoriesCreated": 0,
+  "domainsBound": 0,
+  "externalNotificationsSent": 0,
+  "checks": {
+    "cloudUiToDatabaseSmoke": "Skipped",
+    "cloudRestartRollbackRedisRabbitOutbox": "Skipped",
+    "cloudBackupRestoreReconciliation": "Skipped",
+    "cloudDashboards": "Skipped",
+    "externalTestAlertDelivery": "Skipped",
+    "actualOidcAndSigning": "Skipped"
+  }
+}

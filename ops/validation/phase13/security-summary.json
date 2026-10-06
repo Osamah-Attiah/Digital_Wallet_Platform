@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "failures": [],
+  "results": [
+    {
+      "scan": "repository-secrets",
+      "exitCode": 0
+    },
+    {
+      "scan": "api",
+      "policyViolations": [],
+      "sbom": true
+    },
+    {
+      "scan": "worker",
+      "policyViolations": [],
+      "sbom": true
+    },
+    {
+      "scan": "migrator",
+      "policyViolations": [],
+      "sbom": true
+    },
+    {
+      "scan": "admin",
+      "policyViolations": [],
+      "sbom": true
+    }
+  ],
+  "exceptions": 3,
+  "criticalAllowed": false
+}

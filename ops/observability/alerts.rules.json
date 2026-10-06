@@ -1,0 +1,257 @@
+{
+  "groups": [
+    {
+      "name": "digitalwallet.phase12",
+      "interval": "30s",
+      "rules": [
+        {
+          "alert": "LedgerImbalance",
+          "expr": "max(wallet_ledger_imbalance) > 0",
+          "for": "0m",
+          "labels": {
+            "severity": "critical",
+            "owner": "operations"
+          },
+          "annotations": {
+            "summary": "Committed journal imbalance is above zero",
+            "runbook_url": "../../docs/runbooks/ledger-imbalance.md"
+          }
+        },
+        {
+          "alert": "ProjectionDrift",
+          "expr": "max(wallet_ledger_projection_drift) > 0",
+          "for": "0m",
+          "labels": {
+            "severity": "critical",
+            "owner": "operations"
+          },
+          "annotations": {
+            "summary": "Account balance projection drift is above zero",
+            "runbook_url": "../../docs/runbooks/projection-drift.md"
+          }
+        },
+        {
+          "alert": "ReconciliationStale",
+          "expr": "(time() - max(wallet_reconciliation_last_success) > 900) or absent(wallet_reconciliation_last_success)",
+          "for": "5m",
+          "labels": {
+            "severity": "critical",
+            "owner": "operations"
+          },
+          "annotations": {
+            "summary": "Reconciliation is stale or its signal is missing",
+            "runbook_url": "../../docs/runbooks/reconciliation.md"
+          }
+        },
+        {
+          "alert": "ReconciliationFailed",
+          "expr": "sum(increase(wallet_reconciliation_failures[10m])) > 0",
+          "for": "2m",
+          "labels": {
+            "severity": "critical",
+            "owner": "operations"
+          },
+          "annotations": {
+            "summary": "Read-only reconciliation failed",
+            "runbook_url": "../../docs/runbooks/reconciliation.md"
+          }
+        },
+        {
+          "alert": "PostingFailures",
+          "expr": "sum(increase(wallet_operation_count{module=\"Ledger\",operation=\"Post\",outcome=\"Failed\"}[5m])) >= 3",
+          "for": "5m",
+          "labels": {
+            "severity": "critical",
+            "owner": "operations"
+          },
+          "annotations": {
+            "summary": "Repeated technical posting failures",
+            "runbook_url": "../../docs/runbooks/ledger-imbalance.md"
+          }
+        },
+        {
+          "alert": "OutboxBacklog",
+          "expr": "max(outbox_oldest_unpublished_seconds) > 120",
+          "for": "5m",
+          "labels": {
+            "severity": "warning",
+            "owner": "operations"
+          },
+          "annotations": {
+            "summary": "Committed event publication is delayed",
+            "runbook_url": "../../docs/runbooks/outbox-backlog.md"
+          }
+        },
+        {
+          "alert": "DeadLetters",
+          "expr": "max(messaging_dlq) > 0",
+          "for": "2m",
+          "labels": {
+            "severity": "warning",
+            "owner": "operations"
+          },
+          "annotations": {
+            "summary": "Quarantined messages require review",
+            "runbook_url": "../../docs/runbooks/rabbitmq-dlq.md"
+          }
+        },
+        {
+          "alert": "TransferTechnicalErrors",
+          "expr": "sum(rate(wallet_operation_count{module=\"Transfers\",operation=\"Confirm\",outcome=\"Failed\"}[5m])) / clamp_min(sum(rate(wallet_operation_count{module=\"Transfers\",operation=\"Confirm\"}[5m])), 0.001) > 0.05 and sum(increase(wallet_operation_count{module=\"Transfers\",operation=\"Confirm\"}[5m])) >= 20",
+          "for": "5m",
+          "labels": {
+            "severity": "critical",
+            "owner": "operations"
+          },
+          "annotations": {
+            "summary": "Sustained transfer technical error rate",
+            "runbook_url": "../../docs/runbooks/ledger-imbalance.md"
+          }
+        },
+        {
+          "alert": "RefreshTokenReuse",
+          "expr": "sum(increase(wallet_security_events{event=\"RefreshReuse\"}[5m])) > 0",
+          "for": "0m",
+          "labels": {
+            "severity": "critical",
+            "owner": "security"
+          },
+          "annotations": {
+            "summary": "Refresh token replay was detected",
+            "runbook_url": "../../docs/runbooks/refresh-reuse.md"
+          }
+        },
+        {
+          "alert": "LoginFailureSpike",
+          "expr": "sum(increase(wallet_security_events{event=\"LoginFailed\"}[5m])) > 50",
+          "for": "5m",
+          "labels": {
+            "severity": "warning",
+            "owner": "security"
+          },
+          "annotations": {
+            "summary": "Elevated login failures",
+            "runbook_url": "../../docs/runbooks/refresh-reuse.md"
+          }
+        },
+        {
+          "alert": "OtpFailureSpike",
+          "expr": "sum(increase(wallet_security_events{event=~\"OtpInvalid|OtpLocked|OtpExpired|OtpThrottled\"}[5m])) > 50",
+          "for": "5m",
+          "labels": {
+            "severity": "warning",
+            "owner": "security"
+          },
+          "annotations": {
+            "summary": "Elevated OTP failures or throttling",
+            "runbook_url": "../../docs/runbooks/refresh-reuse.md"
+          }
+        },
+        {
+          "alert": "AdminDenialSpike",
+          "expr": "sum(increase(wallet_security_events{event=\"AdminDenied\"}[5m])) > 20",
+          "for": "5m",
+          "labels": {
+            "severity": "warning",
+            "owner": "security"
+          },
+          "annotations": {
+            "summary": "Elevated administrative authorization denials",
+            "runbook_url": "../../docs/runbooks/pii-report-abuse.md"
+          }
+        },
+        {
+          "alert": "PiiRevealSpike",
+          "expr": "sum(increase(wallet_security_events{event=\"PiiRevealed\"}[5m])) > 20",
+          "for": "2m",
+          "labels": {
+            "severity": "warning",
+            "owner": "security"
+          },
+          "annotations": {
+            "summary": "Elevated PII reveal activity",
+            "runbook_url": "../../docs/runbooks/pii-report-abuse.md"
+          }
+        },
+        {
+          "alert": "ReportExportSpike",
+          "expr": "sum(increase(wallet_security_events{event=~\"ReportCreated|ReportDownloaded\"}[5m])) > 20",
+          "for": "2m",
+          "labels": {
+            "severity": "warning",
+            "owner": "security"
+          },
+          "annotations": {
+            "summary": "Elevated report export activity",
+            "runbook_url": "../../docs/runbooks/pii-report-abuse.md"
+          }
+        },
+        {
+          "alert": "PostgresPoolSaturation",
+          "expr": "sum(wallet_postgres_pool_used) / clamp_min(sum(wallet_postgres_pool_max), 1) > 0.85",
+          "for": "5m",
+          "labels": {
+            "severity": "warning",
+            "owner": "operations"
+          },
+          "annotations": {
+            "summary": "PostgreSQL connection pool is saturated",
+            "runbook_url": "../../docs/runbooks/postgres-pool.md"
+          }
+        },
+        {
+          "alert": "RabbitUnavailable",
+          "expr": "min(messaging_broker_available) == 0",
+          "for": "2m",
+          "labels": {
+            "severity": "warning",
+            "owner": "operations"
+          },
+          "annotations": {
+            "summary": "RabbitMQ is unavailable; committed money is unaffected",
+            "runbook_url": "../../docs/runbooks/outbox-backlog.md"
+          }
+        },
+        {
+          "alert": "RedisUnavailable",
+          "expr": "min(cache_connection_available) == 0",
+          "for": "2m",
+          "labels": {
+            "severity": "warning",
+            "owner": "operations"
+          },
+          "annotations": {
+            "summary": "Redis is unavailable; cache and rate coordination are degraded",
+            "runbook_url": "../../docs/runbooks/redis-outage.md"
+          }
+        },
+        {
+          "alert": "TelemetryExporterFailure",
+          "expr": "sum(increase(wallet_telemetry_export_failures[5m])) > 0",
+          "for": "5m",
+          "labels": {
+            "severity": "warning",
+            "owner": "operations"
+          },
+          "annotations": {
+            "summary": "Telemetry exporter is failing; do not restart financial traffic blindly",
+            "runbook_url": "../../docs/runbooks/telemetry-outage.md"
+          }
+        },
+        {
+          "alert": "TelemetryDrops",
+          "expr": "sum(increase(wallet_telemetry_dropped[5m])) > 0",
+          "for": "5m",
+          "labels": {
+            "severity": "warning",
+            "owner": "operations"
+          },
+          "annotations": {
+            "summary": "Telemetry queue or export loss detected",
+            "runbook_url": "../../docs/runbooks/telemetry-outage.md"
+          }
+        }
+      ]
+    }
+  ]
+}

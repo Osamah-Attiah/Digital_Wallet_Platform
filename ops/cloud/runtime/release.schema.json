@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["revision", "version", "images", "acceptance"],
+  "properties": {
+    "revision": {"type": "string", "pattern": "^[a-f0-9]{40}$"},
+    "version": {"type": "string", "pattern": "^[a-zA-Z0-9._-]+$"},
+    "images": {"type": "object", "required": ["api", "worker", "migrator", "admin", "collector", "postgres", "redis", "rabbitmq", "prometheus", "grafana", "edge", "alertmanager"]},
+    "acceptance": {"type": "object"}
+  },
+  "additionalProperties": false
+}

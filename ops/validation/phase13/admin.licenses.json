@@ -1,0 +1,70 @@
+[
+  {
+    "name": "digitalwallet.local/web",
+    "version": "UNKNOWN",
+    "licenses": []
+  },
+  {
+    "name": "stdlib",
+    "version": "go1.26.8",
+    "licenses": [
+      "BSD-3-Clause"
+    ]
+  },
+  {
+    "name": "digital-wallet-admin",
+    "version": "1.0.0",
+    "licenses": [
+      "NOASSERTION"
+    ]
+  },
+  {
+    "name": "cookie",
+    "version": "1.1.1",
+    "licenses": [
+      "MIT"
+    ]
+  },
+  {
+    "name": "react",
+    "version": "19.2.0",
+    "licenses": [
+      "MIT"
+    ]
+  },
+  {
+    "name": "react-dom",
+    "version": "19.2.0",
+    "licenses": [
+      "MIT"
+    ]
+  },
+  {
+    "name": "react-router",
+    "version": "7.18.4",
+    "licenses": [
+      "MIT"
+    ]
+  },
+  {
+    "name": "react-router-dom",
+    "version": "7.18.4",
+    "licenses": [
+      "MIT"
+    ]
+  },
+  {
+    "name": "scheduler",
+    "version": "0.27.0",
+    "licenses": [
+      "MIT"
+    ]
+  },
+  {
+    "name": "set-cookie-parser",
+    "version": "2.7.2",
+    "licenses": [
+      "MIT"
+    ]
+  }
+]

@@ -1,0 +1,36 @@
+# Configuration seam only. No container/orchestration/deployment is created in phase 12.
+receivers:
+  otlp:
+    protocols:
+      http:
+        endpoint: 127.0.0.1:4318
+        tls:
+          cert_file: ${env:OTLP_TLS_CERT_FILE}
+          key_file: ${env:OTLP_TLS_KEY_FILE}
+processors:
+  memory_limiter:
+    check_interval: 1s
+    limit_mib: 128
+  batch:
+    timeout: 1s
+    send_batch_size: 128
+exporters:
+  prometheus:
+    endpoint: 127.0.0.1:9464
+    translation_strategy: UnderscoreEscapingWithoutSuffixes
+    resource_to_telemetry_conversion:
+      enabled: false
+  otlp/traces:
+    endpoint: ${env:TRACE_BACKEND_ENDPOINT}
+    tls:
+      insecure: false
+service:
+  pipelines:
+    metrics:
+      receivers: [otlp]
+      processors: [memory_limiter, batch]
+      exporters: [prometheus]
+    traces:
+      receivers: [otlp]
+      processors: [memory_limiter, batch]
+      exporters: [otlp/traces]

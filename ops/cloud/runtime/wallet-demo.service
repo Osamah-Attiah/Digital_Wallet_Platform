@@ -1,0 +1,19 @@
+[Unit]
+Description=Approved synthetic wallet demo release
+After=network-online.target docker.service wallet-metadata-block.service
+Requires=docker.service wallet-metadata-block.service
+Wants=network-online.target
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+EnvironmentFile=/etc/wallet/approval.env
+WorkingDirectory=/srv/wallet/current
+ExecCondition=/usr/bin/test ! -e /etc/wallet/deployment-in-progress
+ExecCondition=/usr/bin/test -f /etc/wallet/compose.active.json
+ExecStartPre=/usr/bin/python3 /srv/wallet/current/ops/cloud/runtime/fetch-secrets.py
+# Restore the approved release after a host reboot. Do not re-run schema migration or seeding on every restart.
+ExecStart=/usr/bin/docker compose --env-file /etc/wallet/runtime.env -f /etc/wallet/compose.active.json up -d --no-deps postgres redis rabbitmq collector prometheus grafana alertmanager api worker admin-web edge
+ExecStop=/usr/bin/docker compose --env-file /etc/wallet/runtime.env -f /etc/wallet/compose.active.json stop
+TimeoutStartSec=300
+[Install]
+WantedBy=multi-user.target

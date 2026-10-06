@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "image": "api",
+      "imageId": "sha256:d8a1aceda66dd510e5fe23cf8b3585a21c7740ddf0d04fc6a22b827a37da8ece",
+      "user": "1654:1654",
+      "version": "14.0.0-local",
+      "gitSha": "d9ac1ac1fd949a69ff05230506c77300864327bc",
+      "buildDate": "2026-10-05T23:26:06.735834+00:00",
+      "noShellBuildToolsSourceSecrets": true,
+      "releaseLabelsMatch": true
+    },
+    {
+      "image": "worker",
+      "imageId": "sha256:9c99db51ae32a5661db7b24edbcea6a258106444e4a0a1a279367c3c9cf7380c",
+      "user": "1654:1654",
+      "version": "14.0.0-local",
+      "gitSha": "d9ac1ac1fd949a69ff05230506c77300864327bc",
+      "buildDate": "2026-10-05T23:26:06.735834+00:00",
+      "noShellBuildToolsSourceSecrets": true,
+      "releaseLabelsMatch": true
+    },
+    {
+      "image": "migrator",
+      "imageId": "sha256:79a06272b725b99d99b091f0c20acd7790e0d41ef0fb9b7bac82739cf597566c",
+      "user": "1654:1654",
+      "version": "14.0.0-local",
+      "gitSha": "d9ac1ac1fd949a69ff05230506c77300864327bc",
+      "buildDate": "2026-10-05T23:26:06.735834+00:00",
+      "noShellBuildToolsSourceSecrets": true,
+      "releaseLabelsMatch": true
+    },
+    {
+      "image": "admin",
+      "imageId": "sha256:9671ace7b042ee54da4dcd74286216ae2417f5718e164d9d63e5a199bb02d5c5",
+      "user": "1654:1654",
+      "version": "14.0.0-local",
+      "gitSha": "d9ac1ac1fd949a69ff05230506c77300864327bc",
+      "buildDate": "2026-10-05T23:26:06.735834+00:00",
+      "noShellBuildToolsSourceSecrets": true,
+      "releaseLabelsMatch": true
+    }
+  ]
+}

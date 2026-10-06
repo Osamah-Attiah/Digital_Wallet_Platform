@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "scope": "local Docker derived images; not Cloud or external alert delivery",
+  "grafanaVersion": "13.2.3",
+  "dashboardCount": 5,
+  "signedPrometheusPluginHealth": "OK",
+  "prometheusPluginSignature": "valid",
+  "alertmanagerIngestion": "passed",
+  "externalNotificationsSent": 0,
+  "externalDelivery": "Skipped"
+}

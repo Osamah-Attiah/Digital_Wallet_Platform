@@ -1,0 +1,441 @@
+[
+  {
+    "name": "DigitalWallet.Administration",
+    "version": "1.0.0",
+    "licenses": []
+  },
+  {
+    "name": "DigitalWallet.Api",
+    "version": "1.0.0",
+    "licenses": []
+  },
+  {
+    "name": "DigitalWallet.Audit",
+    "version": "1.0.0",
+    "licenses": []
+  },
+  {
+    "name": "DigitalWallet.Audit.Contracts",
+    "version": "1.0.0",
+    "licenses": []
+  },
+  {
+    "name": "DigitalWallet.Beneficiaries",
+    "version": "1.0.0",
+    "licenses": []
+  },
+  {
+    "name": "DigitalWallet.Beneficiaries.Contracts",
+    "version": "1.0.0",
+    "licenses": []
+  },
+  {
+    "name": "DigitalWallet.Caching",
+    "version": "1.0.0",
+    "licenses": []
+  },
+  {
+    "name": "DigitalWallet.Caching.Contracts",
+    "version": "1.0.0",
+    "licenses": []
+  },
+  {
+    "name": "DigitalWallet.Customers",
+    "version": "1.0.0",
+    "licenses": []
+  },
+  {
+    "name": "DigitalWallet.Customers.Contracts",
+    "version": "1.0.0",
+    "licenses": []
+  },
+  {
+    "name": "DigitalWallet.Identity",
+    "version": "1.0.0",
+    "licenses": []
+  },
+  {
+    "name": "DigitalWallet.Identity.Contracts",
+    "version": "1.0.0",
+    "licenses": []
+  },
+  {
+    "name": "DigitalWallet.Ledger",
+    "version": "1.0.0",
+    "licenses": []
+  },
+  {
+    "name": "DigitalWallet.Ledger.Contracts",
+    "version": "1.0.0",
+    "licenses": []
+  },
+  {
+    "name": "DigitalWallet.Messaging",
+    "version": "1.0.0",
+    "licenses": []
+  },
+  {
+    "name": "DigitalWallet.Messaging.Contracts",
+    "version": "1.0.0",
+    "licenses": []
+  },
+  {
+    "name": "DigitalWallet.Migrator",
+    "version": "1.0.0",
+    "licenses": []
+  },
+  {
+    "name": "DigitalWallet.Notifications",
+    "version": "1.0.0",
+    "licenses": []
+  },
+  {
+    "name": "DigitalWallet.Reporting",
+    "version": "1.0.0",
+    "licenses": []
+  },
+  {
+    "name": "DigitalWallet.Reporting.Contracts",
+    "version": "1.0.0",
+    "licenses": []
+  },
+  {
+    "name": "DigitalWallet.RiskLimits",
+    "version": "1.0.0",
+    "licenses": []
+  },
+  {
+    "name": "DigitalWallet.RiskLimits.Contracts",
+    "version": "1.0.0",
+    "licenses": []
+  },
+  {
+    "name": "DigitalWallet.SharedKernel",
+    "version": "1.0.0",
+    "licenses": []
+  },
+  {
+    "name": "DigitalWallet.Transactions",
+    "version": "1.0.0",
+    "licenses": []
+  },
+  {
+    "name": "DigitalWallet.Transactions.Contracts",
+    "version": "1.0.0",
+    "licenses": []
+  },
+  {
+    "name": "DigitalWallet.Transfers",
+    "version": "1.0.0",
+    "licenses": []
+  },
+  {
+    "name": "DigitalWallet.Transfers.Contracts",
+    "version": "1.0.0",
+    "licenses": []
+  },
+  {
+    "name": "DigitalWallet.Wallets",
+    "version": "1.0.0",
+    "licenses": []
+  },
+  {
+    "name": "DigitalWallet.Wallets.Contracts",
+    "version": "1.0.0",
+    "licenses": []
+  },
+  {
+    "name": "Microsoft.AspNetCore.App.Runtime.linux-arm64",
+    "version": "10.0.11",
+    "licenses": []
+  },
+  {
+    "name": "Microsoft.AspNetCore.Authentication.JwtBearer",
+    "version": "10.0.11",
+    "licenses": []
+  },
+  {
+    "name": "Microsoft.AspNetCore.Identity.EntityFrameworkCore",
+    "version": "10.0.11",
+    "licenses": []
+  },
+  {
+    "name": "Microsoft.AspNetCore.OpenApi",
+    "version": "10.0.11",
+    "licenses": []
+  },
+  {
+    "name": "Microsoft.Bcl.Cryptography",
+    "version": "10.0.2",
+    "licenses": []
+  },
+  {
+    "name": "Microsoft.EntityFrameworkCore",
+    "version": "10.0.11",
+    "licenses": []
+  },
+  {
+    "name": "Microsoft.EntityFrameworkCore.Abstractions",
+    "version": "10.0.11",
+    "licenses": []
+  },
+  {
+    "name": "Microsoft.EntityFrameworkCore.Relational",
+    "version": "10.0.11",
+    "licenses": []
+  },
+  {
+    "name": "Microsoft.Extensions.DependencyModel",
+    "version": "10.0.0",
+    "licenses": []
+  },
+  {
+    "name": "Microsoft.IdentityModel.Abstractions",
+    "version": "8.19.2",
+    "licenses": []
+  },
+  {
+    "name": "Microsoft.IdentityModel.JsonWebTokens",
+    "version": "8.19.2",
+    "licenses": []
+  },
+  {
+    "name": "Microsoft.IdentityModel.Logging",
+    "version": "8.19.2",
+    "licenses": []
+  },
+  {
+    "name": "Microsoft.IdentityModel.Protocols",
+    "version": "8.19.2",
+    "licenses": []
+  },
+  {
+    "name": "Microsoft.IdentityModel.Protocols.OpenIdConnect",
+    "version": "8.19.2",
+    "licenses": []
+  },
+  {
+    "name": "Microsoft.IdentityModel.Tokens",
+    "version": "8.19.2",
+    "licenses": []
+  },
+  {
+    "name": "Microsoft.NETCore.App.Runtime.linux-arm64",
+    "version": "10.0.11",
+    "licenses": []
+  },
+  {
+    "name": "Microsoft.OpenApi",
+    "version": "2.7.5",
+    "licenses": []
+  },
+  {
+    "name": "Npgsql",
+    "version": "10.0.3",
+    "licenses": []
+  },
+  {
+    "name": "Npgsql.EntityFrameworkCore.PostgreSQL",
+    "version": "10.0.3",
+    "licenses": []
+  },
+  {
+    "name": "OpenTelemetry",
+    "version": "1.15.3",
+    "licenses": []
+  },
+  {
+    "name": "OpenTelemetry.Api",
+    "version": "1.16.0",
+    "licenses": []
+  },
+  {
+    "name": "OpenTelemetry.Api.ProviderBuilderExtensions",
+    "version": "1.16.0",
+    "licenses": []
+  },
+  {
+    "name": "OpenTelemetry.Exporter.OpenTelemetryProtocol",
+    "version": "1.15.3",
+    "licenses": []
+  },
+  {
+    "name": "OpenTelemetry.Extensions.Hosting",
+    "version": "1.15.3",
+    "licenses": []
+  },
+  {
+    "name": "OpenTelemetry.Instrumentation.AspNetCore",
+    "version": "1.16.0",
+    "licenses": []
+  },
+  {
+    "name": "OpenTelemetry.Instrumentation.Http",
+    "version": "1.16.0",
+    "licenses": []
+  },
+  {
+    "name": "Pipelines.Sockets.Unofficial",
+    "version": "2.2.8",
+    "licenses": []
+  },
+  {
+    "name": "RabbitMQ.Client",
+    "version": "7.2.0",
+    "licenses": []
+  },
+  {
+    "name": "Serilog",
+    "version": "4.3.0",
+    "licenses": []
+  },
+  {
+    "name": "Serilog.AspNetCore",
+    "version": "10.0.0",
+    "licenses": []
+  },
+  {
+    "name": "Serilog.Extensions.Hosting",
+    "version": "10.0.0",
+    "licenses": []
+  },
+  {
+    "name": "Serilog.Extensions.Logging",
+    "version": "10.0.0",
+    "licenses": []
+  },
+  {
+    "name": "Serilog.Formatting.Compact",
+    "version": "3.0.0",
+    "licenses": []
+  },
+  {
+    "name": "Serilog.Settings.Configuration",
+    "version": "10.0.0",
+    "licenses": []
+  },
+  {
+    "name": "Serilog.Sinks.Async",
+    "version": "2.1.0",
+    "licenses": []
+  },
+  {
+    "name": "Serilog.Sinks.Console",
+    "version": "6.1.1",
+    "licenses": []
+  },
+  {
+    "name": "Serilog.Sinks.Debug",
+    "version": "3.0.0",
+    "licenses": []
+  },
+  {
+    "name": "Serilog.Sinks.File",
+    "version": "7.0.0",
+    "licenses": []
+  },
+  {
+    "name": "StackExchange.Redis",
+    "version": "2.9.32",
+    "licenses": []
+  },
+  {
+    "name": "System.IdentityModel.Tokens.Jwt",
+    "version": "8.19.2",
+    "licenses": []
+  },
+  {
+    "name": "base-files",
+    "version": "13ubuntu10.4",
+    "licenses": [
+      "GPL"
+    ]
+  },
+  {
+    "name": "ca-certificates",
+    "version": "20260601~24.04.1",
+    "licenses": [
+      "GPL-2",
+      "GPL-2+",
+      "MPL-2.0"
+    ]
+  },
+  {
+    "name": "gcc-14",
+    "version": "14.2.0-4ubuntu2~24.04.1",
+    "licenses": []
+  },
+  {
+    "name": "gcc-14-base",
+    "version": "14.2.0-4ubuntu2~24.04.1",
+    "licenses": [
+      "Artistic",
+      "GFDL-1.2",
+      "GPL",
+      "GPL-3",
+      "LGPL"
+    ]
+  },
+  {
+    "name": "libc6",
+    "version": "2.39-0ubuntu8.8",
+    "licenses": [
+      "GFDL-1.3",
+      "GPL-2",
+      "LGPL-2.1"
+    ]
+  },
+  {
+    "name": "libgcc-s1",
+    "version": "14.2.0-4ubuntu2~24.04.1",
+    "licenses": [
+      "Artistic",
+      "GFDL-1.2",
+      "GPL",
+      "GPL-3",
+      "LGPL"
+    ]
+  },
+  {
+    "name": "libicu74",
+    "version": "74.2-1ubuntu3.1",
+    "licenses": [
+      "GPL-3",
+      "MIT"
+    ]
+  },
+  {
+    "name": "libssl3t64",
+    "version": "3.0.13-0ubuntu3.12",
+    "licenses": [
+      "Apache-2.0",
+      "Artistic",
+      "GPL-1",
+      "GPL-1+"
+    ]
+  },
+  {
+    "name": "libstdc++6",
+    "version": "14.2.0-4ubuntu2~24.04.1",
+    "licenses": [
+      "Artistic",
+      "GFDL-1.2",
+      "GPL",
+      "GPL-3",
+      "LGPL"
+    ]
+  },
+  {
+    "name": "openssl",
+    "version": "3.0.13-0ubuntu3.12",
+    "licenses": []
+  },
+  {
+    "name": "tzdata",
+    "version": "2026c-0ubuntu0.24.04.1",
+    "licenses": [
+      "ICU",
+      "public-domain"
+    ]
+  }
+]

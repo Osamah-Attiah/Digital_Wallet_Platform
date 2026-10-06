@@ -1,0 +1,224 @@
+name: digital-wallet
+x-build-args: &build-args
+  VERSION: ${VERSION:?Run make init first}
+  GIT_SHA: ${GIT_SHA:?Run make init first}
+  BUILD_DATE: ${BUILD_DATE:?Run make init first}
+x-security: &security
+  security_opt: ["no-new-privileges:true"]
+  cap_drop: [ALL]
+  pids_limit: 256
+  mem_limit: 768m
+  cpus: 1.0
+  stop_grace_period: 30s
+x-runtime: &runtime
+  <<: *security
+  read_only: true
+  tmpfs: ["/tmp:rw,noexec,nosuid,size=64m,uid=1654,gid=1654"]
+  restart: unless-stopped
+  networks: [private]
+x-environment: &environment
+  ASPNETCORE_ENVIRONMENT: Development
+  Hosting__SecretsDirectory: /run/secrets
+  AllowedHosts: "localhost;127.0.0.1;api;worker"
+  Identity__Jwt__Issuer: DigitalWallet
+  Identity__Jwt__Audience: DigitalWallet.Api
+  Caching__Enabled: "true"
+  Caching__Environment: development
+  Reporting__StoragePath: /var/reports
+  HttpSecurity__AdminOrigins__0: http://localhost:8080
+  Release__Version: ${VERSION}
+  Release__GitSha: ${GIT_SHA}
+  Observability__ExportEnabled: "false"
+services:
+  postgres:
+    <<: *security
+    image: postgres:17.6-alpine@sha256:ef257d85f76e48da1c64832459b59fcaba1a4dac97bf5d7450c77753542eee94
+    user: "70:70"
+    restart: unless-stopped
+    entrypoint: ["/bin/sh", "/run-config/postgres.sh"]
+    environment:
+      POSTGRES_USER: wallet_bootstrap
+      POSTGRES_DB: digital_wallet
+      POSTGRES_PASSWORD_FILE: /run/secrets/bootstrap_password
+    secrets: [bootstrap_password, api_db_password, worker_db_password, migrator_db_password]
+    volumes: ["postgres-data:/var/lib/postgresql/data", "./ops/postgres/roles.sql:/docker-entrypoint-initdb.d/10-wallet.sql:ro", "./ops/containers/postgres.sh:/run-config/postgres.sh:ro"]
+    networks: [private]
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U wallet_bootstrap -d digital_wallet"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+  redis:
+    <<: *security
+    image: redis:7.4.7-alpine@sha256:02f2cc4882f8bf87c79a220ac958f58c700bdec0dfb9b9ea61b62fb0e8f1bfcf
+    user: "999:999"
+    restart: unless-stopped
+    read_only: true
+    tmpfs: ["/tmp:rw,noexec,nosuid,size=16m,uid=999,gid=999", "/data:rw,noexec,nosuid,size=64m,uid=999,gid=999"]
+    entrypoint: ["/bin/sh", "/run-config/redis.sh"]
+    secrets: [redis_password]
+    volumes: ["./ops/containers/redis.sh:/run-config/redis.sh:ro"]
+    networks: [private]
+    healthcheck:
+      test: [CMD-SHELL, "REDISCLI_AUTH=$$(cat /run/secrets/redis_password) redis-cli --user wallet_cache ping | grep -q PONG"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  rabbitmq:
+    <<: *security
+    image: rabbitmq:4.1.4-management-alpine@sha256:5cbd7145b0306399ad68422c3350b6cbd1bb95704b39f5896480e5b6d4238a04
+    user: "999:999"
+    hostname: rabbitmq
+    restart: unless-stopped
+    entrypoint: ["/bin/sh", "/run-config/rabbit.sh"]
+    secrets: [rabbit_password, rabbit_api_password]
+    volumes: ["rabbit-data:/var/lib/rabbitmq", "./ops/containers/rabbit.sh:/run-config/rabbit.sh:ro"]
+    tmpfs: ["/tmp:rw,nosuid,size=32m,uid=999,gid=999"]
+    networks: [private]
+    healthcheck:
+      test: [CMD, rabbitmq-diagnostics, -q, check_running]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+  migrate:
+    <<: *runtime
+    image: digitalwallet/migrator:${VERSION}
+    build: {context: ., dockerfile: ops/containers/migrator.Dockerfile, args: *build-args}
+    restart: "no"
+    environment:
+      <<: *environment
+      Hosting__Role: Migrator
+      Migration__ApplyRuntimeGrants: "true"
+    secrets: [migrator_db_password, jwt_key, otp_key, token_key, cache_key, redis_password, rabbit_password]
+    depends_on:
+      postgres: {condition: service_healthy}
+  api:
+    <<: *runtime
+    image: digitalwallet/api:${VERSION}
+    build: {context: ., dockerfile: ops/containers/api.Dockerfile, args: *build-args}
+    environment:
+      <<: *environment
+      Hosting__Role: Api
+      Messaging__MonitorDeclaresTopology: "false"
+      HttpSecurity__ExternalWorkersDecision: phase13-separate-worker
+      DevelopmentFixtures__Enabled: "true"
+      Beneficiaries__CoolingPeriodMinutes: 0
+    secrets: [api_db_password, jwt_key, otp_key, token_key, cache_key, redis_password, rabbit_api_password, fixture_key]
+    volumes: ["report-files:/var/reports"]
+    networks: [public, private]
+    ports: ["127.0.0.1:${API_PORT:-8081}:8080"]
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+      redis: {condition: service_healthy}
+      rabbitmq: {condition: service_healthy}
+      notification-sink: {condition: service_healthy}
+  worker:
+    <<: *runtime
+    image: digitalwallet/worker:${VERSION}
+    build: {context: ., dockerfile: ops/containers/worker.Dockerfile, args: *build-args}
+    environment:
+      <<: *environment
+      Hosting__Role: Worker
+    secrets: [worker_db_password, jwt_key, otp_key, token_key, cache_key, redis_password, rabbit_password]
+    volumes: ["report-files:/var/reports"]
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+      redis: {condition: service_healthy}
+      rabbitmq: {condition: service_healthy}
+  admin-web:
+    <<: *runtime
+    image: digitalwallet/admin:${VERSION}
+    build: {context: ., dockerfile: ops/containers/admin.Dockerfile, args: *build-args}
+    networks: [public]
+    ports: ["127.0.0.1:${ADMIN_PORT:-8080}:8080"]
+    depends_on:
+      api: {condition: service_healthy}
+  notification-sink:
+    <<: *runtime
+    image: digitalwallet/admin:${VERSION}
+    build: {context: ., dockerfile: ops/containers/admin.Dockerfile, args: *build-args}
+    environment: {SINK_MODE: "true"}
+    secrets: [fixture_key]
+  collector:
+    <<: *security
+    profiles: [observability]
+    image: digitalwallet/collector:${VERSION}
+    build: {context: ., dockerfile: ops/containers/collector.Dockerfile, args: *build-args}
+    user: "10001:10001"
+    read_only: true
+    command: ["--config=/etc/otel/config.yaml"]
+    volumes: ["./ops/observability/compose-collector.yaml:/etc/otel/config.yaml:ro"]
+    networks: [operations]
+  prometheus:
+    <<: *security
+    profiles: [observability]
+    image: prom/prometheus:v3.5.0@sha256:63805ebb8d2b3920190daf1cb14a60871b16fd38bed42b857a3182bc621f4996
+    user: "65534:65534"
+    read_only: true
+    command: ["--config.file=/etc/prometheus/prometheus.yml", "--storage.tsdb.path=/prometheus", "--storage.tsdb.retention.time=24h"]
+    volumes: ["prometheus-data:/prometheus", "./ops/observability/compose-prometheus.yaml:/etc/prometheus/prometheus.yml:ro", "./ops/observability/alerts.rules.json:/etc/prometheus/alerts.rules.json:ro"]
+    networks: [operations]
+    healthcheck:
+      test: [CMD, wget, -q, -O, /dev/null, http://127.0.0.1:9090/-/ready]
+      interval: 10s
+      timeout: 4s
+      retries: 20
+  grafana:
+    <<: *security
+    profiles: [observability]
+    image: grafana/grafana:12.2.1@sha256:35c41e0fd0295f5d0ee5db7e780cf33506abfaf47686196f825364889dee878b
+    user: "472:472"
+    read_only: true
+    environment:
+      GF_SECURITY_ADMIN_USER: wallet_observer
+      GF_SECURITY_ADMIN_PASSWORD__FILE: /run/secrets/grafana_password
+      GF_USERS_ALLOW_SIGN_UP: "false"
+      GF_AUTH_ANONYMOUS_ENABLED: "false"
+    secrets: [grafana_password]
+    volumes: ["grafana-data:/var/lib/grafana", "./ops/observability/provisioning:/etc/grafana/provisioning:ro", "./ops/observability/provisioning/resolved-dashboards:/var/lib/grafana/dashboards:ro"]
+    tmpfs: ["/tmp:rw,noexec,nosuid,size=16m,uid=472,gid=472"]
+    ports: ["127.0.0.1:3000:3000"]
+    networks: [operations, management]
+    healthcheck:
+      test: [CMD, wget, -q, -O, /dev/null, http://127.0.0.1:3000/api/health]
+      interval: 10s
+      timeout: 4s
+      retries: 20
+networks:
+  public: {}
+  private: {internal: true}
+  operations: {internal: true}
+  management: {}
+volumes:
+  postgres-data: {}
+  rabbit-data: {}
+  report-files: {}
+  prometheus-data: {}
+  grafana-data: {}
+secrets:
+  bootstrap_password:
+    file: ./.local/secrets/bootstrap_password
+  migrator_db_password:
+    file: ./.local/secrets/migrator_db_password
+  api_db_password:
+    file: ./.local/secrets/api_db_password
+  worker_db_password:
+    file: ./.local/secrets/worker_db_password
+  redis_password:
+    file: ./.local/secrets/redis_password
+  rabbit_password:
+    file: ./.local/secrets/rabbit_password
+  jwt_key:
+    file: ./.local/secrets/jwt_key
+  otp_key:
+    file: ./.local/secrets/otp_key
+  token_key:
+    file: ./.local/secrets/token_key
+  cache_key:
+    file: ./.local/secrets/cache_key
+  fixture_key:
+    file: ./.local/secrets/fixture_key
+  grafana_password:
+    file: ./.local/secrets/grafana_password
+  rabbit_api_password:
+    file: ./.local/secrets/rabbit_api_password

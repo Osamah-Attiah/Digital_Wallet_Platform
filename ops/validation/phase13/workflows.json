@@ -1,0 +1,35 @@
+{
+  "workflows": [
+    {
+      "file": "release.yml",
+      "fullShaActions": true,
+      "trustedPrBoundary": true
+    },
+    {
+      "file": "security.yml",
+      "fullShaActions": true,
+      "trustedPrBoundary": true
+    },
+    {
+      "file": "pr.yml",
+      "fullShaActions": true,
+      "trustedPrBoundary": true
+    },
+    {
+      "file": "dotnet-tests.yml",
+      "fullShaActions": true,
+      "trustedPrBoundary": true
+    }
+  ],
+  "status": "passed",
+  "actionlint": {
+    "version": "1.7.7",
+    "findings": 0
+  },
+  "zizmor": {
+    "version": "1.16.3",
+    "mode": "pedantic",
+    "findings": 0
+  },
+  "externallyExecuted": false
+}

@@ -1,0 +1,615 @@
+{
+  "SchemaVersion": 2,
+  "CreatedAt": "2026-10-05T23:58:33.449215671Z",
+  "ArtifactName": "mcr.microsoft.com/dotnet/aspnet:10.0-noble-chiseled-extra@sha256:00e0ad6a7ef8c0c1391b87f05c7ac757a15740455688f2bfcd146a3f4b987efd",
+  "ArtifactType": "container_image",
+  "Metadata": {
+    "Size": 171001856,
+    "OS": {
+      "Family": "ubuntu",
+      "Name": "24.04"
+    },
+    "ImageID": "sha256:47111d3b1090ad818d4506e2a120f29cc6470caa225cc4358d54c6e746e824b3",
+    "DiffIDs": [
+      "sha256:82313bb8b6c13649f8b4219d7d6790840199ca02e6e2f287f4a39858c4f1b82b",
+      "sha256:c82e9a18c2b6d29aa1bd35f27491ad3ae8e89bf8c031fb3e77093502e8bb9a0d",
+      "sha256:c8b1baf880b5847771702a0c6de0c87494d86a723a329dcfed52b582c7e03197",
+      "sha256:907280bf420030c98f00d4ca200648dec1328cfc4df13318dd452267d1041308",
+      "sha256:3d1f72dc3978ebe4550b119c3e450c4169150da9d5f7fa16dfcc78da8526a69a"
+    ],
+    "RepoDigests": [
+      "mcr.microsoft.com/dotnet/aspnet@sha256:00e0ad6a7ef8c0c1391b87f05c7ac757a15740455688f2bfcd146a3f4b987efd"
+    ],
+    "ImageConfig": {
+      "architecture": "arm64",
+      "created": "2026-10-02T19:01:22.125011251Z",
+      "history": [
+        {
+          "created": "2026-10-02T19:00:48Z",
+          "created_by": "COPY /rootfs / # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2026-10-02T19:00:49Z",
+          "created_by": "ENV APP_UID=1654 ASPNETCORE_HTTP_PORTS=8080 DOTNET_RUNNING_IN_CONTAINER=true",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2026-10-02T19:00:49Z",
+          "created_by": "COPY /rootfs/home/app /home/app # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2026-10-02T19:00:49Z",
+          "created_by": "USER 1654",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2026-10-02T19:01:10Z",
+          "created_by": "ENV DOTNET_VERSION=10.0.12",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2026-10-02T19:01:10Z",
+          "created_by": "COPY /usr/share/dotnet /usr/share/dotnet # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2026-10-02T19:01:10Z",
+          "created_by": "COPY /dotnet-symlink /usr/bin # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2026-10-02T19:01:10Z",
+          "created_by": "ENTRYPOINT [\"/usr/bin/dotnet\"]",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2026-10-02T19:01:10Z",
+          "created_by": "CMD [\"--info\"]",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2026-10-02T19:01:22Z",
+          "created_by": "ENV ASPNET_VERSION=10.0.12",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2026-10-02T19:01:22Z",
+          "created_by": "COPY /dotnet /usr/share/dotnet # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        }
+      ],
+      "os": "linux",
+      "rootfs": {
+        "type": "layers",
+        "diff_ids": [
+          "sha256:82313bb8b6c13649f8b4219d7d6790840199ca02e6e2f287f4a39858c4f1b82b",
+          "sha256:c82e9a18c2b6d29aa1bd35f27491ad3ae8e89bf8c031fb3e77093502e8bb9a0d",
+          "sha256:c8b1baf880b5847771702a0c6de0c87494d86a723a329dcfed52b582c7e03197",
+          "sha256:907280bf420030c98f00d4ca200648dec1328cfc4df13318dd452267d1041308",
+          "sha256:3d1f72dc3978ebe4550b119c3e450c4169150da9d5f7fa16dfcc78da8526a69a"
+        ]
+      },
+      "config": {
+        "Cmd": [
+          "--info"
+        ],
+        "Entrypoint": [
+          "/usr/bin/dotnet"
+        ],
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "APP_UID=1654",
+          "ASPNETCORE_HTTP_PORTS=8080",
+          "DOTNET_RUNNING_IN_CONTAINER=true",
+          "DOTNET_VERSION=10.0.12",
+          "ASPNET_VERSION=10.0.12"
+        ],
+        "User": "1654",
+        "WorkingDir": "/",
+        "ArgsEscaped": true
+      }
+    },
+    "Layers": [
+      {
+        "Size": 51948544,
+        "DiffID": "sha256:82313bb8b6c13649f8b4219d7d6790840199ca02e6e2f287f4a39858c4f1b82b"
+      },
+      {
+        "Size": 2048,
+        "DiffID": "sha256:c82e9a18c2b6d29aa1bd35f27491ad3ae8e89bf8c031fb3e77093502e8bb9a0d"
+      },
+      {
+        "Size": 88928768,
+        "DiffID": "sha256:c8b1baf880b5847771702a0c6de0c87494d86a723a329dcfed52b582c7e03197"
+      },
+      {
+        "Size": 2560,
+        "DiffID": "sha256:907280bf420030c98f00d4ca200648dec1328cfc4df13318dd452267d1041308"
+      },
+      {
+        "Size": 30119936,
+        "DiffID": "sha256:3d1f72dc3978ebe4550b119c3e450c4169150da9d5f7fa16dfcc78da8526a69a"
+      }
+    ]
+  },
+  "Results": [
+    {
+      "Target": "mcr.microsoft.com/dotnet/aspnet:10.0-noble-chiseled-extra@sha256:00e0ad6a7ef8c0c1391b87f05c7ac757a15740455688f2bfcd146a3f4b987efd (ubuntu 24.04)",
+      "Class": "os-pkgs",
+      "Type": "ubuntu",
+      "Packages": [
+        {
+          "ID": "base-files@13ubuntu10.5",
+          "Name": "base-files",
+          "Identifier": {
+            "PURL": "pkg:deb/ubuntu/base-files@13ubuntu10.5?arch=arm64&distro=ubuntu-24.04",
+            "UID": "bbb9484ebf80db3"
+          },
+          "Version": "13ubuntu10.5",
+          "Arch": "arm64",
+          "SrcName": "base-files",
+          "SrcVersion": "13ubuntu10.5",
+          "Licenses": [
+            "GPL-2.0-or-later"
+          ],
+          "Maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+          "DependsOn": [
+            "libc6@2.39-0ubuntu8.9"
+          ],
+          "Layer": {
+            "DiffID": "sha256:82313bb8b6c13649f8b4219d7d6790840199ca02e6e2f287f4a39858c4f1b82b"
+          }
+        },
+        {
+          "ID": "ca-certificates@20260601~24.04.1",
+          "Name": "ca-certificates",
+          "Identifier": {
+            "PURL": "pkg:deb/ubuntu/ca-certificates@20260601~24.04.1?arch=all&distro=ubuntu-24.04",
+            "UID": "e5e28662e3b9e3a9"
+          },
+          "Version": "20260601~24.04.1",
+          "Arch": "all",
+          "SrcName": "ca-certificates",
+          "SrcVersion": "20260601~24.04.1",
+          "Licenses": [
+            "GPL-2.0-or-later",
+            "GPL-2.0-only",
+            "MPL-2.0"
+          ],
+          "Maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+          "DependsOn": [
+            "openssl@3.0.13-0ubuntu3.16"
+          ],
+          "Layer": {
+            "DiffID": "sha256:82313bb8b6c13649f8b4219d7d6790840199ca02e6e2f287f4a39858c4f1b82b"
+          }
+        },
+        {
+          "ID": "gcc-14-base@14.2.0-4ubuntu2~24.04.1",
+          "Name": "gcc-14-base",
+          "Identifier": {
+            "PURL": "pkg:deb/ubuntu/gcc-14-base@14.2.0-4ubuntu2~24.04.1?arch=arm64&distro=ubuntu-24.04",
+            "UID": "b5b9e61b1844726"
+          },
+          "Version": "14.2.0",
+          "Release": "4ubuntu2~24.04.1",
+          "Arch": "arm64",
+          "SrcName": "gcc-14",
+          "SrcVersion": "14.2.0",
+          "SrcRelease": "4ubuntu2~24.04.1",
+          "Licenses": [
+            "GPL-2.0-or-later",
+            "GPL-3.0-only",
+            "GFDL-1.2-only",
+            "Artistic-2.0",
+            "LGPL-2.0-or-later"
+          ],
+          "Maintainer": "Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+          "Layer": {
+            "DiffID": "sha256:82313bb8b6c13649f8b4219d7d6790840199ca02e6e2f287f4a39858c4f1b82b"
+          }
+        },
+        {
+          "ID": "libc6@2.39-0ubuntu8.9",
+          "Name": "libc6",
+          "Identifier": {
+            "PURL": "pkg:deb/ubuntu/libc6@2.39-0ubuntu8.9?arch=arm64&distro=ubuntu-24.04",
+            "UID": "ed8c2fc2345c2c5c"
+          },
+          "Version": "2.39",
+          "Release": "0ubuntu8.9",
+          "Arch": "arm64",
+          "SrcName": "glibc",
+          "SrcVersion": "2.39",
+          "SrcRelease": "0ubuntu8.9",
+          "Licenses": [
+            "LGPL-2.1-only",
+            "GPL-2.0-only",
+            "GFDL-1.3-only"
+          ],
+          "Maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+          "DependsOn": [
+            "libgcc-s1@14.2.0-4ubuntu2~24.04.1"
+          ],
+          "Layer": {
+            "DiffID": "sha256:82313bb8b6c13649f8b4219d7d6790840199ca02e6e2f287f4a39858c4f1b82b"
+          }
+        },
+        {
+          "ID": "libgcc-s1@14.2.0-4ubuntu2~24.04.1",
+          "Name": "libgcc-s1",
+          "Identifier": {
+            "PURL": "pkg:deb/ubuntu/libgcc-s1@14.2.0-4ubuntu2~24.04.1?arch=arm64&distro=ubuntu-24.04",
+            "UID": "e7c92f19342d140b"
+          },
+          "Version": "14.2.0",
+          "Release": "4ubuntu2~24.04.1",
+          "Arch": "arm64",
+          "SrcName": "gcc-14",
+          "SrcVersion": "14.2.0",
+          "SrcRelease": "4ubuntu2~24.04.1",
+          "Maintainer": "Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+          "DependsOn": [
+            "gcc-14-base@14.2.0-4ubuntu2~24.04.1",
+            "libc6@2.39-0ubuntu8.9"
+          ],
+          "Layer": {
+            "DiffID": "sha256:82313bb8b6c13649f8b4219d7d6790840199ca02e6e2f287f4a39858c4f1b82b"
+          }
+        },
+        {
+          "ID": "libicu74@74.2-1ubuntu3.1",
+          "Name": "libicu74",
+          "Identifier": {
+            "PURL": "pkg:deb/ubuntu/libicu74@74.2-1ubuntu3.1?arch=arm64&distro=ubuntu-24.04",
+            "UID": "c7461b6a5dc3b587"
+          },
+          "Version": "74.2",
+          "Release": "1ubuntu3.1",
+          "Arch": "arm64",
+          "SrcName": "icu",
+          "SrcVersion": "74.2",
+          "SrcRelease": "1ubuntu3.1",
+          "Licenses": [
+            "MIT",
+            "GPL-3.0-only"
+          ],
+          "Maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+          "DependsOn": [
+            "libc6@2.39-0ubuntu8.9",
+            "libgcc-s1@14.2.0-4ubuntu2~24.04.1",
+            "libstdc++6@14.2.0-4ubuntu2~24.04.1"
+          ],
+          "Layer": {
+            "DiffID": "sha256:82313bb8b6c13649f8b4219d7d6790840199ca02e6e2f287f4a39858c4f1b82b"
+          }
+        },
+        {
+          "ID": "libssl3t64@3.0.13-0ubuntu3.16",
+          "Name": "libssl3t64",
+          "Identifier": {
+            "PURL": "pkg:deb/ubuntu/libssl3t64@3.0.13-0ubuntu3.16?arch=arm64&distro=ubuntu-24.04",
+            "UID": "f02ea553915dd00e"
+          },
+          "Version": "3.0.13",
+          "Release": "0ubuntu3.16",
+          "Arch": "arm64",
+          "SrcName": "openssl",
+          "SrcVersion": "3.0.13",
+          "SrcRelease": "0ubuntu3.16",
+          "Licenses": [
+            "Apache-2.0",
+            "Artistic-2.0",
+            "GPL-1.0-or-later",
+            "GPL-1.0-only"
+          ],
+          "Maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+          "DependsOn": [
+            "libc6@2.39-0ubuntu8.9"
+          ],
+          "Layer": {
+            "DiffID": "sha256:82313bb8b6c13649f8b4219d7d6790840199ca02e6e2f287f4a39858c4f1b82b"
+          }
+        },
+        {
+          "ID": "libstdc++6@14.2.0-4ubuntu2~24.04.1",
+          "Name": "libstdc++6",
+          "Identifier": {
+            "PURL": "pkg:deb/ubuntu/libstdc%2B%2B6@14.2.0-4ubuntu2~24.04.1?arch=arm64&distro=ubuntu-24.04",
+            "UID": "7a1dee7868b889ad"
+          },
+          "Version": "14.2.0",
+          "Release": "4ubuntu2~24.04.1",
+          "Arch": "arm64",
+          "SrcName": "gcc-14",
+          "SrcVersion": "14.2.0",
+          "SrcRelease": "4ubuntu2~24.04.1",
+          "Maintainer": "Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+          "DependsOn": [
+            "gcc-14-base@14.2.0-4ubuntu2~24.04.1",
+            "libc6@2.39-0ubuntu8.9",
+            "libgcc-s1@14.2.0-4ubuntu2~24.04.1"
+          ],
+          "Layer": {
+            "DiffID": "sha256:82313bb8b6c13649f8b4219d7d6790840199ca02e6e2f287f4a39858c4f1b82b"
+          }
+        },
+        {
+          "ID": "openssl@3.0.13-0ubuntu3.16",
+          "Name": "openssl",
+          "Identifier": {
+            "PURL": "pkg:deb/ubuntu/openssl@3.0.13-0ubuntu3.16?arch=arm64&distro=ubuntu-24.04",
+            "UID": "3019dca39bdbce7"
+          },
+          "Version": "3.0.13",
+          "Release": "0ubuntu3.16",
+          "Arch": "arm64",
+          "SrcName": "openssl",
+          "SrcVersion": "3.0.13",
+          "SrcRelease": "0ubuntu3.16",
+          "Maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+          "DependsOn": [
+            "libc6@2.39-0ubuntu8.9",
+            "libssl3t64@3.0.13-0ubuntu3.16"
+          ],
+          "Layer": {
+            "DiffID": "sha256:82313bb8b6c13649f8b4219d7d6790840199ca02e6e2f287f4a39858c4f1b82b"
+          }
+        },
+        {
+          "ID": "tzdata@2026c-0ubuntu0.24.04.1",
+          "Name": "tzdata",
+          "Identifier": {
+            "PURL": "pkg:deb/ubuntu/tzdata@2026c-0ubuntu0.24.04.1?arch=all&distro=ubuntu-24.04",
+            "UID": "1db8c1ac1195792b"
+          },
+          "Version": "2026c",
+          "Release": "0ubuntu0.24.04.1",
+          "Arch": "all",
+          "SrcName": "tzdata",
+          "SrcVersion": "2026c",
+          "SrcRelease": "0ubuntu0.24.04.1",
+          "Licenses": [
+            "public-domain",
+            "ICU"
+          ],
+          "Maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+          "Layer": {
+            "DiffID": "sha256:82313bb8b6c13649f8b4219d7d6790840199ca02e6e2f287f4a39858c4f1b82b"
+          }
+        }
+      ],
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2026-18374",
+          "PkgID": "libc6@2.39-0ubuntu8.9",
+          "PkgName": "libc6",
+          "PkgIdentifier": {
+            "PURL": "pkg:deb/ubuntu/libc6@2.39-0ubuntu8.9?arch=arm64&distro=ubuntu-24.04",
+            "UID": "ed8c2fc2345c2c5c"
+          },
+          "InstalledVersion": "2.39-0ubuntu8.9",
+          "Status": "affected",
+          "Layer": {
+            "DiffID": "sha256:82313bb8b6c13649f8b4219d7d6790840199ca02e6e2f287f4a39858c4f1b82b"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-18374",
+          "DataSource": {
+            "ID": "ubuntu",
+            "Name": "Ubuntu CVE Tracker",
+            "URL": "https://git.launchpad.net/ubuntu-cve-tracker"
+          },
+          "Title": "glibc: glibc: Heap buffer overflow via attacker-controlled fopen mode string",
+          "Description": "Passing an effectively empty string to the `,ccs=` syntax extension of the mode argument in the `fopen` function in the GNU C Library version 2.45 or earlier may result in a heap buffer overflow when the mode string input to the function is attacker controlled.\n\n\n\nThis usage pattern is not seen in applications in common GNU/Linux distributions and applications that process user-supplied values for `ccs` should not pass them through without validation.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-787"
+          ],
+          "VendorSeverity": {
+            "redhat": 2,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "V3Score": 4.9
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2026/08/27/6",
+            "https://access.redhat.com/security/cve/CVE-2026-18374",
+            "https://nvd.nist.gov/vuln/detail/CVE-2026-18374",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=34574",
+            "https://sourceware.org/git/?p=glibc.git;a=blob;f=advisories/GLIBC-SA-2026-0015",
+            "https://sourceware.org/git/?p=glibc.git;a=blob_plain;f=advisories/GLIBC-SA-2026-0015",
+            "https://www.cve.org/CVERecord?id=CVE-2026-18374"
+          ],
+          "PublishedDate": "2026-08-27T20:17:03.553Z",
+          "LastModifiedDate": "2026-09-03T16:43:15.293Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2026-89092",
+          "PkgID": "libc6@2.39-0ubuntu8.9",
+          "PkgName": "libc6",
+          "PkgIdentifier": {
+            "PURL": "pkg:deb/ubuntu/libc6@2.39-0ubuntu8.9?arch=arm64&distro=ubuntu-24.04",
+            "UID": "ed8c2fc2345c2c5c"
+          },
+          "InstalledVersion": "2.39-0ubuntu8.9",
+          "Status": "affected",
+          "Layer": {
+            "DiffID": "sha256:82313bb8b6c13649f8b4219d7d6790840199ca02e6e2f287f4a39858c4f1b82b"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-89092",
+          "DataSource": {
+            "ID": "ubuntu",
+            "Name": "Ubuntu CVE Tracker",
+            "URL": "https://git.launchpad.net/ubuntu-cve-tracker"
+          },
+          "Title": "glibc: nscd stack overflow leads to degraded DNS resolution",
+          "Description": "The nscd service in the GNU C Library 2.3.4 onwards may crash due to a \nstack overflow when a malicious DNS server returns too large a response \nfor a DNS query, resulting in degraded DNS resolution for the system.\n\n\n\nExploitation of this bug needs a system that has nscd enabled and using \nan untrusted DNS server for name resolution, with the compromised DNS \nserver being capable of processing records large enough to result in a \nstack overflow in an nscd thread stack.\u00a0 During experimentation, bind 9 \nwas unable to handle large records, but that could change in future or \nwith a different name server.\u00a0 In typical installations, nscd is \nexecuted in an isolated context as its own user without a shell, due to \nwhich any compromise of that service is isolated.\n\n\n\nThere is a remote possibility of nscd cache corruption if an attacker \nmanages to get the stack pointer into a desired point in the heap, \npotentially resulting in other caches in nscd being overwritten with \ncorrupt data through the stack overflow, until the buggy code path \neventually results in a crash.\n\n\n\nFinally, a crash in nscd may result in performance degradation when \nresolving names, but it does not result in a denial of service.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-789"
+          ],
+          "VendorSeverity": {
+            "redhat": 2,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L",
+              "V3Score": 4.2
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2026/09/11/2",
+            "https://access.redhat.com/security/cve/CVE-2026-89092",
+            "https://nvd.nist.gov/vuln/detail/CVE-2026-89092",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=34624",
+            "https://sourceware.org/git/?p=glibc.git;a=blob;f=advisories/GLIBC-SA-2026-0016",
+            "https://sourceware.org/git/?p=glibc.git;a=blob_plain;f=advisories/GLIBC-SA-2026-0016",
+            "https://www.cve.org/CVERecord?id=CVE-2026-89092"
+          ],
+          "PublishedDate": "2026-09-11T02:18:35.46Z",
+          "LastModifiedDate": "2026-09-11T18:17:00.23Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-5222",
+          "PkgID": "libicu74@74.2-1ubuntu3.1",
+          "PkgName": "libicu74",
+          "PkgIdentifier": {
+            "PURL": "pkg:deb/ubuntu/libicu74@74.2-1ubuntu3.1?arch=arm64&distro=ubuntu-24.04",
+            "UID": "c7461b6a5dc3b587"
+          },
+          "InstalledVersion": "74.2-1ubuntu3.1",
+          "Status": "affected",
+          "Layer": {
+            "DiffID": "sha256:82313bb8b6c13649f8b4219d7d6790840199ca02e6e2f287f4a39858c4f1b82b"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-5222",
+          "DataSource": {
+            "ID": "ubuntu",
+            "Name": "Ubuntu CVE Tracker",
+            "URL": "https://git.launchpad.net/ubuntu-cve-tracker"
+          },
+          "Title": "icu: Stack buffer overflow in the SRBRoot::addTag function",
+          "Description": "A stack buffer overflow was found in Internationl components for unicode (ICU ). While running the genrb binary, the 'subtag' struct overflowed at the SRBRoot::addTag function. This issue may lead to memory corruption and local arbitrary code execution.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-120"
+          ],
+          "VendorSeverity": {
+            "alma": 2,
+            "amazon": 3,
+            "azure": 3,
+            "cbl-mariner": 3,
+            "oracle-oval": 2,
+            "photon": 3,
+            "redhat": 2,
+            "rocky": 2,
+            "ubuntu": 1
+          },
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "V3Score": 7
+            }
+          },
+          "References": [
+            "https://access.redhat.com/errata/RHSA-2025:11888",
+            "https://access.redhat.com/errata/RHSA-2025:12083",
+            "https://access.redhat.com/errata/RHSA-2025:12331",
+            "https://access.redhat.com/errata/RHSA-2025:12332",
+            "https://access.redhat.com/errata/RHSA-2025:12333",
+            "https://access.redhat.com/errata/RHSA-2026:54544",
+            "https://access.redhat.com/errata/RHSA-2026:54553",
+            "https://access.redhat.com/errata/RHSA-2026:54581",
+            "https://access.redhat.com/errata/RHSA-2026:56786",
+            "https://access.redhat.com/errata/RHSA-2026:56853",
+            "https://access.redhat.com/errata/RHSA-2026:56911",
+            "https://access.redhat.com/errata/RHSA-2026:60019",
+            "https://access.redhat.com/errata/RHSA-2026:65839",
+            "https://access.redhat.com/security/cve/CVE-2025-5222",
+            "https://bugzilla.redhat.com/2368600",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2368600",
+            "https://cert-portal.siemens.com/productcert/html/ssa-585531.html",
+            "https://creativecommons.org/licenses/by/4.0/",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-5222",
+            "https://errata.almalinux.org/9/ALSA-2025-12083.html",
+            "https://errata.rockylinux.org/RLSA-2025:12083",
+            "https://linux.oracle.com/cve/CVE-2025-5222.html",
+            "https://linux.oracle.com/errata/ELSA-2025-12083.html",
+            "https://lists.debian.org/debian-lts-announce/2025/06/msg00015.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-5222",
+            "https://unicode-org.atlassian.net/jira/software/c/projects/ICU/issues/ICU-22957",
+            "https://www.cve.org/CVERecord?id=CVE-2025-5222"
+          ],
+          "PublishedDate": "2025-05-27T21:15:23.03Z",
+          "LastModifiedDate": "2026-09-17T19:16:36.083Z"
+        }
+      ]
+    },
+    {
+      "Target": "usr/share/dotnet/shared/Microsoft.AspNetCore.App/10.0.12/Microsoft.AspNetCore.App.deps.json",
+      "Class": "lang-pkgs",
+      "Type": "dotnet-core",
+      "Packages": [
+        {
+          "ID": "Microsoft.AspNetCore.App.Runtime.linux-arm64/10.0.12",
+          "Name": "Microsoft.AspNetCore.App.Runtime.linux-arm64",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-arm64@10.0.12",
+            "UID": "16047997adc19ec1"
+          },
+          "Version": "10.0.12",
+          "Layer": {
+            "DiffID": "sha256:3d1f72dc3978ebe4550b119c3e450c4169150da9d5f7fa16dfcc78da8526a69a"
+          },
+          "Locations": [
+            {
+              "StartLine": 581,
+              "EndLine": 586
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Target": "usr/share/dotnet/shared/Microsoft.NETCore.App/10.0.12/Microsoft.NETCore.App.deps.json",
+      "Class": "lang-pkgs",
+      "Type": "dotnet-core",
+      "Packages": [
+        {
+          "ID": "Microsoft.NETCore.App.Runtime.linux-arm64/10.0.12",
+          "Name": "Microsoft.NETCore.App.Runtime.linux-arm64",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.NETCore.App.Runtime.linux-arm64@10.0.12",
+            "UID": "3ebdfb18cb48a80d"
+          },
+          "Version": "10.0.12",
+          "Layer": {
+            "DiffID": "sha256:c8b1baf880b5847771702a0c6de0c87494d86a723a329dcfed52b582c7e03197"
+          },
+          "Locations": [
+            {
+              "StartLine": 749,
+              "EndLine": 754
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

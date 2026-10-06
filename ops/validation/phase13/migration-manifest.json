@@ -1,0 +1,71 @@
+{
+  "status": "verified",
+  "version": "13.0.0-local",
+  "contexts": [
+    {
+      "context": "IdentityDbContext",
+      "latest": "20261005203108_BindSessionsToAuthorizationVersion",
+      "pending": 0
+    },
+    {
+      "context": "CustomersDbContext",
+      "latest": "20261005203224_AdminSearchKeysetIndexes",
+      "pending": 0
+    },
+    {
+      "context": "LedgerDbContext",
+      "latest": "20260920121221_InitialLedger",
+      "pending": 0
+    },
+    {
+      "context": "WalletsDbContext",
+      "latest": "20260920144705_EnforceWalletLedgerReadiness",
+      "pending": 0
+    },
+    {
+      "context": "BeneficiariesDbContext",
+      "latest": "20260920200000_AddBeneficiaryStateConstraints",
+      "pending": 0
+    },
+    {
+      "context": "RiskLimitsDbContext",
+      "latest": "20260922120839_PreserveUsageAcrossRuleVersions",
+      "pending": 0
+    },
+    {
+      "context": "TransfersDbContext",
+      "latest": "20260922160539_TrackTransferOtpIssuance",
+      "pending": 0
+    },
+    {
+      "context": "TransactionsDbContext",
+      "latest": "20261005004252_InitialTransactions",
+      "pending": 0
+    },
+    {
+      "context": "OutboxDbContext",
+      "latest": "20261006090000_OutboxTraceHeaders",
+      "pending": 0
+    },
+    {
+      "context": "NotificationsDbContext",
+      "latest": "20261005112943_InitialNotifications",
+      "pending": 0
+    },
+    {
+      "context": "AuditDbContext",
+      "latest": "20261005125706_InitialAudit",
+      "pending": 0
+    },
+    {
+      "context": "AdministrationDbContext",
+      "latest": "20261005130604_InitialAdministration",
+      "pending": 0
+    },
+    {
+      "context": "ReportingDbContext",
+      "latest": "20261005130638_InitialReporting",
+      "pending": 0
+    }
+  ]
+}

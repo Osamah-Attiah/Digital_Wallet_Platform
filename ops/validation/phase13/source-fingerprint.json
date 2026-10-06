@@ -1,0 +1,1671 @@
+{
+  "algorithm": "sha256",
+  "scope": "tracked and trackable repository inputs excluding generated ops/validation evidence, ignored private files and build outputs",
+  "fingerprint": "7702af8aeed4d450b46b35492f1116e1e333b0a5b468a238b1cdfb8982827e14",
+  "files": [
+    {
+      "path": ".dockerignore",
+      "sha256": "7354cdfb4401f02869e9083732230bca14aeea6873fb2416d6965ac007fe271f"
+    },
+    {
+      "path": ".env.example",
+      "sha256": "2703bbeac3f88cefce73e3641ab445c899c0cc97b645bcb1e5bf54f487a47393"
+    },
+    {
+      "path": ".github/dependabot.yml",
+      "sha256": "0975446ae15c73d7877360cf10356736519068d03ba23adf5dc83c97e507410f"
+    },
+    {
+      "path": ".github/workflows/dotnet-tests.yml",
+      "sha256": "1556ba3a881cc27ba98e8ef3e3e48d8808d323b138a8bc047762618c17f85ecf"
+    },
+    {
+      "path": ".github/workflows/pr.yml",
+      "sha256": "5def3eae164beef2d1d0c014fd68b653264898ab3e8df59466abf333c3184b15"
+    },
+    {
+      "path": ".github/workflows/release.yml",
+      "sha256": "eb799cd206613654541c3a6851b852d5e126f87425686ed472cfbe81436855b1"
+    },
+    {
+      "path": ".github/workflows/security.yml",
+      "sha256": "7422e32069d53fbe1d3b9f62fcbfa4c2b632004c82bf866d3ecaaca990f10c28"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "0274220e69bb2ae51f75b44ba055701c1fad0c434bede3d61101eaa9125eb4cd"
+    },
+    {
+      "path": ".gitleaks.toml",
+      "sha256": "27630a96d6c55755cc37620f3933d5cab94b1eb78a726a32e11212972525d76e"
+    },
+    {
+      "path": ".nvmrc",
+      "sha256": "7e8a2fa94951112b894a3dbe3d05efef5e9263741fa49125f0a70f40fedab4cc"
+    },
+    {
+      "path": "Digital_Wallet_Platform.sln",
+      "sha256": "c99cc9c339ee9b088ddd604ef8500b669c368585cb4e581d5cec4b97be4616d9"
+    },
+    {
+      "path": "Directory.Build.props",
+      "sha256": "0803abe268cfc7edddfb4844ef2b24c7e48a74cb1ced01a3c0954cf91cd0773f"
+    },
+    {
+      "path": "Makefile",
+      "sha256": "f2fbeac44e55d179e0959a753ff5e4ea9086d07fbe8303391460504d03462fc8"
+    },
+    {
+      "path": "apps/admin/README.md",
+      "sha256": "32d0e88bd58e183db45d32a63edc074300758d195cbc116d73fe3e4431f754e3"
+    },
+    {
+      "path": "apps/admin/index.html",
+      "sha256": "e807fabd3e353363e81e3e8299a2ed50e3f5bf9d772a887deed1e502bc90c0c4"
+    },
+    {
+      "path": "apps/admin/package-lock.json",
+      "sha256": "1ba826afe58c9d751bb7f8de8d3bc62995276db4adafa422f9fea024833c0c9f"
+    },
+    {
+      "path": "apps/admin/package.json",
+      "sha256": "f9ddfb61d50a6ffbdee8594a693af3b540fa08592d1f2bbbe4147d57bbc62e3f"
+    },
+    {
+      "path": "apps/admin/security-headers.json",
+      "sha256": "1dc9a1fa4dc4659afc71e81bc2ce57b0f404b51d235d3d308d5734d47d6811b1"
+    },
+    {
+      "path": "apps/admin/src/App.test.tsx",
+      "sha256": "d6ff1fed3472f35b1a983b156e58acb58bfb364ecbfda9acfeb670bcc4757917"
+    },
+    {
+      "path": "apps/admin/src/App.tsx",
+      "sha256": "e268f7c187a42159b3d1d8d5e90742655ba85b4b5f2687f84d6cedb0f0e52923"
+    },
+    {
+      "path": "apps/admin/src/api.ts",
+      "sha256": "2e938e2c1225c851a16595530a2c36fc6c47db531cfa1b3d9396d86c3ab76fc4"
+    },
+    {
+      "path": "apps/admin/src/auth.tsx",
+      "sha256": "cd55006ef21f40026872d8d012e50f2180651be64349238dc6598fe04653d81b"
+    },
+    {
+      "path": "apps/admin/src/components.tsx",
+      "sha256": "7aa709b254dca7a013141969d04339924526e404e348324b47b2b335f6fbd5cc"
+    },
+    {
+      "path": "apps/admin/src/main.tsx",
+      "sha256": "4ce350c47b166c6f69ead5ca324795eee532ec620c283e00aa96e6e97aa63131"
+    },
+    {
+      "path": "apps/admin/src/pages.tsx",
+      "sha256": "aedfc1c38c236cbfb2b285c494f65e01d3dd4f9d00b242f59c24551b4d3b8772"
+    },
+    {
+      "path": "apps/admin/src/style.css",
+      "sha256": "714ae8ba6517cf2384f332d5745d54a1ca5c8f240244764f373a361ef3cda6f4"
+    },
+    {
+      "path": "apps/admin/src/test-setup.ts",
+      "sha256": "9b328c4843431fa76d8de00008fc159e95f99a840211085ff3b8f25e53d14409"
+    },
+    {
+      "path": "apps/admin/tsconfig.json",
+      "sha256": "f7039ecf027e9e720e76feb6f2fa35120370c1ba644ceeec62fb48025eb9b88a"
+    },
+    {
+      "path": "apps/admin/vite.config.ts",
+      "sha256": "10859243ee5b3c92c6531d06cfeaf34d31e5f385ccbee16daeae5e9c82fe41e2"
+    },
+    {
+      "path": "compose.observability.yaml",
+      "sha256": "958a90a5d6049d313209b8f90d9ace0fc92ac520cea359dd2148725e47684a95"
+    },
+    {
+      "path": "compose.yaml",
+      "sha256": "da8539ae7c5525c0685908051d2ffa676935674280fa8df4f8561b4f3b3b2ce0"
+    },
+    {
+      "path": "docs/api-error-contract.md",
+      "sha256": "ee70cee0b3d51238e274d3e6089d2739dfa9539137c49193443faf605ceea4a6"
+    },
+    {
+      "path": "docs/architecture-boundaries.md",
+      "sha256": "a907c11382aec0ec4a49419985c630e20480d015c09d213728cd0dd7d2c81a5f"
+    },
+    {
+      "path": "docs/architecture/admin-dashboard-reporting-phase10.md",
+      "sha256": "7d14447c497fae84e6a286c7b1a7a92d6fc05a1d479c60bf97494c0f2474a8d4"
+    },
+    {
+      "path": "docs/architecture/beneficiaries-phase5.md",
+      "sha256": "2d66865b8ee277fbe73f1185364c209a68089726ecc074b3e95a72718d63de90"
+    },
+    {
+      "path": "docs/architecture/identity-phase2.md",
+      "sha256": "ccf06eccf68dcb520eb7bd363c5a5f4adf1cb483744b8e21b8d207bbd1b7bc82"
+    },
+    {
+      "path": "docs/architecture/ledger-phase4.md",
+      "sha256": "4b0df8708d8abe638540180b7fa5d56304946ab0eaddeeb9e5a68166c2a28d33"
+    },
+    {
+      "path": "docs/architecture/observability-hardening-phase12.md",
+      "sha256": "f179b1b8d9f524f21c30b0825072d7f2ef6dfabeaf4728936570a9a3621ef8a3"
+    },
+    {
+      "path": "docs/architecture/outbox-rabbitmq-notifications-phase9.md",
+      "sha256": "2619f51ed5a5bdd8c1f1ab9633ab46d710a478cb9116c73c50d1126d87549f8a"
+    },
+    {
+      "path": "docs/architecture/packaging-cicd-phase13.md",
+      "sha256": "4085b77edd623bd86d2cbf296d2b07a253fee6a998f77eb83c2f0f252570d677"
+    },
+    {
+      "path": "docs/architecture/redis-performance-phase11.md",
+      "sha256": "285a879195ffe84217d53287283f45cbd289fea48fbb540f1231a937d3cb5c68"
+    },
+    {
+      "path": "docs/architecture/risk-limits-fees-phase6.md",
+      "sha256": "c324adde90ba4460cdf7caad2b9e5db473f3e4dc7453da4cd1fd53faa7b1f384"
+    },
+    {
+      "path": "docs/architecture/solution-foundation.md",
+      "sha256": "e693372e212f5f1572be5e8c0ddc4d5af01e1d5baeaa30c591fc2135ba074e8f"
+    },
+    {
+      "path": "docs/architecture/transactions-reversal-phase8.md",
+      "sha256": "e04deae635bd20ca35fa91cb04e7140ca474332df6ba9868743f32a59e03f2f7"
+    },
+    {
+      "path": "docs/architecture/transfers-phase7.md",
+      "sha256": "5379d3bfa72a16772ece18d3b20be39d8e63ead7d7ec588583b9f2822d5003b0"
+    },
+    {
+      "path": "docs/deployment/ci-cd.md",
+      "sha256": "4f53f0e20d3ec406c0873d8b0d83efcf62033b6f75f683298bd49ea266329a42"
+    },
+    {
+      "path": "docs/deployment/local-compose.md",
+      "sha256": "755699acad3086b33332bc6abe5c993a630590605dbc387768ea6d4b65b50ed4"
+    },
+    {
+      "path": "docs/deployment/migrations.md",
+      "sha256": "1fb6607413aac7729909296aa61a83b6b97ce93b60b30d5926297622d54fa8d3"
+    },
+    {
+      "path": "docs/deployment/supply-chain.md",
+      "sha256": "85be8aed295b26cab85c3db56a6461109ef34de1c7e26ff5740470d0fa663b62"
+    },
+    {
+      "path": "docs/module-boundaries.md",
+      "sha256": "8eb1d97515441eceb7f02a7f37436b217c8de44225a096ad649bc08d50fe52bd"
+    },
+    {
+      "path": "docs/performance/phase11/after-redis.json",
+      "sha256": "35ffc8013a3ba1e3df825afb70adf30a8f42768d69c20bcc53941f8c37fd9cc9"
+    },
+    {
+      "path": "docs/performance/phase11/after-uncached.json",
+      "sha256": "d84db46cf772fa78e03671e1b9f5b9a35f9eb00d1a6a23510d665e54a88b5aa0"
+    },
+    {
+      "path": "docs/performance/phase11/baseline.json",
+      "sha256": "749c2099a60e28e3275b6d5c7c893e56f042ca5fb885f09182ebb412c0ae7b59"
+    },
+    {
+      "path": "docs/performance/phase11/postgres-dense-plans.json",
+      "sha256": "fced1dd2657e916bcc9cebdab23755cdc87208a48508e62552708e0cdbfeedfa"
+    },
+    {
+      "path": "docs/performance/phase11/validation-summary.json",
+      "sha256": "3f9bf89f20bf067b412d7dba047ebfd0c82a203faef9108fbc07cbfb8aa508e4"
+    },
+    {
+      "path": "docs/runbooks/README.md",
+      "sha256": "e1345cce453cd60d0d59fb28791dd7bffa298c886248b5dda7442ff6c82b2201"
+    },
+    {
+      "path": "docs/runbooks/ledger-imbalance.md",
+      "sha256": "0a33bae48b09f56aa3de37764a585b93396915bdd1ffd1a8df81d633dc603784"
+    },
+    {
+      "path": "docs/runbooks/outbox-backlog.md",
+      "sha256": "99b6f29764c769f74f227a230ec02211973ee20ea6cfd914ba93528efcf26b2c"
+    },
+    {
+      "path": "docs/runbooks/pii-report-abuse.md",
+      "sha256": "d52329ce06235102d18e9614ae94ac52266e25e81fd4782afedeeeabf18bb97d"
+    },
+    {
+      "path": "docs/runbooks/postgres-pool.md",
+      "sha256": "a9dafece72cd935ea945ab183ea2940607ba08694138ba65dfa7c270354ef296"
+    },
+    {
+      "path": "docs/runbooks/projection-drift.md",
+      "sha256": "174cdd2b630fd6d079acef8f914547371d8329e36eae42f7324c53d30765fe97"
+    },
+    {
+      "path": "docs/runbooks/rabbitmq-dlq.md",
+      "sha256": "2b7c26eda4642775746616434530fefe3aeda8424f68040805872d0ebc4bb9ba"
+    },
+    {
+      "path": "docs/runbooks/reconciliation.md",
+      "sha256": "1e33ea7d8fa686e0a9eacb0b7914b5c7ec7f62dfa1dbfe321678eeeda201ebc4"
+    },
+    {
+      "path": "docs/runbooks/redis-outage.md",
+      "sha256": "6a2ab8b798e91598f82191c3701e754c71d48b769a099c996107c9f5b1f67cee"
+    },
+    {
+      "path": "docs/runbooks/refresh-reuse.md",
+      "sha256": "843bae9e2aefae6d1babcddd4d812f274d0c2db23821d7f52c45c218eabcd6d9"
+    },
+    {
+      "path": "docs/runbooks/telemetry-outage.md",
+      "sha256": "3886031276b6dbf421ad9d0df1b1c3aee64588616f2eb33d4dc5dc18b34acc6a"
+    },
+    {
+      "path": "docs/security/threat-model-phase12.md",
+      "sha256": "d6a480a4b17225c05113bb4c4a036c867a284326415127f4a597ca5f1436d82d"
+    },
+    {
+      "path": "docs/system-analysis-and-architecture.ar.md",
+      "sha256": "dc3f057b1395c7df860cf88e0353f5d19261116a57718e009f5dd35abbe290cb"
+    },
+    {
+      "path": "global.json",
+      "sha256": "c39786ab1a147662bbe4db015f900165178875ec4a872ddae53bc0c90771ac34"
+    },
+    {
+      "path": "ops/containers/admin.Dockerfile",
+      "sha256": "972c5fe0216063acb9b1834328db698a6704e4b40ab463439665de86782a01f8"
+    },
+    {
+      "path": "ops/containers/api.Dockerfile",
+      "sha256": "6d15ab320b338093ce20e4ed4f0938923b48f12fe750fa265ba2b768f03d760c"
+    },
+    {
+      "path": "ops/containers/collector.Dockerfile",
+      "sha256": "49e9997a7b48b3e6a0d5e1712fc6c6c4f85ffa5af063d0d3e4b91e9d0213e830"
+    },
+    {
+      "path": "ops/containers/migrator.Dockerfile",
+      "sha256": "dfc0447f63f350d163c588de774b8ef17fa1917fa1a1cbacbe723972c3eb66da"
+    },
+    {
+      "path": "ops/containers/postgres.sh",
+      "sha256": "24205982faa2d4a09a89ed72d7015410d0caa78cf9b691700b5b253cfdde8efa"
+    },
+    {
+      "path": "ops/containers/probe/main.go",
+      "sha256": "894dfa62aba229895d9b364a94a430535b9fc3979990c3fdc4c079038d8ee186"
+    },
+    {
+      "path": "ops/containers/rabbit.sh",
+      "sha256": "7a7aab0d7b70fe8531756764d6101abb02a9350976f7ac9ddeb4a300807ace1c"
+    },
+    {
+      "path": "ops/containers/redis.sh",
+      "sha256": "cfcc950d96066bc3af9454b7491a969a9970b7e28d994990f45a5a97c0c12e61"
+    },
+    {
+      "path": "ops/containers/web/go.mod",
+      "sha256": "20104530e267774e7421a8fb488629b7963eeea5490587862b61c76a4d411ee7"
+    },
+    {
+      "path": "ops/containers/web/main.go",
+      "sha256": "1010ba3caf345cb88a28e700cff379ebcaeb27f4810ac2c512603258d9d02c0b"
+    },
+    {
+      "path": "ops/containers/worker.Dockerfile",
+      "sha256": "a9ee7f6961aa718ecc7466f4e016b7ac2b3667c8cc53c2fbd1b7c1e683a4109e"
+    },
+    {
+      "path": "ops/observability/README.md",
+      "sha256": "6206bf791b0e05c43de761a35f1c09fff73ca96534c6a4b4c13be9636b75dbe8"
+    },
+    {
+      "path": "ops/observability/alerts.rules.json",
+      "sha256": "88a65463c3464c3fae68ce82fa905e1dd53be464660e442a9c5af3cb41e7128f"
+    },
+    {
+      "path": "ops/observability/alerts.tests.json",
+      "sha256": "1da3bad6074454e9fe8d1fa413fb975820cf49ad65dcbd4cbbec83ec83e14609"
+    },
+    {
+      "path": "ops/observability/collector.example.yaml",
+      "sha256": "2d6830d247cb2b212aa8a3b969b0266f163741158ae48ac7aeadc734ac7b966a"
+    },
+    {
+      "path": "ops/observability/compose-collector.yaml",
+      "sha256": "828df011f4198a5216885ea75ae5ba5c349290b7ceb892ec8bec555ad704d246"
+    },
+    {
+      "path": "ops/observability/compose-prometheus.yaml",
+      "sha256": "f2b48c1923c01cbdf30387e5b65182807a9878db3435cb4a91e05ad4840cc914"
+    },
+    {
+      "path": "ops/observability/dashboards/api-reliability.json",
+      "sha256": "de81c04637c32b1b01ac319aa4ca977de773be428f0ccd86b4acacf84d2283c7"
+    },
+    {
+      "path": "ops/observability/dashboards/cache-dependencies.json",
+      "sha256": "8828b243f88b9fdf790ab2218f1f785d38eb60d6820e780cf7e8a18337d9a459"
+    },
+    {
+      "path": "ops/observability/dashboards/financial-integrity.json",
+      "sha256": "cda2cf28d54c09eafb7bdb6a98734416497b79f667b657cd4733e75385876222"
+    },
+    {
+      "path": "ops/observability/dashboards/identity-security.json",
+      "sha256": "9cfaf5d4e05b40e3f2b21ec041ca9516555634822ecf931ca07bd2865d1303f6"
+    },
+    {
+      "path": "ops/observability/dashboards/messaging.json",
+      "sha256": "3bc8047d4bba3f7cf0cddd3969ffa50ddceb1e51370a7472218518992c253d1e"
+    },
+    {
+      "path": "ops/observability/provisioning/dashboards/wallet.yaml",
+      "sha256": "8122444620ab369a5b4dc45597bba9f1a8c1b8fe7a31b562afe1e8cb21a5349f"
+    },
+    {
+      "path": "ops/observability/provisioning/datasources/prometheus.yaml",
+      "sha256": "f3998abeaca5b9c7874ac566bc108e98329e4b827270f863176b1d7451fddd55"
+    },
+    {
+      "path": "ops/observability/provisioning/resolved-dashboards/api-reliability.json",
+      "sha256": "848f79fc753c7329770c470c5717584adfeb1f235187cfeeae6f9f2357ff7818"
+    },
+    {
+      "path": "ops/observability/provisioning/resolved-dashboards/cache-dependencies.json",
+      "sha256": "fbf26855a2b7643cb6e510a0f9fefc7681b9313da04a0c1479551886041a9833"
+    },
+    {
+      "path": "ops/observability/provisioning/resolved-dashboards/financial-integrity.json",
+      "sha256": "73cf76f91a90af633bacda97db0587f39db36b397601cada1b61ee998731e84e"
+    },
+    {
+      "path": "ops/observability/provisioning/resolved-dashboards/identity-security.json",
+      "sha256": "e7810241b62e0966e4551f05112b00d9fe3bc99f47b1138e24456ae7db5ca6c0"
+    },
+    {
+      "path": "ops/observability/provisioning/resolved-dashboards/messaging.json",
+      "sha256": "259d07be64039f5b38a843c0614596cd98acf864e60d221ebe569b93930e2d75"
+    },
+    {
+      "path": "ops/observability/validation/alerts.validation.json",
+      "sha256": "1d56b8d66a1e240c02248f410da46d7b241415d3dd2c67935c3095d58b11d981"
+    },
+    {
+      "path": "ops/observability/validation/backend.validation.json",
+      "sha256": "818877ad23ed2f084a79912d40e17b6367079e67fcd71a6c7dcf345d1cdf3fe5"
+    },
+    {
+      "path": "ops/observability/validation/dashboards.validation.json",
+      "sha256": "eb20a9fd9a9555b28bc0966150e936861eacd84e839687231fec60ad785d5a1e"
+    },
+    {
+      "path": "ops/observability/validation/phase12-validation.md",
+      "sha256": "c66d4f4c2796d54c9175886e3725558363b2a51d7386d4072691288393fbb43e"
+    },
+    {
+      "path": "ops/observability/validation/spa.validation.json",
+      "sha256": "b4981e592e095060f638147fdb088dd540d89551446de48ff970198b1c30e9ce"
+    },
+    {
+      "path": "ops/postgres/roles.sql",
+      "sha256": "2b743d9398f431e250c12d18fd75c0740d5cf6c5f7477d37ff3a3c57f42fcc09"
+    },
+    {
+      "path": "ops/postgres/runtime-grants.sql",
+      "sha256": "3225e9cbec285571a3a913d00a9f46324c630eb38c68396a4a1f349df2d8c544"
+    },
+    {
+      "path": "ops/scripts/format-check.py",
+      "sha256": "d1082e7856ae0904bf241620913a9833b24428910129260ad387314d10af497d"
+    },
+    {
+      "path": "ops/scripts/image-check.py",
+      "sha256": "c6c1770e7ca35c88e1f758b438107327c7beacf38f1c47d58dbddc7e72634533"
+    },
+    {
+      "path": "ops/scripts/init-local.py",
+      "sha256": "529aa7cc501f988ed41e96e48c796689b2b1a0b90d74b317705b64667f0e43b4"
+    },
+    {
+      "path": "ops/scripts/migration-tests.py",
+      "sha256": "76a96804988aa96bbd20048572db6ef628c63b3af37dc7863b715c68796631d7"
+    },
+    {
+      "path": "ops/scripts/prepare-ci.py",
+      "sha256": "ffb94c8b48a20b62875db8f3d0de8219934b7fc7ec96fa708e9025aaee6cae63"
+    },
+    {
+      "path": "ops/scripts/publish-release.py",
+      "sha256": "96de367d0e23af24a064e05da5d779985596cbdd67565616aad18e19fd03e3e7"
+    },
+    {
+      "path": "ops/scripts/release-build.py",
+      "sha256": "97251ccc2b5b8b512f744cf8995aef7bede54bf42af14d2274ad1e0d455d5077"
+    },
+    {
+      "path": "ops/scripts/release-finalize.py",
+      "sha256": "3bd032ab3e74bc3f3faa50cbbd9bff5566ced917a7fdb67827d05f3c6b84f5e4"
+    },
+    {
+      "path": "ops/scripts/release.py",
+      "sha256": "5c6c79932f08e8a3726ee471ebb2470c58ce9c8599510da9a6b4e171fab7cce6"
+    },
+    {
+      "path": "ops/scripts/scan.py",
+      "sha256": "26753fd8d2dc023e4e58dac789f3aefbb29a27d5438c5272b869cd75b4496af4"
+    },
+    {
+      "path": "ops/scripts/smoke.py",
+      "sha256": "bc9f9eca456b0cadc6cb38b2f6662be64526fee78bdefdf7527b4ee2fb87df2b"
+    },
+    {
+      "path": "ops/scripts/validate-packaging.py",
+      "sha256": "b52ff155ee02fa99121795496d23b30c48cd5417c92d7c8e959a8fda7ab990a0"
+    },
+    {
+      "path": "ops/scripts/validate-workflows.py",
+      "sha256": "e4b05e2f0c86d879a8b5539a3a275ec6396b13f4f12db6148e20844af6abe580"
+    },
+    {
+      "path": "ops/scripts/verify-no-secrets.py",
+      "sha256": "ce8bcc7b0ae27e6bff57ad213a795ce9202d2d79ea61e3a07d3909d2b8c6793e"
+    },
+    {
+      "path": "ops/scripts/verify-observability.py",
+      "sha256": "11268175d4b84bdea6dea64e9182013f546bfb5bc27e5357e54c4af74539ff5a"
+    },
+    {
+      "path": "ops/security/vulnerability-allowlist.json",
+      "sha256": "3627561255cf5ea3486c4867c62ba3a1c936a5d916b5d3e31456c3a607b2e549"
+    },
+    {
+      "path": "src/DigitalWallet.Api/Composition/AdminAuditFilter.cs",
+      "sha256": "bc7d99bdde1272f4df78432c232d51424272ce7377aeb231d89f9670e72da5a8"
+    },
+    {
+      "path": "src/DigitalWallet.Api/Composition/ReportCoordinator.cs",
+      "sha256": "c23271e9ca1facde0c5f1e3891b9222062ee308ce719237f963240b52bcaa08c"
+    },
+    {
+      "path": "src/DigitalWallet.Api/Composition/TransactionCoordinator.cs",
+      "sha256": "5e3bf57bafae62dc4bc251f60c12e6b69a957595a2f5d580c447c0cab65499c2"
+    },
+    {
+      "path": "src/DigitalWallet.Api/Composition/TransferCoordinator.cs",
+      "sha256": "0f64a026b031237b8957986fc32cc4bda8d0888ac604901fa407840e3289285e"
+    },
+    {
+      "path": "src/DigitalWallet.Api/DigitalWallet.Api.csproj",
+      "sha256": "95a23999937ee36b2a9917b0d7d0bd0c20a705dffa5b457b9b56f0c8284fc292"
+    },
+    {
+      "path": "src/DigitalWallet.Api/Foundation/Configuration/PlatformOptions.cs",
+      "sha256": "6b86c28bb9c40bfa11ca3361c75e028567c0e2f6a16d3adee9615c9eea9e03b5"
+    },
+    {
+      "path": "src/DigitalWallet.Api/Foundation/Configuration/PlatformOptionsValidator.cs",
+      "sha256": "b2292899ee6f6514aa4eaaa8292a31feb49ee8af6d6be03a88bd2a79910bc560"
+    },
+    {
+      "path": "src/DigitalWallet.Api/Foundation/Configuration/ProductionHardening.cs",
+      "sha256": "7eab8e71577b5e413bba02f1f143043f117012e97b8487dc0f49a580c3208bd0"
+    },
+    {
+      "path": "src/DigitalWallet.Api/Foundation/DependencyHealth.cs",
+      "sha256": "97bdd082eb60039363a40bd334411132b2987cbc3218fe93c950a881a309daea"
+    },
+    {
+      "path": "src/DigitalWallet.Api/Foundation/DistributedRateMiddleware.cs",
+      "sha256": "a4a5e81b39be64a437c85626125af1d30f46a05e941c31dc43128d0908adc6d1"
+    },
+    {
+      "path": "src/DigitalWallet.Api/Foundation/Errors/GlobalExceptionHandler.cs",
+      "sha256": "52880062cb212a3d7567447271b6db779aa8c24d2a3e05ad45e331dbda318b76"
+    },
+    {
+      "path": "src/DigitalWallet.Api/Foundation/Errors/ProblemDetailsFactory.cs",
+      "sha256": "31556d37650c91e995a06878042589ebb200ee7bf3d34ab7e810ed61ca89fb55"
+    },
+    {
+      "path": "src/DigitalWallet.Api/Foundation/HttpSecurity.cs",
+      "sha256": "8fc8b7fb4d8fd9ce7ea8107e0caadf69580258ca50409fbfc55d5689c06d8487"
+    },
+    {
+      "path": "src/DigitalWallet.Api/Foundation/Observability/CorrelationIdMiddleware.cs",
+      "sha256": "ce4fb1d2e0fb0e5fa14a0a15779d5ba9ee2d69e6e3b2af85088cc3756779afe1"
+    },
+    {
+      "path": "src/DigitalWallet.Api/Foundation/Observability/ObservabilityOptions.cs",
+      "sha256": "8aa24e689e88dc53ef73fc466f5cf5897417776403b4c53d8efd59efd68c7da4"
+    },
+    {
+      "path": "src/DigitalWallet.Api/Foundation/Observability/OpenTelemetrySetup.cs",
+      "sha256": "0d1593a60a46d3d2131eab584bf5b6cbd9585d635e6bee2411f77cd269b30bb8"
+    },
+    {
+      "path": "src/DigitalWallet.Api/Foundation/Observability/OperationalMetrics.cs",
+      "sha256": "3c55b13079eabb289b84a80678fc7f548b9830360d9e5ac525acaf644f15b301"
+    },
+    {
+      "path": "src/DigitalWallet.Api/Foundation/Observability/PostgresMetricsBridge.cs",
+      "sha256": "d440c74a300d9a8d5b1a5db6758f4ad012856f115eab3d24dfef744a89e38f29"
+    },
+    {
+      "path": "src/DigitalWallet.Api/Foundation/Observability/ReconciliationWorker.cs",
+      "sha256": "a5cc7d6e6182262e80194acdc59c83c4266c3d4ce550cdd6800606c4070bb2a3"
+    },
+    {
+      "path": "src/DigitalWallet.Api/Foundation/Observability/RequestTelemetryMiddleware.cs",
+      "sha256": "f97a369726ed8c72a7fc7da059f4a04e23a50d0ab82ea9f40922a39f51821e35"
+    },
+    {
+      "path": "src/DigitalWallet.Api/Foundation/Observability/SafeTelemetry.cs",
+      "sha256": "e4aea76f5a4b2d78337bc79353965bc0522a3c04aa6a42e2f2400b7fee0c416e"
+    },
+    {
+      "path": "src/DigitalWallet.Api/Hosting/ContainerConfiguration.cs",
+      "sha256": "812b6591b49c2c503df20c5b20a436e1e7f80dcb70649387c1bae87c89ce5012"
+    },
+    {
+      "path": "src/DigitalWallet.Api/Hosting/DevelopmentFixture.cs",
+      "sha256": "f880e771f7c4c42726b2c7fc91d6021bbfa75e7abe3a10ab704720d3e1850464"
+    },
+    {
+      "path": "src/DigitalWallet.Api/Hosting/WalletComposition.cs",
+      "sha256": "39578d029331d0dfd42d118c37b0c2d70d0b13afa999917ea75fcd6edcc5283f"
+    },
+    {
+      "path": "src/DigitalWallet.Api/Program.cs",
+      "sha256": "3515a9bbccf4a2c72f6bbca11c97f3a01434527293fe347305a5505aa3b7623d"
+    },
+    {
+      "path": "src/DigitalWallet.Api/appsettings.Development.json",
+      "sha256": "d8b7707eeb52df495a7cf86e789296821d7799c8a02c53b92c2aa9ca8387aeaf"
+    },
+    {
+      "path": "src/DigitalWallet.Api/appsettings.json",
+      "sha256": "9b831de48430e652408c1e10cb60fb7ba9ed3272ea0c4fff96784263e0819a8e"
+    },
+    {
+      "path": "src/DigitalWallet.Api/packages.lock.json",
+      "sha256": "df3f82dca94da7b5ffc611ec3223d724351bbe0fb8dcc176956ff2370b457f4f"
+    },
+    {
+      "path": "src/DigitalWallet.Migrator/DigitalWallet.Migrator.csproj",
+      "sha256": "1d8e428d331cc68356852e42e77849de829aa3a97e31a3a91b038c54a1342ba4"
+    },
+    {
+      "path": "src/DigitalWallet.Migrator/MigrationOrchestrator.cs",
+      "sha256": "e2d7ab9d524057fcb0a44b4f1593a4308471ca05f91f90dab186567953ffb289"
+    },
+    {
+      "path": "src/DigitalWallet.Migrator/Program.cs",
+      "sha256": "4e6e41f5f1698d09b9480e009b7cf8215caf561951a3a7ad0777e85535c8e8d2"
+    },
+    {
+      "path": "src/DigitalWallet.Migrator/packages.lock.json",
+      "sha256": "eac99beda781954591734b7f74ba3e67d2f48f5fd11dea17dc38cfb398451ba0"
+    },
+    {
+      "path": "src/DigitalWallet.SharedKernel/Administration/Keyset.cs",
+      "sha256": "aa40875b2c9218bd9cf72d83e431156d419cf6465b67b9efcb0eee1351cad829"
+    },
+    {
+      "path": "src/DigitalWallet.SharedKernel/Correlation/CorrelationContext.cs",
+      "sha256": "bed0692d0053a924dada2cb9a8971a55d89d13b5e3055358d1c82577d24da05f"
+    },
+    {
+      "path": "src/DigitalWallet.SharedKernel/DigitalWallet.SharedKernel.csproj",
+      "sha256": "2fdbb0ccdef922bfda5b379cbc768b7c0c1cfce3b8a8f7dcdacecb06b4e736d7"
+    },
+    {
+      "path": "src/DigitalWallet.SharedKernel/Observability/WalletTelemetry.cs",
+      "sha256": "db2f8c5114d7dd62d3df4fb125404b57fac8fd88f974f1e0af32a7a464976cf4"
+    },
+    {
+      "path": "src/DigitalWallet.SharedKernel/Transactions/ParticipantSavepoint.cs",
+      "sha256": "6ba7bddfbef297be03d7a33ae9feb07b68a359350144ee7dedfb8177a4ea60d4"
+    },
+    {
+      "path": "src/DigitalWallet.SharedKernel/packages.lock.json",
+      "sha256": "a29c6aa8cfb81874ff8bb78dc369d7416f28c9b8cc47e99592bfc019b20c41eb"
+    },
+    {
+      "path": "src/DigitalWallet.Worker/DigitalWallet.Worker.csproj",
+      "sha256": "7fcf2a7bb249078c75c28cc936361592b5caf09a4fed827b51dda1fcc03cf527"
+    },
+    {
+      "path": "src/DigitalWallet.Worker/Program.cs",
+      "sha256": "1d380c5c7ea5ee9dd873f555d9338324c4c48e4e2b6735583bea283ea271d1fc"
+    },
+    {
+      "path": "src/DigitalWallet.Worker/packages.lock.json",
+      "sha256": "eac99beda781954591734b7f74ba3e67d2f48f5fd11dea17dc38cfb398451ba0"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Administration/AdministrationModule.cs",
+      "sha256": "a77f0629bbaaea8fe62ee3cd1031fbcc23865724b44af9fb6bdc24662f657b1b"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Administration/AdministrativeReads.cs",
+      "sha256": "251c8dccdf6920c49d906cfa0919b5b4db427a10301c4ba8770bb6f24a0e9a3c"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Administration/DigitalWallet.Administration.csproj",
+      "sha256": "eb96671138c289f31b3b60f2b1b586258ec1435f5ea101a04f6a246a509ce02d"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Administration/Migrations/20261005130604_InitialAdministration.Designer.cs",
+      "sha256": "15c09916f222d4ed221531f09fa0acd73b5b7068e4a868c83e50d07342b6baed"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Administration/Migrations/20261005130604_InitialAdministration.cs",
+      "sha256": "811fc724ab0849c4dc42388ae9af419c7c3cc6ccd5dd26758d2577bfdf8c7253"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Administration/Migrations/AdministrationDbContextModelSnapshot.cs",
+      "sha256": "b0d40d0b180776afde9ceb654c483c6380ed92878e9167834e9fc21d46f008dd"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Administration/packages.lock.json",
+      "sha256": "85390acb69b9c85da799dca4318cc63a4e5846ce3231ce40d33e918e181ab275"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Audit.Contracts/AuditContracts.cs",
+      "sha256": "ee20a6f4436c355e92f34dd596fc3f8ace51ec8950bb98093360bf5e4b9216b1"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Audit.Contracts/DigitalWallet.Audit.Contracts.csproj",
+      "sha256": "11e66d6baf45dd69563247d06048c76816e7066a7d22a7279563bcc4a9f1be93"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Audit.Contracts/packages.lock.json",
+      "sha256": "a29c6aa8cfb81874ff8bb78dc369d7416f28c9b8cc47e99592bfc019b20c41eb"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Audit/AuditModule.cs",
+      "sha256": "2a3198213d8112aff8f6bc9f0845e2f941974f6bbb62cd5a4407271898b41c89"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Audit/DigitalWallet.Audit.csproj",
+      "sha256": "d99e1d75061f6bcb0878ed61973e88f5f1dbd8b44e8ba12b7a262c3c99225d63"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Audit/Migrations/20261005125706_InitialAudit.Designer.cs",
+      "sha256": "03d5bc71eaaf97d3983e4390b5bbd1bd4b3e10025e12b53a514c34612465033b"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Audit/Migrations/20261005125706_InitialAudit.cs",
+      "sha256": "a6fdb6771dd3bffce3c6976d0cd6881165656aa1d2551de4dbe35763bb05162c"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Audit/Migrations/AuditDbContextModelSnapshot.cs",
+      "sha256": "ddefff25c2fc1c5dd7912414b40b5a02c46fd218f94b2ff5e6c52192ffa5400a"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Audit/packages.lock.json",
+      "sha256": "2f1bdd788bd46a93877f49e377ad677ce3907bc98fbb9ac3ccba5909211b9a22"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Beneficiaries.Contracts/BeneficiaryReadContracts.cs",
+      "sha256": "c467b4219333b060fa5b36e12299a720152024591951f0d432591791cbe6cb72"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Beneficiaries.Contracts/DigitalWallet.Beneficiaries.Contracts.csproj",
+      "sha256": "5f27cc3117b11fb828a7877e49768ea62e5af11e8f8c28ef299eda07aad5b3e5"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Beneficiaries.Contracts/TransferBeneficiary.cs",
+      "sha256": "1a7db96e45e88dc41661490ed2f339837c439fa93e7ba2eee90dd88c0950f35b"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Beneficiaries.Contracts/packages.lock.json",
+      "sha256": "a29c6aa8cfb81874ff8bb78dc369d7416f28c9b8cc47e99592bfc019b20c41eb"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Beneficiaries/Application/BeneficiaryService.cs",
+      "sha256": "998055d62d887add18c34567e24ae134e34db013b1d09255f00fbcf97101038b"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Beneficiaries/BeneficiariesEndpoints.cs",
+      "sha256": "2d8cc22453143c6088262a7d0813b5c07d3836a6799f75b118d22b6199b4d575"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Beneficiaries/BeneficiariesModule.cs",
+      "sha256": "c7a0d7fd6b61acda7f70641967b470dd3d25eb0bec63e365abaca921af4f446a"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Beneficiaries/DigitalWallet.Beneficiaries.csproj",
+      "sha256": "d64e15f52b18f4d137243f2422e8481d7af8ce65164a935cdcf3702411603afc"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Beneficiaries/Domain/Beneficiary.cs",
+      "sha256": "fa41032ff462847e5e404c09388bcd02aa6703cf85dbcf95a0b67f0a373d9932"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Beneficiaries/Infrastructure/BeneficiariesDbContext.cs",
+      "sha256": "da10b6faaf5f63fbcb4c1c991b65df47df24ad9c9bc3b6f3ed36d24c2531aaf4"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Beneficiaries/Infrastructure/BeneficiariesDbContextFactory.cs",
+      "sha256": "a22de0762c13464be95d405db623f79e1c041cb53cefdbe7a58772dbbbffb59a"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Beneficiaries/Infrastructure/BeneficiariesTransactionParticipant.cs",
+      "sha256": "f8868ed2c129b19d3fdb8c9548d94a93c1a743035dc2fa7c56d8f63cdb2c1e1f"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Beneficiaries/Infrastructure/Migrations/20260920180500_InitialBeneficiaries.cs",
+      "sha256": "524e2abd87ddbb13b399fb439b211b2a8c099dbd4bdcdc12c3b9e429a19c976a"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Beneficiaries/Infrastructure/Migrations/20260920200000_AddBeneficiaryStateConstraints.Designer.cs",
+      "sha256": "cdfa7a51791902521a878f68a676bdbcd3cfe55c3dec1ba19b58ad84f314736a"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Beneficiaries/Infrastructure/Migrations/20260920200000_AddBeneficiaryStateConstraints.cs",
+      "sha256": "e26ba105bc3962e5bede52c3b66fceb63994e70f3db48bc45b78fa633ea2eac6"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Beneficiaries/Infrastructure/Migrations/BeneficiariesDbContextModelSnapshot.cs",
+      "sha256": "2823d5519e25ec416bcceecb6777ba81e20eb0a76640df05d9f27869f384114a"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Beneficiaries/packages.lock.json",
+      "sha256": "b1953d04abdc106866163ea7f61c760c2b5021852434de3688b7865ee4b747b7"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Caching.Contracts/DigitalWallet.Caching.Contracts.csproj",
+      "sha256": "5f27cc3117b11fb828a7877e49768ea62e5af11e8f8c28ef299eda07aad5b3e5"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Caching.Contracts/SafeCaching.cs",
+      "sha256": "6fea52da3c178d524bb98112c753ff11d279128e0cc8c6142952419c3e2fc939"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Caching.Contracts/packages.lock.json",
+      "sha256": "a29c6aa8cfb81874ff8bb78dc369d7416f28c9b8cc47e99592bfc019b20c41eb"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Caching/DigitalWallet.Caching.csproj",
+      "sha256": "f20a35b2c997fa05cc2056eee71e8948ae37a775aef5f9b6aba280ee49cd06d3"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Caching/DistributedRateCoordinator.cs",
+      "sha256": "dc8031ac924ff368283fae3f7b9173bceb8f1fac06650a5bc2f9b21cbb761c89"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Caching/RedisRuntime.cs",
+      "sha256": "29b4d06184b8d8fc21aa0eece687df3e833478d5a651182b9a4ea3bbe8b563da"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Caching/SafeCache.cs",
+      "sha256": "921046082578d4169826b598e3c7445bbcfe6f1d60915b7924678742336cb0fd"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Caching/packages.lock.json",
+      "sha256": "b6cd03589672e584b9aa34e3a8f213a04c9f3a7f091b44e5b52e35b4cb646a4d"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Customers.Contracts/AdminCustomers.cs",
+      "sha256": "773775e603db96251967ecad5ac542c27b10e684b96cc2e7a9e7d83a567052bf"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Customers.Contracts/CustomerEligibility.cs",
+      "sha256": "0ad2f316e09daeca5038ab92f8a0a30aa0c305fe2cf8ac34c413f9c679d7dd2e"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Customers.Contracts/DigitalWallet.Customers.Contracts.csproj",
+      "sha256": "5f27cc3117b11fb828a7877e49768ea62e5af11e8f8c28ef299eda07aad5b3e5"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Customers.Contracts/TransferCustomer.cs",
+      "sha256": "774ca29414c30f616b64bb6314c274e81f79f5ac5418f16dd9d0aaadc7148a77"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Customers.Contracts/packages.lock.json",
+      "sha256": "a29c6aa8cfb81874ff8bb78dc369d7416f28c9b8cc47e99592bfc019b20c41eb"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Customers/CustomersEndpoints.cs",
+      "sha256": "53f8b74762ea52d16b7a2cdf0320b976cb23240a3d29b83e1846ac2107cfbf98"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Customers/CustomersModule.cs",
+      "sha256": "50e40e5c170052d0703575e1d58e0d8b9278641fa89084f2cfd1f18a6e779a37"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Customers/DigitalWallet.Customers.csproj",
+      "sha256": "592a75450db3ca91e9b0c4d7a9094d670ff50ce1eb64ccc5ae12692fa4ce4984"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Customers/Domain/Customer.cs",
+      "sha256": "86b5817caac07cc8fc99af83cc5a12b19312ba427bb8ad5b80be717cabb9b2fe"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Customers/Persistence/CustomersDbContext.cs",
+      "sha256": "492fbbbd5147dfabc816a43e5b5eae4c4f5d3e55557828ae23cfa8d233fb97ed"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Customers/Persistence/CustomersDbContextFactory.cs",
+      "sha256": "2fee02d3a20d2986898b733d094b30063f2c3f9b29509527e644dde5715f0235"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Customers/Persistence/CustomersTransactionParticipant.cs",
+      "sha256": "5715c4b29a4d8108aa661c436fc59ce7a369fd56d82ffa9eb98df5e41de84d54"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Customers/Persistence/Migrations/20260920114618_InitialCustomers.Designer.cs",
+      "sha256": "ea2b3d214590bb55bcfaae9f83932dd7f32d05569a583901ba54dacd24306f79"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Customers/Persistence/Migrations/20260920114618_InitialCustomers.cs",
+      "sha256": "f158439403b279b5889a7841936d288f7d300de31d78dfa9aa223b52d187d173"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Customers/Persistence/Migrations/20261005203224_AdminSearchKeysetIndexes.Designer.cs",
+      "sha256": "6c9676bc9ef6fd50cec1983c3b8ff37c14188c0460e25f4d5d2eefe5a07db94c"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Customers/Persistence/Migrations/20261005203224_AdminSearchKeysetIndexes.cs",
+      "sha256": "6210e9c632be07ec60597b51e1c50b7f6a7f0870ff4fb13279444995de6016ce"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Customers/Persistence/Migrations/CustomersDbContextModelSnapshot.cs",
+      "sha256": "9e88937b9ae776c6e064e33049e9386bf78738300d2c7f70a73439fddd53954b"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Customers/Services/AdminCustomerReader.cs",
+      "sha256": "e9699bdb5a25928ef64a993bfa53a1277c0536e24329985649f44ff67cfc4479"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Customers/Services/CustomerService.cs",
+      "sha256": "50bcef815e3dd094be368e048282b3d9bc18a4a7d59bf6df7bdad0545a48349d"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Customers/packages.lock.json",
+      "sha256": "9e93ba0faf86f37d760ada9e010459149dc7f648732a3de847469ade310706a7"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Identity.Contracts/DigitalWallet.Identity.Contracts.csproj",
+      "sha256": "5f27cc3117b11fb828a7877e49768ea62e5af11e8f8c28ef299eda07aad5b3e5"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Identity.Contracts/OtpContracts.cs",
+      "sha256": "6b0a06340e0d18af8f67e5f3770d399bcb2ac8c3b425258adc0e1eafff94ac72"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Identity.Contracts/StaffContracts.cs",
+      "sha256": "bf8badd3eb97e048a82017105de8b685a1dd2f49683785ccfc015b97cf3ee622"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Identity.Contracts/packages.lock.json",
+      "sha256": "a29c6aa8cfb81874ff8bb78dc369d7416f28c9b8cc47e99592bfc019b20c41eb"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Identity/Authorization/Permissions.cs",
+      "sha256": "b8b7833e459d1ddb0001baaf2eca34dc6760fd3bfea38cac71d60419c0122afd"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Identity/DigitalWallet.Identity.csproj",
+      "sha256": "c9c2ddbce1ae07479e39d94a34cb6e509ab342d2a73ec0501fd2e02697564e47"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Identity/Domain/IdentityEntities.cs",
+      "sha256": "c52f88ee14d0490b1a7374aa0c9a43b4aee4e836fa52f116f5794375a8185daa"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Identity/IdentityEndpoints.cs",
+      "sha256": "79bcebfd54d0bb7745f21f6d81f06e50479c07ff854166b0761cdfc22f8b370b"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Identity/IdentityModule.cs",
+      "sha256": "1109868ea28da5888994750c62b8a1717948dbb098206ed6b332c0b245ba4c70"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Identity/IdentityOptions.cs",
+      "sha256": "c74e9e9d8f0bc8caaf97f34ee6d57464e5ade6a6733b66326454336c1b4eb26f"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Identity/IdentitySeed.cs",
+      "sha256": "ce1461b4e73119e3b1fb02e30187666a927dcbd4bee120683ea0b7730db8ea2d"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Identity/Persistence/IdentityDbContext.cs",
+      "sha256": "2907ff6537dd0d2c3ebd79d592bd5bbc675cc60c1d422223b2b104f954f16aec"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Identity/Persistence/IdentityDbContextFactory.cs",
+      "sha256": "f5ffe57432cdb007550c8fbfd285b8713f330f0552a145356705967fde4cb9ac"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Identity/Persistence/Migrations/20260910131128_InitialIdentity.Designer.cs",
+      "sha256": "2c27ee8638c1607777f6c0f4c296d1c6ed223a0bc20a094f605b00653d4c74a6"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Identity/Persistence/Migrations/20260910131128_InitialIdentity.cs",
+      "sha256": "21c9d07190e357da963fe129f65b2da60539274e33ec757e78acf46ba7c7b39f"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Identity/Persistence/Migrations/20260920111608_BindRefreshTokensToSecurityStamp.Designer.cs",
+      "sha256": "a8e1d06cb0841805853e67c236839cebc69fa3ff3075f0ee6f55931205b69cce"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Identity/Persistence/Migrations/20260920111608_BindRefreshTokensToSecurityStamp.cs",
+      "sha256": "1e36186260ef97f0ccf6bd3da171beabbd34f1d5679224638c288f60b0d5a18b"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Identity/Persistence/Migrations/20260920180000_BindOtpChallengesToResources.cs",
+      "sha256": "8264e2ce46e61ef033adb1eadc9d0640f905345f82f46f5779254b0e0c4396e8"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Identity/Persistence/Migrations/20261005130820_StaffAuthorizationConcurrency.Designer.cs",
+      "sha256": "cb88cbbb09a74e2980d9b44b7c4d281c3cfa0357b1ffbca109ccf0dc93f873ef"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Identity/Persistence/Migrations/20261005130820_StaffAuthorizationConcurrency.cs",
+      "sha256": "1c1fe2bbe26561083a85574e9a58ce0d2fc2c9c2aa4e2a818466fbf2e584e22c"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Identity/Persistence/Migrations/20261005203108_BindSessionsToAuthorizationVersion.Designer.cs",
+      "sha256": "0c10257af59223ccb27e757d1445afd922c53f18abcd3148050ed8c684752357"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Identity/Persistence/Migrations/20261005203108_BindSessionsToAuthorizationVersion.cs",
+      "sha256": "e365c644b2523fda92e063a45145641dce0f4b4502da03e622851dc25ad275f3"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Identity/Persistence/Migrations/IdentityDbContextModelSnapshot.cs",
+      "sha256": "d00cea76d417748d6898ee0e171e6fd892087e30e219ec44a3fab27eaced4394"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Identity/Services/EffectivePermissions.cs",
+      "sha256": "89494f6823bfabe51dc690b6e2196aa9f77e12e58d439bbc66509b60641ee91c"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Identity/Services/IdentityServices.cs",
+      "sha256": "4761dfc3132f8ca962c4b687145d0d199f0935a1e7d789157c1604e2d60fbaeb"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Identity/Services/StaffAccess.cs",
+      "sha256": "5c7217c5075fbcc7d1ce1209851cc1e317ed2384398812fe9c58a5fa11e34640"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Identity/packages.lock.json",
+      "sha256": "231ef43c8bd83553eac72611f60cd9a3e8e995bde60c08fcb93008c3123f3b57"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Ledger.Contracts/DigitalWallet.Ledger.Contracts.csproj",
+      "sha256": "5f27cc3117b11fb828a7877e49768ea62e5af11e8f8c28ef299eda07aad5b3e5"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Ledger.Contracts/LedgerContracts.cs",
+      "sha256": "e2efcd2416d3f090891eed42c51dfb01ece2662fffba7a28163eea8f7203faf6"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Ledger.Contracts/packages.lock.json",
+      "sha256": "a29c6aa8cfb81874ff8bb78dc369d7416f28c9b8cc47e99592bfc019b20c41eb"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Ledger/Application/LedgerPostingService.cs",
+      "sha256": "5dca43da809429789b4e80ce8ca593c2d2c2c0176e5de0dc3804e2b594397bb3"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Ledger/DigitalWallet.Ledger.csproj",
+      "sha256": "efe4a283e1e255932c009170c00fbf379c6348e9e3db8eef67c6c94e755e54ca"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Ledger/Domain/LedgerEntities.cs",
+      "sha256": "a26b848db9fe7dfa84cd6ffcf961f5b769e2f7eaf1e55ebdc1cd4955e0275b08"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Ledger/Endpoints/LedgerEndpoints.cs",
+      "sha256": "2f1553339387c95c0637fd7b2b52d27d8d656bfacf331de102dd131cc32afe96"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Ledger/Infrastructure/LedgerDbContext.cs",
+      "sha256": "a887a13d62903a31ed35050c196bce7308ca72f8954ab164e0097dca5e095e19"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Ledger/Infrastructure/LedgerStore.cs",
+      "sha256": "e1ebf9b3c1ac99dc16cfc02fe7754cb0d70def3cfd82e46c52920098d1ee75f4"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Ledger/Infrastructure/LedgerTransactionParticipant.cs",
+      "sha256": "54609ab54e62552e8909a3f51f3273d1ab8f0476e447c2adcd2f888c98c011d1"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Ledger/Infrastructure/Migrations/20260920121221_InitialLedger.Designer.cs",
+      "sha256": "dca916f1b98eb50eb1f6fa79883149de0e298f2da07f458389b9fc538dfa9caa"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Ledger/Infrastructure/Migrations/20260920121221_InitialLedger.cs",
+      "sha256": "58073f4be452438ae2fa33436f92c2d32320f5fbe38d96200be533e346f422a5"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Ledger/Infrastructure/Migrations/InitialLedgerGuards.sql",
+      "sha256": "e5a6f644d2e4bf5275562d3ba715d5464f55c2784e1aa4c1d6c9343daa431673"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Ledger/Infrastructure/Migrations/LedgerDbContextModelSnapshot.cs",
+      "sha256": "4a330f0910c31bcffe641903bff9da49cad703590eaf38f5a689fb911fbd9044"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Ledger/LedgerModule.cs",
+      "sha256": "1af50086f6c554551e7918a8893021f1f625a0b66e5b77b0bba1dbce5fe29bfb"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Ledger/packages.lock.json",
+      "sha256": "2345206662384176e1c65683a95e3d867d3a21254224f7d0286b1a294eef6d85"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Messaging.Contracts/DigitalWallet.Messaging.Contracts.csproj",
+      "sha256": "5f27cc3117b11fb828a7877e49768ea62e5af11e8f8c28ef299eda07aad5b3e5"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Messaging.Contracts/Events.cs",
+      "sha256": "103ef220c3d5d429d541b2b119595a5c244c9575de51265218095980628c4110"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Messaging.Contracts/Monitoring.cs",
+      "sha256": "2e018cedbb22faa128b5daca840fd2c6d85f3d5440017ac43d9acdc96c482b5f"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Messaging.Contracts/packages.lock.json",
+      "sha256": "a29c6aa8cfb81874ff8bb78dc369d7416f28c9b8cc47e99592bfc019b20c41eb"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Messaging/DigitalWallet.Messaging.csproj",
+      "sha256": "1420703ceb1ef602cb3e01a8beddd0453668d2f1e8ab5c07f90b4f73faf45d4a"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Messaging/MessagingModule.cs",
+      "sha256": "fdaa5e5c224f74a763c4b810c9603910b40e262367e0dc31a3ceeb0983a71e12"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Messaging/Migrations/20261005112928_InitialOutbox.Designer.cs",
+      "sha256": "5213c348da7243dad095049d317c85863ff6aba3ed70cb0492fb7bdfe8b32a91"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Messaging/Migrations/20261005112928_InitialOutbox.cs",
+      "sha256": "cfe5883e637cb4866d609bff681dd6c9e1fc30768f501dab4856c9f35a2c3feb"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Messaging/Migrations/20261006090000_OutboxTraceHeaders.cs",
+      "sha256": "3e110c16129a1f25931b4ac49c4d7f3aada6a25248456616c4a8f669b30cc6ac"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Messaging/Migrations/OutboxDbContextModelSnapshot.cs",
+      "sha256": "218e02d35e8faf026e9eac1e7c89c25bbe00a7b0d5423e431fa91f899c066bde"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Messaging/OutboxDbContext.cs",
+      "sha256": "225470058127179d61e0f88d167ff6d25521fa54d50b29cc527b9f938ec63e6b"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Messaging/OutboxPublisher.cs",
+      "sha256": "fec616a0e7ae0eb9a5809ac5853c49fcc8015bf6dcc836c2bb55326124511867"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Messaging/OutboxWriter.cs",
+      "sha256": "6c6a0306646d1ec98d365303a6a354d9d619710d3b874b6cf56e77a7ee6150a5"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Messaging/RabbitTransport.cs",
+      "sha256": "2e4dfab9500fce3dcfbc98a94d89a3a3c3dfdd963add20074bc37e39d1f503a0"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Messaging/TraceHeaders.cs",
+      "sha256": "4414bb0ec505f1f2c3bfc60e5fb0ed9da7d80c28f528fe2023e4ffa1cb944411"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Messaging/packages.lock.json",
+      "sha256": "d26dd58ad9663a7a2bd7766e521f8b291b9ac51ee7a20dc72a14fa21b460c5ea"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Notifications/DigitalWallet.Notifications.csproj",
+      "sha256": "b7206efa457873d43d542a6efe2504416fc7bced76616947b083a728564fea04"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Notifications/Migrations/20261005112943_InitialNotifications.Designer.cs",
+      "sha256": "471b862758c2ce8aef00dd3b90c20fce24350d025e394293b4aaa2eccada7428"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Notifications/Migrations/20261005112943_InitialNotifications.cs",
+      "sha256": "e1b93c17347780cd7519dfb293ca149b7fe736fc26875fa35a96a6f4f5ef0dc2"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Notifications/Migrations/NotificationsDbContextModelSnapshot.cs",
+      "sha256": "6508fae192eb8894479cbc72c45961faf5f46a1a1896f4bb67df9f671b8485b6"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Notifications/NotificationConsumer.cs",
+      "sha256": "f28aa4b8921d7d0d0a012c0af74f3eff8f7bfd5046b6b2e7e985ac992e6cfee4"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Notifications/NotificationService.cs",
+      "sha256": "080284db95a20ebff6a668daeb3f95067c2044dbf3cbb87b2a3af851fbb888d6"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Notifications/NotificationsDbContext.cs",
+      "sha256": "eee140b18e970a84d0e1aa8958fec1493089041d701702a8dde1bb4e2c2ee6be"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Notifications/NotificationsModule.cs",
+      "sha256": "96122f989caf6c5cacfcd4ae6dccf6a30291a1715eb92a3acb4da21a80cee7e7"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Notifications/packages.lock.json",
+      "sha256": "725cbe21a438bc6c5e076861159f88fa3e796706c86df51eca9285c99171e805"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Reporting.Contracts/DigitalWallet.Reporting.Contracts.csproj",
+      "sha256": "11e66d6baf45dd69563247d06048c76816e7066a7d22a7279563bcc4a9f1be93"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Reporting.Contracts/ReportContracts.cs",
+      "sha256": "7ef5956dc6c9ad9971f9c3a07ca101d7b5b1e19d799f9dda4ec42b403862578c"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Reporting.Contracts/packages.lock.json",
+      "sha256": "a29c6aa8cfb81874ff8bb78dc369d7416f28c9b8cc47e99592bfc019b20c41eb"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Reporting/DigitalWallet.Reporting.csproj",
+      "sha256": "28e0489a1296f9770c234758c3829fc10442776f4af29211d29241b93c3e0032"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Reporting/Migrations/20261005130638_InitialReporting.Designer.cs",
+      "sha256": "29a3a68b9534e9e528aaee268a6974f312fd11c674610efb6e9b176175f32023"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Reporting/Migrations/20261005130638_InitialReporting.cs",
+      "sha256": "0ff11ba9c86334571ca6ced29ce484e06a8d202af9f274571ac42598dcd43d8a"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Reporting/Migrations/ReportingDbContextModelSnapshot.cs",
+      "sha256": "f3b6380b5234736d2ddf33050e06b19698e17d60a70e47881906540d29755b93"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Reporting/ReportConsumer.cs",
+      "sha256": "68c4232527214fb590309bcbe2edd51308befb4879170536497faf27f1644e2d"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Reporting/ReportFiles.cs",
+      "sha256": "66ba148df51f90c6eab63a5f08c5ff3deddedaebecdb3e3d78ada4ffa30a6c9d"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Reporting/ReportService.cs",
+      "sha256": "fe53c51034e918f77d3a419fb044677656046141ecce966316f75d60cd1f408d"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Reporting/ReportingDbContext.cs",
+      "sha256": "e70e08e435c386832cefa08a8d5570560756e886c0cfff35bf31d44ba0a55f56"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Reporting/ReportingModule.cs",
+      "sha256": "900e932f876c453a96b123a8846bf5f312dca022769766e8046f556ac2af461e"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Reporting/packages.lock.json",
+      "sha256": "03df328c88370323181e2dd796ee520aa216a49f1ea8d36176abf9424ebfb5ce"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.RiskLimits.Contracts/DigitalWallet.RiskLimits.Contracts.csproj",
+      "sha256": "5f27cc3117b11fb828a7877e49768ea62e5af11e8f8c28ef299eda07aad5b3e5"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.RiskLimits.Contracts/RiskLimitsContracts.cs",
+      "sha256": "458b78c4bd0fed0966bbf486a09a50374261adab61486f32abd9ec4d16dfa8e4"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.RiskLimits.Contracts/packages.lock.json",
+      "sha256": "a29c6aa8cfb81874ff8bb78dc369d7416f28c9b8cc47e99592bfc019b20c41eb"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.RiskLimits/Application/AssessmentEngine.cs",
+      "sha256": "8d350d8d9d957139723987809ae7b2d4dae92c69fba6b0412a7c4a6fd364dee8"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.RiskLimits/Application/RuleAdministration.cs",
+      "sha256": "18d69a0ad7b3a802096c8783275da4e695a7256718b3c82244b86f6745b60e66"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.RiskLimits/DigitalWallet.RiskLimits.csproj",
+      "sha256": "586ba7be2c8f0bf9b853e01cdc8b42b2414e664b334fbe0d8f67b606fc7b65e3"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.RiskLimits/Domain/Rule.cs",
+      "sha256": "0ee987845c82e3b1452ab86a646c9a546f52b641389a30916a7c7c06b119bc92"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.RiskLimits/Endpoints/RiskLimitsEndpoints.cs",
+      "sha256": "6810d6621bcf8fddcf2d5e4b576aa8aea7e45b41f2e9d4dee0364f1de2be1864"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.RiskLimits/Infrastructure/Migrations/20260922120121_InitialRiskLimits.Designer.cs",
+      "sha256": "e366b2ebc2a550e397cff2e51b261ca22a0345b9c2a19504447dfff251a6dbb9"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.RiskLimits/Infrastructure/Migrations/20260922120121_InitialRiskLimits.cs",
+      "sha256": "cf166b2348c3e71705f9b854fc10c38c9e0a76f452e5e18ec129e374addb54d3"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.RiskLimits/Infrastructure/Migrations/20260922120839_PreserveUsageAcrossRuleVersions.Designer.cs",
+      "sha256": "6ec9ca274d0eb4b90d8ec59edb7ac32ff443c9445a9272127a9b5db8c7c02acd"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.RiskLimits/Infrastructure/Migrations/20260922120839_PreserveUsageAcrossRuleVersions.cs",
+      "sha256": "f23038e88991a0663a422534875ef7db67e3c3a3bf23e44a94eed3af7cea727e"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.RiskLimits/Infrastructure/Migrations/RiskLimitsDbContextModelSnapshot.cs",
+      "sha256": "405b48a7f3bdf2363c719f3f8ea411ab6dc7041a824fcf49aeb49319b576dd0c"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.RiskLimits/Infrastructure/RiskLimitsDbContext.cs",
+      "sha256": "a28147a31e80bd2d1688afdfa8a772cdbc03334a3b7dad7b949b2ec46462f5f5"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.RiskLimits/Infrastructure/RiskLimitsDbContextFactory.cs",
+      "sha256": "f625b02d287945fdf09889a4b111a6c09ce9b368aa270740deab76e87a342719"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.RiskLimits/Infrastructure/RiskLimitsStore.cs",
+      "sha256": "ad16085258141588b31f4bd6dd24d77c914c7acb9d54d059218b243fc2d8053e"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.RiskLimits/Infrastructure/RiskLimitsTransactionParticipant.cs",
+      "sha256": "dc5b4fcdd56276fddc4c2e69af01678006ded5d2c3b3cc0ae31f1109d64f7586"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.RiskLimits/RiskLimitsModule.cs",
+      "sha256": "a30c7005ddbbeeb0dd8ab42755c784236c334ac2a5d26ed755eb22ecfdb55f54"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.RiskLimits/packages.lock.json",
+      "sha256": "b7c967c16f5f863c9079641ce9b2c3e807dd81b2a04ffa531e91ba953912e7f2"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transactions.Contracts/AdminTransactions.cs",
+      "sha256": "833458f6726bee1509f0fe5c06b1b04151dade15f885d81acbcf0091f7f8d95a"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transactions.Contracts/DigitalWallet.Transactions.Contracts.csproj",
+      "sha256": "11e66d6baf45dd69563247d06048c76816e7066a7d22a7279563bcc4a9f1be93"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transactions.Contracts/packages.lock.json",
+      "sha256": "a29c6aa8cfb81874ff8bb78dc369d7416f28c9b8cc47e99592bfc019b20c41eb"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transactions/Application/TransactionPorts.cs",
+      "sha256": "cd75f6673192963e198e0fcf9679e42f93955bcbe8d4698683bfd8d831385c6f"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transactions/Application/TransactionService.cs",
+      "sha256": "06e5434abf1f13195d3c7f65d189ee09a5bac915633425b6e282e81302022030"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transactions/DigitalWallet.Transactions.csproj",
+      "sha256": "de130d6a6f7cf9e686a8abc0d087cfdec16ff282bfd2616d11ed5eb2fc735a0c"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transactions/Domain/FinancialTransaction.cs",
+      "sha256": "cde8cda498aa359c5ef70cbf5ae336c7aa4f9e5b5c70aa29c3b0b8798af80eb7"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transactions/Endpoints/TransactionEndpoints.cs",
+      "sha256": "e53d34479c7ffa0b0707b61db3d992ee425a3a70fcf5c1b42a98d66473adb0d0"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transactions/Infrastructure/AdminTransactionReader.cs",
+      "sha256": "07870a9f8f77bb17a0b18b621fe11ae9264a8bcdc29a6aa5928d9b696800bc61"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transactions/Infrastructure/Migrations/20261005004252_InitialTransactions.Designer.cs",
+      "sha256": "d5153238634bc07970dc2c79f6845ed1a99c3266e1d303e98e7a91dec144a453"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transactions/Infrastructure/Migrations/20261005004252_InitialTransactions.cs",
+      "sha256": "4e9be3794fb5995e6cd5acaa7a2a159a5c45920c5eb7ef21abcf8191a2ed8886"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transactions/Infrastructure/Migrations/TransactionGuards.sql",
+      "sha256": "25eb16cc2bc8f2810dbeca6c266dafe45d39eeafd134de57f07ac7503009b585"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transactions/Infrastructure/Migrations/TransactionsDbContextModelSnapshot.cs",
+      "sha256": "0490b9062e3ea07687e187e48c75e45075d51b55f3612d295fc78e762c1629a8"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transactions/Infrastructure/TransactionStore.cs",
+      "sha256": "c464c23143da29bfdc79a3f43baf4c808e16d206fb6e32a47fa6516dc1be126f"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transactions/Infrastructure/TransactionsDbContext.cs",
+      "sha256": "e74983e5e0092ba607ad0477c4989f4db178498e9ad2ab4bc467625739d5872b"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transactions/Infrastructure/TransactionsTransactionParticipant.cs",
+      "sha256": "9d1627aa8cbf9ca6f18814dd8d9854fc97666bdc4b232f52037404de07180fd5"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transactions/TransactionsModule.cs",
+      "sha256": "c5939ec920987bfba95f9100487b98227efb90b2d2465e20612570258fc3a456"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transactions/packages.lock.json",
+      "sha256": "6694e2ce1abb663222a0ffa556b6f4994aed5d0180e8db13ec7462188ff70271"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transfers.Contracts/DigitalWallet.Transfers.Contracts.csproj",
+      "sha256": "5f27cc3117b11fb828a7877e49768ea62e5af11e8f8c28ef299eda07aad5b3e5"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transfers.Contracts/ReportTransfers.cs",
+      "sha256": "6d2a92cdecb8b63fca5f2b77e38b0630ac584e046e43b257d624b11d3b61ac9d"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transfers.Contracts/TransferContracts.cs",
+      "sha256": "158674e34490a2ea483985f479bf654011231220bb0dbc72e3f5e91625b25595"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transfers.Contracts/packages.lock.json",
+      "sha256": "a29c6aa8cfb81874ff8bb78dc369d7416f28c9b8cc47e99592bfc019b20c41eb"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transfers/Application/TransferPorts.cs",
+      "sha256": "68b4cdc2a2957215eae3edc8d6be5177ab761918f407b9e3bab39687ca36a54b"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transfers/Application/TransferService.cs",
+      "sha256": "956ffc9985a13a5d8d0be67775aca302fa71e99bf434d1380b765bf4aa8c92b5"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transfers/DigitalWallet.Transfers.csproj",
+      "sha256": "99cb0cda4bb6e4f9dbd4f8770b0d4bf70a173bbd2dc97f4121bea58825aa0f8e"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transfers/Domain/Transfer.cs",
+      "sha256": "f5d9034fc88d53ebae995f9f5c72a0a68c3fc0f5bcc5515eba5e899b25244c4f"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transfers/Endpoints/TransferEndpoints.cs",
+      "sha256": "f79b4f8194fe3a0c63991e32027b50236025f518bdb5615d8515ad5ca80390ca"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transfers/Infrastructure/Migrations/20260922155518_InitialTransfers.Designer.cs",
+      "sha256": "3aafbe3bffc27f20e6e72e201c19630e2e0ec2df6c6e5850e10e37d2643d3fcd"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transfers/Infrastructure/Migrations/20260922155518_InitialTransfers.cs",
+      "sha256": "5bf2a0182bb65c175487c9048c2b93da6428b39e42c9d8f2e4ba080d9e878abb"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transfers/Infrastructure/Migrations/20260922160539_TrackTransferOtpIssuance.Designer.cs",
+      "sha256": "25e7d5d7a6db96f164efdab01207fcada32a3cb7dca714833890b018c8b7953e"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transfers/Infrastructure/Migrations/20260922160539_TrackTransferOtpIssuance.cs",
+      "sha256": "b7c7b795b76e43f3f723422ee728bccf8163b216c935574404f6f267adf0d2bf"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transfers/Infrastructure/Migrations/TransferGuards.sql",
+      "sha256": "a4f63d21a694389e817336159e18ee80876f2975e38b7e885f5c7c7cdfa8eb3a"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transfers/Infrastructure/Migrations/TransfersDbContextModelSnapshot.cs",
+      "sha256": "395db08d0be2faab35114ebc23c1904d0b3ac37f395fe94bc9094d6c67bf6dc1"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transfers/Infrastructure/TransferReportReader.cs",
+      "sha256": "617839b2b101c40534be00bd07e7b04a0da50acda6dcc480f9f0f2978d3740ed"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transfers/Infrastructure/TransfersDbContext.cs",
+      "sha256": "e7909dc0c3286caa039b6dd32c7c2287a4ef36644b7e8bdc0b6ae6821c74d69f"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transfers/Infrastructure/TransfersDbContextFactory.cs",
+      "sha256": "38d221061204eafed5e677031133f7c19d51617b146e97b71fedde991741fc99"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transfers/Infrastructure/TransfersStore.cs",
+      "sha256": "470dccb901006e884d9c22771ea9693add4cbc20372e9f18490483ed3c50288c"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transfers/Infrastructure/TransfersTransactionParticipant.cs",
+      "sha256": "2aa284d3868f23346daa657fc61cb5f124b9e2f85688d9082208bef6272779fe"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transfers/TransfersModule.cs",
+      "sha256": "6ae508296279f10b914228d8c2b1f734e8abe22bf0f3108e363e2d0e7d4cd152"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Transfers/packages.lock.json",
+      "sha256": "c3053d5f5f2e3f028c4bb308f0f3ff4acbd9b17043dfb10f90aa0440d22deecd"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Wallets.Contracts/AdminWallets.cs",
+      "sha256": "0da1f0f866caae91cd401ac5833c60dba414e906cffea5ac821712833e9a9284"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Wallets.Contracts/DigitalWallet.Wallets.Contracts.csproj",
+      "sha256": "5f27cc3117b11fb828a7877e49768ea62e5af11e8f8c28ef299eda07aad5b3e5"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Wallets.Contracts/PublicWalletLookup.cs",
+      "sha256": "312bc25342460b6d378ca558957c0451cd266848fee246f4a80704dee73f26c9"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Wallets.Contracts/TransferWallet.cs",
+      "sha256": "cc8d98bda5bb7e7f0d2f8f9182f2aa738c269971bb19035da9dfee4a74c7baae"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Wallets.Contracts/packages.lock.json",
+      "sha256": "a29c6aa8cfb81874ff8bb78dc369d7416f28c9b8cc47e99592bfc019b20c41eb"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Wallets/DigitalWallet.Wallets.csproj",
+      "sha256": "9480384545145fd1073dd0ade3f4afc0fe3704b5af6160f4fbc527657b5026d5"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Wallets/Domain/Wallet.cs",
+      "sha256": "73e3b0a34e4f20183604dd620c40b8ccf3afe9f724373809415552246478b950"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Wallets/Persistence/Migrations/20260920114634_InitialWallets.Designer.cs",
+      "sha256": "c4db3bc726a94335e6f923777e8bd145bc8c957e0f6319154a8427556c9fdb05"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Wallets/Persistence/Migrations/20260920114634_InitialWallets.cs",
+      "sha256": "929380c72b83092efd8e2440d6362c5a2ec169347d0e9ba0d479e891b169a9c3"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Wallets/Persistence/Migrations/20260920121240_RecoverableLedgerProvisioning.Designer.cs",
+      "sha256": "2527e9a431ad8436a9a1f9c5950fb67bf4fad7768026c3a143d63b1d71cadb82"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Wallets/Persistence/Migrations/20260920121240_RecoverableLedgerProvisioning.cs",
+      "sha256": "a206973821ab1217f37d2042e4ab9e4688e314e16819783c74fc047b6a2a2546"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Wallets/Persistence/Migrations/20260920144705_EnforceWalletLedgerReadiness.Designer.cs",
+      "sha256": "2565d28b76433e9a721be3a652ce84678aeb049402d1fc6ed431409d2c515684"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Wallets/Persistence/Migrations/20260920144705_EnforceWalletLedgerReadiness.cs",
+      "sha256": "c79419871af9a83c87013415072c1c3ccf8436f4731727dd6163f241324af2fd"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Wallets/Persistence/Migrations/WalletsDbContextModelSnapshot.cs",
+      "sha256": "5b0bacf18f88ea5b45d874735b4622c2f55624db7c6e3e7da283f1a0f7005233"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Wallets/Persistence/WalletsDbContext.cs",
+      "sha256": "b51b9168873994c72fc6b58178cae0f1bf01ca10af1498c25f0de43672c59cfa"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Wallets/Persistence/WalletsDbContextFactory.cs",
+      "sha256": "8dd51f4f56dd2381dad60c426cd30a6186767480fcafacaaf3b431ef6512b8bc"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Wallets/Persistence/WalletsTransactionParticipant.cs",
+      "sha256": "acfd3963641bf28c9fd49447304435cf37391849290b9f9aae32905a951a86d1"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Wallets/Services/AdminWalletReader.cs",
+      "sha256": "d30caf3573ea43baff42fd1a1fb8d059d9892e448a4a81da21487c4c87fd68f0"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Wallets/Services/PublicWalletLookup.cs",
+      "sha256": "d94abcd47ffd563620171776583180604239ff3adfac65e8c06a92b2afdfa3de"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Wallets/Services/WalletProvisioning.cs",
+      "sha256": "94bfdb247b2d9e545b2c0779f08f13e89bfe515e5aa6b59dced28460d347b1a8"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Wallets/Services/WalletService.cs",
+      "sha256": "180ce0ee2a437a3c00e82ad87bf5ef0b886ed3758f9fe081c15b22432716d764"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Wallets/WalletsEndpoints.cs",
+      "sha256": "df5cb6616a38635745f8686bea259a77e18b8fdd048f31690286dc6ff33adc72"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Wallets/WalletsModule.cs",
+      "sha256": "a01a06ba920e46a1090bb8bec618faf4c355cf5f43ee7430d19a6aa4564bcf19"
+    },
+    {
+      "path": "src/Modules/DigitalWallet.Wallets/packages.lock.json",
+      "sha256": "c1de56aafc0dafc51bd9c538cd55c0f8b6a1038b2dbfc924dfbc640b12d43573"
+    },
+    {
+      "path": "tests/DigitalWallet.Api.Tests/AdminPhase10PostgresTests.cs",
+      "sha256": "790f6a28024bdd0a0ad73aa708b7e7eba033f5b3f6b3ad55aaaf3ba421b41e60"
+    },
+    {
+      "path": "tests/DigitalWallet.Api.Tests/BeneficiariesPhaseFiveAcceptanceTests.cs",
+      "sha256": "57ce3152acbabba14dcb04dbccd9b7a7d512b355ac2819e8e7287a14548a0021"
+    },
+    {
+      "path": "tests/DigitalWallet.Api.Tests/BeneficiariesPostgresTests.cs",
+      "sha256": "89a4e0a95a98dc7153545b6aa6e75b5b80210e3ec8a3938f45b53b156689fd4c"
+    },
+    {
+      "path": "tests/DigitalWallet.Api.Tests/CustomersWalletsPostgresTests.cs",
+      "sha256": "83f982631e29be5cf040d07f2851f224495fd2378982250044f8d8f3c03e07e3"
+    },
+    {
+      "path": "tests/DigitalWallet.Api.Tests/DigitalWallet.Api.Tests.csproj",
+      "sha256": "bcdfe1a8533e185152670eceb8a00318609936bf5c5b46c6c31334262f7b0712"
+    },
+    {
+      "path": "tests/DigitalWallet.Api.Tests/FinancialObservabilityPhase12Tests.cs",
+      "sha256": "339328fcc354694b93aeddb1d6e90818fc4f2d2601140f178bd07788e5af2981"
+    },
+    {
+      "path": "tests/DigitalWallet.Api.Tests/FoundationTests.cs",
+      "sha256": "fc98863a1551db81144590cb7c78ad1679241e7d7e54173909e18132d2406612"
+    },
+    {
+      "path": "tests/DigitalWallet.Api.Tests/IdentityPostgresFactory.cs",
+      "sha256": "d5bbf462e404e1ea0d451a8afcb5a04693eefb3c0a76b1ab0603591ba99713ce"
+    },
+    {
+      "path": "tests/DigitalWallet.Api.Tests/IdentityPostgresTests.cs",
+      "sha256": "70f3e54891d3a1cf98c0b3e5b9494adfe0737fca60309dd40528f4ff96f2d228"
+    },
+    {
+      "path": "tests/DigitalWallet.Api.Tests/LedgerPostgresTests.cs",
+      "sha256": "4910da3f1b63655623717fc9106800f38560136e6a728090e678e55fe581ba9f"
+    },
+    {
+      "path": "tests/DigitalWallet.Api.Tests/MessagingPhase9PostgresTests.cs",
+      "sha256": "2ac98bf91101ad408ba6238dba172723ccbdc7031233e28370dc82496a85a62a"
+    },
+    {
+      "path": "tests/DigitalWallet.Api.Tests/ObservabilityPhase12Tests.cs",
+      "sha256": "d5a6744728a88059d9b90faf78039b4e8202d7c711dfccab5cedfcb4f14a88b3"
+    },
+    {
+      "path": "tests/DigitalWallet.Api.Tests/OperationalAssetsPhase12Tests.cs",
+      "sha256": "c30b0c0d73eebf33533e4308ec9cb1668fbde751d26202ddd008dda0c424642a"
+    },
+    {
+      "path": "tests/DigitalWallet.Api.Tests/PackagingPhase13Tests.cs",
+      "sha256": "782740f0bcb617fca6cba2ca629899139c47aac845d7ec4532e2fe84dd7eb3d9"
+    },
+    {
+      "path": "tests/DigitalWallet.Api.Tests/PerformancePhase11Tests.cs",
+      "sha256": "54710b696e035eb992b18f0f2162b20dd75bd658372896944f4f16ddda931f86"
+    },
+    {
+      "path": "tests/DigitalWallet.Api.Tests/PostgresReadPlansPhase11Tests.cs",
+      "sha256": "e1f2d2db2b17bb9bdf558920b59e2fcf3460d04948fdd1741b7b2c0b4835230e"
+    },
+    {
+      "path": "tests/DigitalWallet.Api.Tests/RabbitDatabaseFixture.cs",
+      "sha256": "f2a85ec492641744d0630f78fb009caa464cb7c45eb034a1d7933121d663e6e3"
+    },
+    {
+      "path": "tests/DigitalWallet.Api.Tests/RedisFinancialPhase11Tests.cs",
+      "sha256": "86f816119e74379cc346bd868509897e2c161d77417d590f32bb89bbadf0a32e"
+    },
+    {
+      "path": "tests/DigitalWallet.Api.Tests/RedisPhase11Tests.cs",
+      "sha256": "9185ddc2191d8a6a227b90d6c89314dbf6e05002357ed029744c96d0462a1f79"
+    },
+    {
+      "path": "tests/DigitalWallet.Api.Tests/RiskLimitsPostgresTests.cs",
+      "sha256": "766df3fce12f2e35450a085689d55351426c70e3adb12ab518b0c7ea2f8c8692"
+    },
+    {
+      "path": "tests/DigitalWallet.Api.Tests/TransactionsPhase8PostgresTests.cs",
+      "sha256": "54c4b9c2050149b737aa72db48b5f804bcf8e99e0e6b5f8f9fa2c29cbdd6f2a1"
+    },
+    {
+      "path": "tests/DigitalWallet.Api.Tests/TransfersPostgresTests.cs",
+      "sha256": "fa6a48a3658ee09aa47ea1a7e536aa3438fdb98be985f95f3d3f6db32476fe5b"
+    },
+    {
+      "path": "tests/DigitalWallet.Api.Tests/TransfersSecurityPostgresTests.cs",
+      "sha256": "17446c634cfb3e5a5403f226e818976bd35fe71ceebed35714a39ec790133598"
+    },
+    {
+      "path": "tests/DigitalWallet.Api.Tests/packages.lock.json",
+      "sha256": "6839c2a8f4f0681d9e0d6a48aea0acf308e1a8e4c58a84ba2e254d2561c14fe9"
+    },
+    {
+      "path": "tests/DigitalWallet.Api.Tests/xunit.runner.json",
+      "sha256": "735df3c59af5b072d126e6529ab42312d552fe7533cd0ea895f6e86b953c01c5"
+    },
+    {
+      "path": "tests/DigitalWallet.ArchitectureTests/DigitalWallet.ArchitectureTests.csproj",
+      "sha256": "cb1dbc8c634af160ec7467ad23332ad4e0b2923b2c8f7756957779977758cee1"
+    },
+    {
+      "path": "tests/DigitalWallet.ArchitectureTests/ProjectReferenceRulesTests.cs",
+      "sha256": "e663e5a7d1a6d4cd6d3ac4237e968b869cbcab6072baebb6dba129b0bac2a9ff"
+    },
+    {
+      "path": "tests/DigitalWallet.ArchitectureTests/RedisBoundaryTests.cs",
+      "sha256": "37553d3920feb45c6c5f69926da66d5ef5add8ce0103365c68656a2b0f0cb40c"
+    },
+    {
+      "path": "tests/DigitalWallet.ArchitectureTests/packages.lock.json",
+      "sha256": "c9e7a8441bd641a5aea0185f8f3649870d88e9cf84caee35fc2a0ac2cc944e67"
+    }
+  ]
+}

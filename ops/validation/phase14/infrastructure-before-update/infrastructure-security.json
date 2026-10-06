@@ -1,0 +1,110 @@
+{
+  "status": "failed",
+  "results": [
+    {
+      "image": "postgres",
+      "reference": "postgres:17.6-alpine@sha256:ef257d85f76e48da1c64832459b59fcaba1a4dac97bf5d7450c77753542eee94",
+      "imageId": "sha256:29e645e20571728f22df398b9954bb6c1cefec390d99ed4e26308fc2f52d6a37",
+      "findings": {
+        "MEDIUM": 52,
+        "LOW": 53,
+        "CRITICAL": 3,
+        "HIGH": 47,
+        "UNKNOWN": 1
+      },
+      "imageSecrets": 0
+    },
+    {
+      "image": "redis",
+      "reference": "redis:7.4.7-alpine@sha256:02f2cc4882f8bf87c79a220ac958f58c700bdec0dfb9b9ea61b62fb0e8f1bfcf",
+      "imageId": "sha256:67d49cdb6df6f3fb9787ff1741d54d2d2ad48ab5cc73453d83b593731f860656",
+      "findings": {
+        "CRITICAL": 6,
+        "HIGH": 69,
+        "MEDIUM": 79,
+        "LOW": 20,
+        "UNKNOWN": 1
+      },
+      "imageSecrets": 0
+    },
+    {
+      "image": "rabbitmq",
+      "reference": "rabbitmq:4.1.4-management-alpine@sha256:5cbd7145b0306399ad68422c3350b6cbd1bb95704b39f5896480e5b6d4238a04",
+      "imageId": "sha256:fb0a158d542dcc7080397502b067f98cb6d04851c216fe038eeab1ef9ec1707d",
+      "findings": {
+        "MEDIUM": 77,
+        "LOW": 65,
+        "CRITICAL": 2,
+        "HIGH": 62,
+        "UNKNOWN": 4
+      },
+      "imageSecrets": 0
+    },
+    {
+      "image": "prometheus",
+      "reference": "prom/prometheus:v3.5.0@sha256:63805ebb8d2b3920190daf1cb14a60871b16fd38bed42b857a3182bc621f4996",
+      "imageId": "sha256:5a1d4a6d0adfd8f785bb0f1243f2a90457e508eaf5eb7e958aa5ea1463020fcb",
+      "findings": {
+        "HIGH": 92,
+        "MEDIUM": 91,
+        "LOW": 9,
+        "UNKNOWN": 4,
+        "CRITICAL": 4
+      },
+      "imageSecrets": 0
+    },
+    {
+      "image": "grafana",
+      "reference": "grafana/grafana:12.2.1@sha256:35c41e0fd0295f5d0ee5db7e780cf33506abfaf47686196f825364889dee878b",
+      "imageId": "sha256:52def22e4440f1ad747ea10b77aff83d82c888b0aac48f0d70928ac45f72ce5b",
+      "findings": {
+        "MEDIUM": 104,
+        "LOW": 61,
+        "HIGH": 118,
+        "CRITICAL": 9,
+        "UNKNOWN": 4
+      },
+      "imageSecrets": 0
+    },
+    {
+      "image": "edge",
+      "reference": "caddy:2.11.2-alpine@sha256:834468128c7696cec0ceea6172f7d692daf645ae51983ca76e39da54a97c570d",
+      "imageId": "sha256:b6e5d14867528ed7ac3dbcea6e8d99be33be0e41d34ada04cab1a7587360810d",
+      "findings": {
+        "HIGH": 74,
+        "MEDIUM": 93,
+        "LOW": 55,
+        "UNKNOWN": 4,
+        "CRITICAL": 2
+      },
+      "imageSecrets": 0
+    },
+    {
+      "image": "alertmanager",
+      "reference": "prom/alertmanager:v0.28.1@sha256:27c475db5fb156cab31d5c18a4251ac7ed567746a2483ff264516437a39b15ba",
+      "imageId": "sha256:d1950c730ae9121fe5ad7b7313be63a26f4a075087d2190a31fd9261f7767a44",
+      "findings": {
+        "MEDIUM": 86,
+        "HIGH": 82,
+        "UNKNOWN": 4,
+        "CRITICAL": 2,
+        "LOW": 4
+      },
+      "imageSecrets": 0
+    },
+    {
+      "image": "collector",
+      "reference": "digitalwallet/collector:14.0.0-local",
+      "imageId": "sha256:e089b240c3177e7cc8cebccdc68e42be05a6e333740008fd31b4635c5d845c0e",
+      "findings": {
+        "LOW": 10,
+        "HIGH": 65,
+        "MEDIUM": 53,
+        "CRITICAL": 7,
+        "UNKNOWN": 2
+      },
+      "imageSecrets": 0
+    }
+  ],
+  "exceptions": 0
+}

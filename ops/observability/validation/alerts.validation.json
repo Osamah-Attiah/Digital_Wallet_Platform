@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-06",
+  "engine": "Prometheus promtool 3.5.0",
+  "ruleCheck": "SUCCESS",
+  "rules": 19,
+  "unitTests": "SUCCESS",
+  "scenarios": 5,
+  "rulesSha256": "88a65463c3464c3fae68ce82fa905e1dd53be464660e442a9c5af3cb41e7128f",
+  "testsSha256": "1da3bad6074454e9fe8d1fa413fb975820cf49ad65dcbd4cbbec83ec83e14609",
+  "productionSloClaim": false
+}

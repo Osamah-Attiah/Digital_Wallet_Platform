@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "passed": 8,
+  "failed": 0,
+  "skipped": 0,
+  "subsetOfBackendTotal": true,
+  "results": [
+    {
+      "file": ".local/test-results/phase13-host-boundaries_net10.0_20261006022845.trx",
+      "sha256": "77e510f4643712bed8dae95058ad84c1a359879fa15da5488054a64a7a95cd47",
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0,
+      "total": 8
+    }
+  ]
+}

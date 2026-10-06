@@ -1,0 +1,54 @@
+# .NET build output
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+[Tt]est[Rr]esult*/
+*.trx
+*.coverage
+*.coveragexml
+
+# IDE and user-specific files
+.vs/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+appsettings.Local.json
+appsettings.*.local.json
+secrets.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Admin frontend and private exports
+node_modules/
+dist/
+.local/
+playwright-report/
+*.tsbuildinfo
+
+# Packaging helper bytecode
+__pycache__/
+*.py[cod]
+
+# IaC state and credentials remain local; the provider lock is reviewable.
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfvars
+!*.example.tfvars
+crash.log
+gha-creds-*.json
+
+# Keep local Markdown documentation out of GitHub; publish only the root README.
+*.[mM][dD]
+!/README.md

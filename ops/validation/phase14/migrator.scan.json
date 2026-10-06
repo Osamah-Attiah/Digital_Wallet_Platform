@@ -1,0 +1,1409 @@
+{
+  "SchemaVersion": 2,
+  "CreatedAt": "2026-10-06T00:41:33.698908795Z",
+  "ArtifactName": "digitalwallet/migrator:14.0.0-local",
+  "ArtifactType": "container_image",
+  "Metadata": {
+    "Size": 184808448,
+    "OS": {
+      "Family": "ubuntu",
+      "Name": "24.04"
+    },
+    "ImageID": "sha256:79a06272b725b99d99b091f0c20acd7790e0d41ef0fb9b7bac82739cf597566c",
+    "DiffIDs": [
+      "sha256:82313bb8b6c13649f8b4219d7d6790840199ca02e6e2f287f4a39858c4f1b82b",
+      "sha256:c82e9a18c2b6d29aa1bd35f27491ad3ae8e89bf8c031fb3e77093502e8bb9a0d",
+      "sha256:c8b1baf880b5847771702a0c6de0c87494d86a723a329dcfed52b582c7e03197",
+      "sha256:907280bf420030c98f00d4ca200648dec1328cfc4df13318dd452267d1041308",
+      "sha256:3d1f72dc3978ebe4550b119c3e450c4169150da9d5f7fa16dfcc78da8526a69a",
+      "sha256:a72f05de94efc6776d2010b77551208cc6d977f7831aabde3fc0aeb22f4080fc",
+      "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035",
+      "sha256:2a07fed0336066fb8cd61a2fccda9e5100b64074264a66e5db8aacdfd3556cce"
+    ],
+    "RepoTags": [
+      "digitalwallet/migrator:14.0.0-local"
+    ],
+    "ImageConfig": {
+      "architecture": "arm64",
+      "created": "2026-10-06T00:15:36.77245788Z",
+      "history": [
+        {
+          "created": "2026-10-02T19:00:48Z",
+          "created_by": "COPY /rootfs / # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2026-10-02T19:00:49Z",
+          "created_by": "ENV APP_UID=1654 ASPNETCORE_HTTP_PORTS=8080 DOTNET_RUNNING_IN_CONTAINER=true",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2026-10-02T19:00:49Z",
+          "created_by": "COPY /rootfs/home/app /home/app # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2026-10-02T19:00:49Z",
+          "created_by": "USER 1654",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2026-10-02T19:01:10Z",
+          "created_by": "ENV DOTNET_VERSION=10.0.12",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2026-10-02T19:01:10Z",
+          "created_by": "COPY /usr/share/dotnet /usr/share/dotnet # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2026-10-02T19:01:10Z",
+          "created_by": "COPY /dotnet-symlink /usr/bin # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2026-10-02T19:01:10Z",
+          "created_by": "ENTRYPOINT [\"/usr/bin/dotnet\"]",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2026-10-02T19:01:10Z",
+          "created_by": "CMD [\"--info\"]",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2026-10-02T19:01:22Z",
+          "created_by": "ENV ASPNET_VERSION=10.0.12",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2026-10-02T19:01:22Z",
+          "created_by": "COPY /dotnet /usr/share/dotnet # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2026-10-06T00:00:04Z",
+          "created_by": "ARG VERSION=14.0.0-local",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2026-10-06T00:00:04Z",
+          "created_by": "ARG GIT_SHA=d9ac1ac1fd949a69ff05230506c77300864327bc",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2026-10-06T00:00:04Z",
+          "created_by": "ARG BUILD_DATE=2026-10-05T23:26:06.735834+00:00",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2026-10-06T00:00:04Z",
+          "created_by": "LABEL org.opencontainers.image.title=DigitalWallet.Migrator org.opencontainers.image.version=14.0.0-local org.opencontainers.image.revision=d9ac1ac1fd949a69ff05230506c77300864327bc org.opencontainers.image.created=2026-10-05T23:26:06.735834+00:00",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2026-10-06T00:00:04Z",
+          "created_by": "WORKDIR /app",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2026-10-06T00:15:36Z",
+          "created_by": "COPY /publish/ ./ # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2026-10-06T00:15:36Z",
+          "created_by": "COPY --chown=1654:1654 /reports/ /var/reports/ # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2026-10-06T00:15:36Z",
+          "created_by": "USER 1654:1654",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2026-10-06T00:15:36Z",
+          "created_by": "ENV ASPNETCORE_HTTP_PORTS=8080 DOTNET_EnableDiagnostics=0",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2026-10-06T00:15:36Z",
+          "created_by": "EXPOSE [8080/tcp]",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2026-10-06T00:15:36Z",
+          "created_by": "HEALTHCHECK {Test:[NONE] Interval:0s Timeout:0s StartPeriod:0s StartInterval:0s Retries:0}",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2026-10-06T00:15:36Z",
+          "created_by": "ENTRYPOINT [\"dotnet\" \"DigitalWallet.Migrator.dll\"]",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        }
+      ],
+      "os": "linux",
+      "rootfs": {
+        "type": "layers",
+        "diff_ids": [
+          "sha256:82313bb8b6c13649f8b4219d7d6790840199ca02e6e2f287f4a39858c4f1b82b",
+          "sha256:c82e9a18c2b6d29aa1bd35f27491ad3ae8e89bf8c031fb3e77093502e8bb9a0d",
+          "sha256:c8b1baf880b5847771702a0c6de0c87494d86a723a329dcfed52b582c7e03197",
+          "sha256:907280bf420030c98f00d4ca200648dec1328cfc4df13318dd452267d1041308",
+          "sha256:3d1f72dc3978ebe4550b119c3e450c4169150da9d5f7fa16dfcc78da8526a69a",
+          "sha256:a72f05de94efc6776d2010b77551208cc6d977f7831aabde3fc0aeb22f4080fc",
+          "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035",
+          "sha256:2a07fed0336066fb8cd61a2fccda9e5100b64074264a66e5db8aacdfd3556cce"
+        ]
+      },
+      "config": {
+        "Healthcheck": {
+          "Test": [
+            "NONE"
+          ]
+        },
+        "Entrypoint": [
+          "dotnet",
+          "DigitalWallet.Migrator.dll"
+        ],
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "APP_UID=1654",
+          "ASPNETCORE_HTTP_PORTS=8080",
+          "DOTNET_RUNNING_IN_CONTAINER=true",
+          "DOTNET_VERSION=10.0.12",
+          "ASPNET_VERSION=10.0.12",
+          "DOTNET_EnableDiagnostics=0"
+        ],
+        "Labels": {
+          "com.docker.compose.project": "digital-wallet",
+          "com.docker.compose.service": "migrate",
+          "com.docker.compose.version": "5.5.1",
+          "org.opencontainers.image.created": "2026-10-05T23:26:06.735834+00:00",
+          "org.opencontainers.image.revision": "d9ac1ac1fd949a69ff05230506c77300864327bc",
+          "org.opencontainers.image.title": "DigitalWallet.Migrator",
+          "org.opencontainers.image.version": "14.0.0-local"
+        },
+        "User": "1654:1654",
+        "WorkingDir": "/app",
+        "ExposedPorts": {
+          "8080/tcp": {}
+        },
+        "ArgsEscaped": true
+      }
+    },
+    "Layers": [
+      {
+        "Size": 51948544,
+        "DiffID": "sha256:82313bb8b6c13649f8b4219d7d6790840199ca02e6e2f287f4a39858c4f1b82b"
+      },
+      {
+        "Size": 2048,
+        "DiffID": "sha256:c82e9a18c2b6d29aa1bd35f27491ad3ae8e89bf8c031fb3e77093502e8bb9a0d"
+      },
+      {
+        "Size": 88928768,
+        "DiffID": "sha256:c8b1baf880b5847771702a0c6de0c87494d86a723a329dcfed52b582c7e03197"
+      },
+      {
+        "Size": 2560,
+        "DiffID": "sha256:907280bf420030c98f00d4ca200648dec1328cfc4df13318dd452267d1041308"
+      },
+      {
+        "Size": 30119936,
+        "DiffID": "sha256:3d1f72dc3978ebe4550b119c3e450c4169150da9d5f7fa16dfcc78da8526a69a"
+      },
+      {
+        "Size": 1536,
+        "DiffID": "sha256:a72f05de94efc6776d2010b77551208cc6d977f7831aabde3fc0aeb22f4080fc"
+      },
+      {
+        "Size": 13802496,
+        "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+      },
+      {
+        "Size": 2560,
+        "DiffID": "sha256:2a07fed0336066fb8cd61a2fccda9e5100b64074264a66e5db8aacdfd3556cce"
+      }
+    ]
+  },
+  "Results": [
+    {
+      "Target": "digitalwallet/migrator:14.0.0-local (ubuntu 24.04)",
+      "Class": "os-pkgs",
+      "Type": "ubuntu",
+      "Packages": [
+        {
+          "ID": "base-files@13ubuntu10.5",
+          "Name": "base-files",
+          "Identifier": {
+            "PURL": "pkg:deb/ubuntu/base-files@13ubuntu10.5?arch=arm64\u0026distro=ubuntu-24.04",
+            "UID": "bbb9484ebf80db3"
+          },
+          "Version": "13ubuntu10.5",
+          "Arch": "arm64",
+          "SrcName": "base-files",
+          "SrcVersion": "13ubuntu10.5",
+          "Licenses": [
+            "GPL-2.0-or-later"
+          ],
+          "Maintainer": "Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+          "DependsOn": [
+            "libc6@2.39-0ubuntu8.9"
+          ],
+          "Layer": {
+            "DiffID": "sha256:82313bb8b6c13649f8b4219d7d6790840199ca02e6e2f287f4a39858c4f1b82b"
+          }
+        },
+        {
+          "ID": "ca-certificates@20260601~24.04.1",
+          "Name": "ca-certificates",
+          "Identifier": {
+            "PURL": "pkg:deb/ubuntu/ca-certificates@20260601~24.04.1?arch=all\u0026distro=ubuntu-24.04",
+            "UID": "e5e28662e3b9e3a9"
+          },
+          "Version": "20260601~24.04.1",
+          "Arch": "all",
+          "SrcName": "ca-certificates",
+          "SrcVersion": "20260601~24.04.1",
+          "Licenses": [
+            "GPL-2.0-or-later",
+            "GPL-2.0-only",
+            "MPL-2.0"
+          ],
+          "Maintainer": "Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+          "DependsOn": [
+            "openssl@3.0.13-0ubuntu3.16"
+          ],
+          "Layer": {
+            "DiffID": "sha256:82313bb8b6c13649f8b4219d7d6790840199ca02e6e2f287f4a39858c4f1b82b"
+          }
+        },
+        {
+          "ID": "gcc-14-base@14.2.0-4ubuntu2~24.04.1",
+          "Name": "gcc-14-base",
+          "Identifier": {
+            "PURL": "pkg:deb/ubuntu/gcc-14-base@14.2.0-4ubuntu2~24.04.1?arch=arm64\u0026distro=ubuntu-24.04",
+            "UID": "b5b9e61b1844726"
+          },
+          "Version": "14.2.0",
+          "Release": "4ubuntu2~24.04.1",
+          "Arch": "arm64",
+          "SrcName": "gcc-14",
+          "SrcVersion": "14.2.0",
+          "SrcRelease": "4ubuntu2~24.04.1",
+          "Licenses": [
+            "GPL-2.0-or-later",
+            "GPL-3.0-only",
+            "GFDL-1.2-only",
+            "Artistic-2.0",
+            "LGPL-2.0-or-later"
+          ],
+          "Maintainer": "Ubuntu Core developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+          "Layer": {
+            "DiffID": "sha256:82313bb8b6c13649f8b4219d7d6790840199ca02e6e2f287f4a39858c4f1b82b"
+          }
+        },
+        {
+          "ID": "libc6@2.39-0ubuntu8.9",
+          "Name": "libc6",
+          "Identifier": {
+            "PURL": "pkg:deb/ubuntu/libc6@2.39-0ubuntu8.9?arch=arm64\u0026distro=ubuntu-24.04",
+            "UID": "ed8c2fc2345c2c5c"
+          },
+          "Version": "2.39",
+          "Release": "0ubuntu8.9",
+          "Arch": "arm64",
+          "SrcName": "glibc",
+          "SrcVersion": "2.39",
+          "SrcRelease": "0ubuntu8.9",
+          "Licenses": [
+            "LGPL-2.1-only",
+            "GPL-2.0-only",
+            "GFDL-1.3-only"
+          ],
+          "Maintainer": "Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+          "DependsOn": [
+            "libgcc-s1@14.2.0-4ubuntu2~24.04.1"
+          ],
+          "Layer": {
+            "DiffID": "sha256:82313bb8b6c13649f8b4219d7d6790840199ca02e6e2f287f4a39858c4f1b82b"
+          }
+        },
+        {
+          "ID": "libgcc-s1@14.2.0-4ubuntu2~24.04.1",
+          "Name": "libgcc-s1",
+          "Identifier": {
+            "PURL": "pkg:deb/ubuntu/libgcc-s1@14.2.0-4ubuntu2~24.04.1?arch=arm64\u0026distro=ubuntu-24.04",
+            "UID": "e7c92f19342d140b"
+          },
+          "Version": "14.2.0",
+          "Release": "4ubuntu2~24.04.1",
+          "Arch": "arm64",
+          "SrcName": "gcc-14",
+          "SrcVersion": "14.2.0",
+          "SrcRelease": "4ubuntu2~24.04.1",
+          "Maintainer": "Ubuntu Core developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+          "DependsOn": [
+            "gcc-14-base@14.2.0-4ubuntu2~24.04.1",
+            "libc6@2.39-0ubuntu8.9"
+          ],
+          "Layer": {
+            "DiffID": "sha256:82313bb8b6c13649f8b4219d7d6790840199ca02e6e2f287f4a39858c4f1b82b"
+          }
+        },
+        {
+          "ID": "libicu74@74.2-1ubuntu3.1",
+          "Name": "libicu74",
+          "Identifier": {
+            "PURL": "pkg:deb/ubuntu/libicu74@74.2-1ubuntu3.1?arch=arm64\u0026distro=ubuntu-24.04",
+            "UID": "c7461b6a5dc3b587"
+          },
+          "Version": "74.2",
+          "Release": "1ubuntu3.1",
+          "Arch": "arm64",
+          "SrcName": "icu",
+          "SrcVersion": "74.2",
+          "SrcRelease": "1ubuntu3.1",
+          "Licenses": [
+            "MIT",
+            "GPL-3.0-only"
+          ],
+          "Maintainer": "Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+          "DependsOn": [
+            "libc6@2.39-0ubuntu8.9",
+            "libgcc-s1@14.2.0-4ubuntu2~24.04.1",
+            "libstdc++6@14.2.0-4ubuntu2~24.04.1"
+          ],
+          "Layer": {
+            "DiffID": "sha256:82313bb8b6c13649f8b4219d7d6790840199ca02e6e2f287f4a39858c4f1b82b"
+          }
+        },
+        {
+          "ID": "libssl3t64@3.0.13-0ubuntu3.16",
+          "Name": "libssl3t64",
+          "Identifier": {
+            "PURL": "pkg:deb/ubuntu/libssl3t64@3.0.13-0ubuntu3.16?arch=arm64\u0026distro=ubuntu-24.04",
+            "UID": "f02ea553915dd00e"
+          },
+          "Version": "3.0.13",
+          "Release": "0ubuntu3.16",
+          "Arch": "arm64",
+          "SrcName": "openssl",
+          "SrcVersion": "3.0.13",
+          "SrcRelease": "0ubuntu3.16",
+          "Licenses": [
+            "Apache-2.0",
+            "Artistic-2.0",
+            "GPL-1.0-or-later",
+            "GPL-1.0-only"
+          ],
+          "Maintainer": "Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+          "DependsOn": [
+            "libc6@2.39-0ubuntu8.9"
+          ],
+          "Layer": {
+            "DiffID": "sha256:82313bb8b6c13649f8b4219d7d6790840199ca02e6e2f287f4a39858c4f1b82b"
+          }
+        },
+        {
+          "ID": "libstdc++6@14.2.0-4ubuntu2~24.04.1",
+          "Name": "libstdc++6",
+          "Identifier": {
+            "PURL": "pkg:deb/ubuntu/libstdc%2B%2B6@14.2.0-4ubuntu2~24.04.1?arch=arm64\u0026distro=ubuntu-24.04",
+            "UID": "7a1dee7868b889ad"
+          },
+          "Version": "14.2.0",
+          "Release": "4ubuntu2~24.04.1",
+          "Arch": "arm64",
+          "SrcName": "gcc-14",
+          "SrcVersion": "14.2.0",
+          "SrcRelease": "4ubuntu2~24.04.1",
+          "Maintainer": "Ubuntu Core developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+          "DependsOn": [
+            "gcc-14-base@14.2.0-4ubuntu2~24.04.1",
+            "libc6@2.39-0ubuntu8.9",
+            "libgcc-s1@14.2.0-4ubuntu2~24.04.1"
+          ],
+          "Layer": {
+            "DiffID": "sha256:82313bb8b6c13649f8b4219d7d6790840199ca02e6e2f287f4a39858c4f1b82b"
+          }
+        },
+        {
+          "ID": "openssl@3.0.13-0ubuntu3.16",
+          "Name": "openssl",
+          "Identifier": {
+            "PURL": "pkg:deb/ubuntu/openssl@3.0.13-0ubuntu3.16?arch=arm64\u0026distro=ubuntu-24.04",
+            "UID": "3019dca39bdbce7"
+          },
+          "Version": "3.0.13",
+          "Release": "0ubuntu3.16",
+          "Arch": "arm64",
+          "SrcName": "openssl",
+          "SrcVersion": "3.0.13",
+          "SrcRelease": "0ubuntu3.16",
+          "Maintainer": "Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+          "DependsOn": [
+            "libc6@2.39-0ubuntu8.9",
+            "libssl3t64@3.0.13-0ubuntu3.16"
+          ],
+          "Layer": {
+            "DiffID": "sha256:82313bb8b6c13649f8b4219d7d6790840199ca02e6e2f287f4a39858c4f1b82b"
+          }
+        },
+        {
+          "ID": "tzdata@2026c-0ubuntu0.24.04.1",
+          "Name": "tzdata",
+          "Identifier": {
+            "PURL": "pkg:deb/ubuntu/tzdata@2026c-0ubuntu0.24.04.1?arch=all\u0026distro=ubuntu-24.04",
+            "UID": "1db8c1ac1195792b"
+          },
+          "Version": "2026c",
+          "Release": "0ubuntu0.24.04.1",
+          "Arch": "all",
+          "SrcName": "tzdata",
+          "SrcVersion": "2026c",
+          "SrcRelease": "0ubuntu0.24.04.1",
+          "Licenses": [
+            "public-domain",
+            "ICU"
+          ],
+          "Maintainer": "Ubuntu Developers \u003cubuntu-devel-discuss@lists.ubuntu.com\u003e",
+          "Layer": {
+            "DiffID": "sha256:82313bb8b6c13649f8b4219d7d6790840199ca02e6e2f287f4a39858c4f1b82b"
+          }
+        }
+      ],
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2026-18374",
+          "PkgID": "libc6@2.39-0ubuntu8.9",
+          "PkgName": "libc6",
+          "PkgIdentifier": {
+            "PURL": "pkg:deb/ubuntu/libc6@2.39-0ubuntu8.9?arch=arm64\u0026distro=ubuntu-24.04",
+            "UID": "ed8c2fc2345c2c5c"
+          },
+          "InstalledVersion": "2.39-0ubuntu8.9",
+          "Status": "affected",
+          "Layer": {
+            "DiffID": "sha256:82313bb8b6c13649f8b4219d7d6790840199ca02e6e2f287f4a39858c4f1b82b"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-18374",
+          "DataSource": {
+            "ID": "ubuntu",
+            "Name": "Ubuntu CVE Tracker",
+            "URL": "https://git.launchpad.net/ubuntu-cve-tracker"
+          },
+          "Title": "glibc: glibc: Heap buffer overflow via attacker-controlled fopen mode string",
+          "Description": "Passing an effectively empty string to the `,ccs=` syntax extension of the mode argument in the `fopen` function in the GNU C Library version 2.45 or earlier may result in a heap buffer overflow when the mode string input to the function is attacker controlled.\n\n\n\nThis usage pattern is not seen in applications in common GNU/Linux distributions and applications that process user-supplied values for `ccs` should not pass them through without validation.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-787"
+          ],
+          "VendorSeverity": {
+            "redhat": 2,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "V3Score": 4.9
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2026/08/27/6",
+            "https://access.redhat.com/security/cve/CVE-2026-18374",
+            "https://nvd.nist.gov/vuln/detail/CVE-2026-18374",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=34574",
+            "https://sourceware.org/git/?p=glibc.git;a=blob;f=advisories/GLIBC-SA-2026-0015",
+            "https://sourceware.org/git/?p=glibc.git;a=blob_plain;f=advisories/GLIBC-SA-2026-0015",
+            "https://www.cve.org/CVERecord?id=CVE-2026-18374"
+          ],
+          "PublishedDate": "2026-08-27T20:17:03.553Z",
+          "LastModifiedDate": "2026-09-03T16:43:15.293Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2026-89092",
+          "PkgID": "libc6@2.39-0ubuntu8.9",
+          "PkgName": "libc6",
+          "PkgIdentifier": {
+            "PURL": "pkg:deb/ubuntu/libc6@2.39-0ubuntu8.9?arch=arm64\u0026distro=ubuntu-24.04",
+            "UID": "ed8c2fc2345c2c5c"
+          },
+          "InstalledVersion": "2.39-0ubuntu8.9",
+          "Status": "affected",
+          "Layer": {
+            "DiffID": "sha256:82313bb8b6c13649f8b4219d7d6790840199ca02e6e2f287f4a39858c4f1b82b"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-89092",
+          "DataSource": {
+            "ID": "ubuntu",
+            "Name": "Ubuntu CVE Tracker",
+            "URL": "https://git.launchpad.net/ubuntu-cve-tracker"
+          },
+          "Title": "glibc: nscd stack overflow leads to degraded DNS resolution",
+          "Description": "The nscd service in the GNU C Library 2.3.4 onwards may crash due to a \nstack overflow when a malicious DNS server returns too large a response \nfor a DNS query, resulting in degraded DNS resolution for the system.\n\n\n\nExploitation of this bug needs a system that has nscd enabled and using \nan untrusted DNS server for name resolution, with the compromised DNS \nserver being capable of processing records large enough to result in a \nstack overflow in an nscd thread stack.  During experimentation, bind 9 \nwas unable to handle large records, but that could change in future or \nwith a different name server.  In typical installations, nscd is \nexecuted in an isolated context as its own user without a shell, due to \nwhich any compromise of that service is isolated.\n\n\n\nThere is a remote possibility of nscd cache corruption if an attacker \nmanages to get the stack pointer into a desired point in the heap, \npotentially resulting in other caches in nscd being overwritten with \ncorrupt data through the stack overflow, until the buggy code path \neventually results in a crash.\n\n\n\nFinally, a crash in nscd may result in performance degradation when \nresolving names, but it does not result in a denial of service.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-789"
+          ],
+          "VendorSeverity": {
+            "redhat": 2,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L",
+              "V3Score": 4.2
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2026/09/11/2",
+            "https://access.redhat.com/security/cve/CVE-2026-89092",
+            "https://nvd.nist.gov/vuln/detail/CVE-2026-89092",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=34624",
+            "https://sourceware.org/git/?p=glibc.git;a=blob;f=advisories/GLIBC-SA-2026-0016",
+            "https://sourceware.org/git/?p=glibc.git;a=blob_plain;f=advisories/GLIBC-SA-2026-0016",
+            "https://www.cve.org/CVERecord?id=CVE-2026-89092"
+          ],
+          "PublishedDate": "2026-09-11T02:18:35.46Z",
+          "LastModifiedDate": "2026-09-11T18:17:00.23Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-5222",
+          "PkgID": "libicu74@74.2-1ubuntu3.1",
+          "PkgName": "libicu74",
+          "PkgIdentifier": {
+            "PURL": "pkg:deb/ubuntu/libicu74@74.2-1ubuntu3.1?arch=arm64\u0026distro=ubuntu-24.04",
+            "UID": "c7461b6a5dc3b587"
+          },
+          "InstalledVersion": "74.2-1ubuntu3.1",
+          "Status": "affected",
+          "Layer": {
+            "DiffID": "sha256:82313bb8b6c13649f8b4219d7d6790840199ca02e6e2f287f4a39858c4f1b82b"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-5222",
+          "DataSource": {
+            "ID": "ubuntu",
+            "Name": "Ubuntu CVE Tracker",
+            "URL": "https://git.launchpad.net/ubuntu-cve-tracker"
+          },
+          "Title": "icu: Stack buffer overflow in the SRBRoot::addTag function",
+          "Description": "A stack buffer overflow was found in Internationl components for unicode (ICU ). While running the genrb binary, the 'subtag' struct overflowed at the SRBRoot::addTag function. This issue may lead to memory corruption and local arbitrary code execution.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-120"
+          ],
+          "VendorSeverity": {
+            "alma": 2,
+            "amazon": 3,
+            "azure": 3,
+            "cbl-mariner": 3,
+            "oracle-oval": 2,
+            "photon": 3,
+            "redhat": 2,
+            "rocky": 2,
+            "ubuntu": 1
+          },
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "V3Score": 7
+            }
+          },
+          "References": [
+            "https://access.redhat.com/errata/RHSA-2025:11888",
+            "https://access.redhat.com/errata/RHSA-2025:12083",
+            "https://access.redhat.com/errata/RHSA-2025:12331",
+            "https://access.redhat.com/errata/RHSA-2025:12332",
+            "https://access.redhat.com/errata/RHSA-2025:12333",
+            "https://access.redhat.com/errata/RHSA-2026:54544",
+            "https://access.redhat.com/errata/RHSA-2026:54553",
+            "https://access.redhat.com/errata/RHSA-2026:54581",
+            "https://access.redhat.com/errata/RHSA-2026:56786",
+            "https://access.redhat.com/errata/RHSA-2026:56853",
+            "https://access.redhat.com/errata/RHSA-2026:56911",
+            "https://access.redhat.com/errata/RHSA-2026:60019",
+            "https://access.redhat.com/errata/RHSA-2026:65839",
+            "https://access.redhat.com/security/cve/CVE-2025-5222",
+            "https://bugzilla.redhat.com/2368600",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2368600",
+            "https://cert-portal.siemens.com/productcert/html/ssa-585531.html",
+            "https://creativecommons.org/licenses/by/4.0/",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-5222",
+            "https://errata.almalinux.org/9/ALSA-2025-12083.html",
+            "https://errata.rockylinux.org/RLSA-2025:12083",
+            "https://linux.oracle.com/cve/CVE-2025-5222.html",
+            "https://linux.oracle.com/errata/ELSA-2025-12083.html",
+            "https://lists.debian.org/debian-lts-announce/2025/06/msg00015.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-5222",
+            "https://unicode-org.atlassian.net/jira/software/c/projects/ICU/issues/ICU-22957",
+            "https://www.cve.org/CVERecord?id=CVE-2025-5222"
+          ],
+          "PublishedDate": "2025-05-27T21:15:23.03Z",
+          "LastModifiedDate": "2026-09-17T19:16:36.083Z"
+        }
+      ]
+    },
+    {
+      "Target": "app/DigitalWallet.Migrator.deps.json",
+      "Class": "lang-pkgs",
+      "Type": "dotnet-core",
+      "Packages": [
+        {
+          "ID": "Microsoft.AspNetCore.Authentication.JwtBearer/10.0.11",
+          "Name": "Microsoft.AspNetCore.Authentication.JwtBearer",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.AspNetCore.Authentication.JwtBearer@10.0.11",
+            "UID": "73950d0b8af38dd4"
+          },
+          "Version": "10.0.11",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 786,
+              "EndLine": 792
+            }
+          ]
+        },
+        {
+          "ID": "Microsoft.AspNetCore.Identity.EntityFrameworkCore/10.0.11",
+          "Name": "Microsoft.AspNetCore.Identity.EntityFrameworkCore",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.AspNetCore.Identity.EntityFrameworkCore@10.0.11",
+            "UID": "dea4436390d466d2"
+          },
+          "Version": "10.0.11",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 793,
+              "EndLine": 799
+            }
+          ]
+        },
+        {
+          "ID": "Microsoft.AspNetCore.OpenApi/10.0.11",
+          "Name": "Microsoft.AspNetCore.OpenApi",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.AspNetCore.OpenApi@10.0.11",
+            "UID": "242fbba7d3c2d6e7"
+          },
+          "Version": "10.0.11",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 800,
+              "EndLine": 806
+            }
+          ]
+        },
+        {
+          "ID": "Microsoft.Bcl.Cryptography/10.0.2",
+          "Name": "Microsoft.Bcl.Cryptography",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.Bcl.Cryptography@10.0.2",
+            "UID": "ab7537f4d22ffa42"
+          },
+          "Version": "10.0.2",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 807,
+              "EndLine": 813
+            }
+          ]
+        },
+        {
+          "ID": "Microsoft.EntityFrameworkCore/10.0.11",
+          "Name": "Microsoft.EntityFrameworkCore",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.EntityFrameworkCore@10.0.11",
+            "UID": "d2de3141983bc845"
+          },
+          "Version": "10.0.11",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 814,
+              "EndLine": 820
+            }
+          ]
+        },
+        {
+          "ID": "Microsoft.EntityFrameworkCore.Abstractions/10.0.11",
+          "Name": "Microsoft.EntityFrameworkCore.Abstractions",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.EntityFrameworkCore.Abstractions@10.0.11",
+            "UID": "d3a0d205efa6c8e8"
+          },
+          "Version": "10.0.11",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 821,
+              "EndLine": 827
+            }
+          ]
+        },
+        {
+          "ID": "Microsoft.EntityFrameworkCore.Relational/10.0.11",
+          "Name": "Microsoft.EntityFrameworkCore.Relational",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.EntityFrameworkCore.Relational@10.0.11",
+            "UID": "c6df15a07f1bd68d"
+          },
+          "Version": "10.0.11",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 828,
+              "EndLine": 834
+            }
+          ]
+        },
+        {
+          "ID": "Microsoft.Extensions.DependencyModel/10.0.0",
+          "Name": "Microsoft.Extensions.DependencyModel",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.Extensions.DependencyModel@10.0.0",
+            "UID": "c9204c3aa990594b"
+          },
+          "Version": "10.0.0",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 835,
+              "EndLine": 841
+            }
+          ]
+        },
+        {
+          "ID": "Microsoft.IdentityModel.Abstractions/8.19.2",
+          "Name": "Microsoft.IdentityModel.Abstractions",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.IdentityModel.Abstractions@8.19.2",
+            "UID": "b44067619c4468f4"
+          },
+          "Version": "8.19.2",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 842,
+              "EndLine": 848
+            }
+          ]
+        },
+        {
+          "ID": "Microsoft.IdentityModel.JsonWebTokens/8.19.2",
+          "Name": "Microsoft.IdentityModel.JsonWebTokens",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.IdentityModel.JsonWebTokens@8.19.2",
+            "UID": "27ba617973ce9fc0"
+          },
+          "Version": "8.19.2",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 849,
+              "EndLine": 855
+            }
+          ]
+        },
+        {
+          "ID": "Microsoft.IdentityModel.Logging/8.19.2",
+          "Name": "Microsoft.IdentityModel.Logging",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.IdentityModel.Logging@8.19.2",
+            "UID": "a021d0edbf0165e"
+          },
+          "Version": "8.19.2",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 856,
+              "EndLine": 862
+            }
+          ]
+        },
+        {
+          "ID": "Microsoft.IdentityModel.Protocols/8.19.2",
+          "Name": "Microsoft.IdentityModel.Protocols",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.IdentityModel.Protocols@8.19.2",
+            "UID": "3db907a1b5e23381"
+          },
+          "Version": "8.19.2",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 863,
+              "EndLine": 869
+            }
+          ]
+        },
+        {
+          "ID": "Microsoft.IdentityModel.Protocols.OpenIdConnect/8.19.2",
+          "Name": "Microsoft.IdentityModel.Protocols.OpenIdConnect",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.IdentityModel.Protocols.OpenIdConnect@8.19.2",
+            "UID": "6c3d8c6ed414d6dd"
+          },
+          "Version": "8.19.2",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 870,
+              "EndLine": 876
+            }
+          ]
+        },
+        {
+          "ID": "Microsoft.IdentityModel.Tokens/8.19.2",
+          "Name": "Microsoft.IdentityModel.Tokens",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.IdentityModel.Tokens@8.19.2",
+            "UID": "707040be74c3f257"
+          },
+          "Version": "8.19.2",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 877,
+              "EndLine": 883
+            }
+          ]
+        },
+        {
+          "ID": "Microsoft.OpenApi/2.7.5",
+          "Name": "Microsoft.OpenApi",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.OpenApi@2.7.5",
+            "UID": "dae73a05dee6a7a0"
+          },
+          "Version": "2.7.5",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 884,
+              "EndLine": 890
+            }
+          ]
+        },
+        {
+          "ID": "Npgsql/10.0.3",
+          "Name": "Npgsql",
+          "Identifier": {
+            "PURL": "pkg:nuget/Npgsql@10.0.3",
+            "UID": "2160e004d2a4e349"
+          },
+          "Version": "10.0.3",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 891,
+              "EndLine": 897
+            }
+          ]
+        },
+        {
+          "ID": "Npgsql.EntityFrameworkCore.PostgreSQL/10.0.3",
+          "Name": "Npgsql.EntityFrameworkCore.PostgreSQL",
+          "Identifier": {
+            "PURL": "pkg:nuget/Npgsql.EntityFrameworkCore.PostgreSQL@10.0.3",
+            "UID": "4d949da149b9d87b"
+          },
+          "Version": "10.0.3",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 898,
+              "EndLine": 904
+            }
+          ]
+        },
+        {
+          "ID": "OpenTelemetry/1.15.3",
+          "Name": "OpenTelemetry",
+          "Identifier": {
+            "PURL": "pkg:nuget/OpenTelemetry@1.15.3",
+            "UID": "5a998feccb49dde4"
+          },
+          "Version": "1.15.3",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 905,
+              "EndLine": 911
+            }
+          ]
+        },
+        {
+          "ID": "OpenTelemetry.Api/1.16.0",
+          "Name": "OpenTelemetry.Api",
+          "Identifier": {
+            "PURL": "pkg:nuget/OpenTelemetry.Api@1.16.0",
+            "UID": "cff5414ee2f3e1f3"
+          },
+          "Version": "1.16.0",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 912,
+              "EndLine": 918
+            }
+          ]
+        },
+        {
+          "ID": "OpenTelemetry.Api.ProviderBuilderExtensions/1.16.0",
+          "Name": "OpenTelemetry.Api.ProviderBuilderExtensions",
+          "Identifier": {
+            "PURL": "pkg:nuget/OpenTelemetry.Api.ProviderBuilderExtensions@1.16.0",
+            "UID": "e8c43db7f1e4608d"
+          },
+          "Version": "1.16.0",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 919,
+              "EndLine": 925
+            }
+          ]
+        },
+        {
+          "ID": "OpenTelemetry.Exporter.OpenTelemetryProtocol/1.15.3",
+          "Name": "OpenTelemetry.Exporter.OpenTelemetryProtocol",
+          "Identifier": {
+            "PURL": "pkg:nuget/OpenTelemetry.Exporter.OpenTelemetryProtocol@1.15.3",
+            "UID": "7036a8b57b807847"
+          },
+          "Version": "1.15.3",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 926,
+              "EndLine": 932
+            }
+          ]
+        },
+        {
+          "ID": "OpenTelemetry.Extensions.Hosting/1.15.3",
+          "Name": "OpenTelemetry.Extensions.Hosting",
+          "Identifier": {
+            "PURL": "pkg:nuget/OpenTelemetry.Extensions.Hosting@1.15.3",
+            "UID": "159e1bcbd5fe1649"
+          },
+          "Version": "1.15.3",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 933,
+              "EndLine": 939
+            }
+          ]
+        },
+        {
+          "ID": "OpenTelemetry.Instrumentation.AspNetCore/1.16.0",
+          "Name": "OpenTelemetry.Instrumentation.AspNetCore",
+          "Identifier": {
+            "PURL": "pkg:nuget/OpenTelemetry.Instrumentation.AspNetCore@1.16.0",
+            "UID": "7a164ce8f968480b"
+          },
+          "Version": "1.16.0",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 940,
+              "EndLine": 946
+            }
+          ]
+        },
+        {
+          "ID": "OpenTelemetry.Instrumentation.Http/1.16.0",
+          "Name": "OpenTelemetry.Instrumentation.Http",
+          "Identifier": {
+            "PURL": "pkg:nuget/OpenTelemetry.Instrumentation.Http@1.16.0",
+            "UID": "cc81e9de8f4a103e"
+          },
+          "Version": "1.16.0",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 947,
+              "EndLine": 953
+            }
+          ]
+        },
+        {
+          "ID": "Pipelines.Sockets.Unofficial/2.2.8",
+          "Name": "Pipelines.Sockets.Unofficial",
+          "Identifier": {
+            "PURL": "pkg:nuget/Pipelines.Sockets.Unofficial@2.2.8",
+            "UID": "e7bf6018bf907c0c"
+          },
+          "Version": "2.2.8",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 954,
+              "EndLine": 960
+            }
+          ]
+        },
+        {
+          "ID": "RabbitMQ.Client/7.2.0",
+          "Name": "RabbitMQ.Client",
+          "Identifier": {
+            "PURL": "pkg:nuget/RabbitMQ.Client@7.2.0",
+            "UID": "96b4943947b8da8e"
+          },
+          "Version": "7.2.0",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 961,
+              "EndLine": 967
+            }
+          ]
+        },
+        {
+          "ID": "Serilog/4.3.0",
+          "Name": "Serilog",
+          "Identifier": {
+            "PURL": "pkg:nuget/Serilog@4.3.0",
+            "UID": "40085116a0956e4c"
+          },
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 968,
+              "EndLine": 974
+            }
+          ]
+        },
+        {
+          "ID": "Serilog.AspNetCore/10.0.0",
+          "Name": "Serilog.AspNetCore",
+          "Identifier": {
+            "PURL": "pkg:nuget/Serilog.AspNetCore@10.0.0",
+            "UID": "51d555a8c726b8da"
+          },
+          "Version": "10.0.0",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 975,
+              "EndLine": 981
+            }
+          ]
+        },
+        {
+          "ID": "Serilog.Extensions.Hosting/10.0.0",
+          "Name": "Serilog.Extensions.Hosting",
+          "Identifier": {
+            "PURL": "pkg:nuget/Serilog.Extensions.Hosting@10.0.0",
+            "UID": "d2da2d11aed0a3ca"
+          },
+          "Version": "10.0.0",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 982,
+              "EndLine": 988
+            }
+          ]
+        },
+        {
+          "ID": "Serilog.Extensions.Logging/10.0.0",
+          "Name": "Serilog.Extensions.Logging",
+          "Identifier": {
+            "PURL": "pkg:nuget/Serilog.Extensions.Logging@10.0.0",
+            "UID": "2dd4d2e24fa57883"
+          },
+          "Version": "10.0.0",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 989,
+              "EndLine": 995
+            }
+          ]
+        },
+        {
+          "ID": "Serilog.Formatting.Compact/3.0.0",
+          "Name": "Serilog.Formatting.Compact",
+          "Identifier": {
+            "PURL": "pkg:nuget/Serilog.Formatting.Compact@3.0.0",
+            "UID": "5144157c655eb9fb"
+          },
+          "Version": "3.0.0",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 996,
+              "EndLine": 1002
+            }
+          ]
+        },
+        {
+          "ID": "Serilog.Settings.Configuration/10.0.0",
+          "Name": "Serilog.Settings.Configuration",
+          "Identifier": {
+            "PURL": "pkg:nuget/Serilog.Settings.Configuration@10.0.0",
+            "UID": "a46c952cb9d08bad"
+          },
+          "Version": "10.0.0",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 1003,
+              "EndLine": 1009
+            }
+          ]
+        },
+        {
+          "ID": "Serilog.Sinks.Async/2.1.0",
+          "Name": "Serilog.Sinks.Async",
+          "Identifier": {
+            "PURL": "pkg:nuget/Serilog.Sinks.Async@2.1.0",
+            "UID": "1cc960a1d224c0c"
+          },
+          "Version": "2.1.0",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 1010,
+              "EndLine": 1016
+            }
+          ]
+        },
+        {
+          "ID": "Serilog.Sinks.Console/6.1.1",
+          "Name": "Serilog.Sinks.Console",
+          "Identifier": {
+            "PURL": "pkg:nuget/Serilog.Sinks.Console@6.1.1",
+            "UID": "59506e71fbe46370"
+          },
+          "Version": "6.1.1",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 1017,
+              "EndLine": 1023
+            }
+          ]
+        },
+        {
+          "ID": "Serilog.Sinks.Debug/3.0.0",
+          "Name": "Serilog.Sinks.Debug",
+          "Identifier": {
+            "PURL": "pkg:nuget/Serilog.Sinks.Debug@3.0.0",
+            "UID": "7d7972a2c8a13287"
+          },
+          "Version": "3.0.0",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 1024,
+              "EndLine": 1030
+            }
+          ]
+        },
+        {
+          "ID": "Serilog.Sinks.File/7.0.0",
+          "Name": "Serilog.Sinks.File",
+          "Identifier": {
+            "PURL": "pkg:nuget/Serilog.Sinks.File@7.0.0",
+            "UID": "743022807cdd49f5"
+          },
+          "Version": "7.0.0",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 1031,
+              "EndLine": 1037
+            }
+          ]
+        },
+        {
+          "ID": "StackExchange.Redis/2.9.32",
+          "Name": "StackExchange.Redis",
+          "Identifier": {
+            "PURL": "pkg:nuget/StackExchange.Redis@2.9.32",
+            "UID": "335754aac67ebce8"
+          },
+          "Version": "2.9.32",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 1038,
+              "EndLine": 1044
+            }
+          ]
+        },
+        {
+          "ID": "System.IdentityModel.Tokens.Jwt/8.19.2",
+          "Name": "System.IdentityModel.Tokens.Jwt",
+          "Identifier": {
+            "PURL": "pkg:nuget/System.IdentityModel.Tokens.Jwt@8.19.2",
+            "UID": "6da41389bc8599af"
+          },
+          "Version": "8.19.2",
+          "Layer": {
+            "DiffID": "sha256:e352eef054d56f3ceb2c1c353bfa3181638641d34b2f24389f8a14ee2c39e035"
+          },
+          "Locations": [
+            {
+              "StartLine": 1045,
+              "EndLine": 1051
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Target": "usr/share/dotnet/shared/Microsoft.AspNetCore.App/10.0.12/Microsoft.AspNetCore.App.deps.json",
+      "Class": "lang-pkgs",
+      "Type": "dotnet-core",
+      "Packages": [
+        {
+          "ID": "Microsoft.AspNetCore.App.Runtime.linux-arm64/10.0.12",
+          "Name": "Microsoft.AspNetCore.App.Runtime.linux-arm64",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-arm64@10.0.12",
+            "UID": "16047997adc19ec1"
+          },
+          "Version": "10.0.12",
+          "Layer": {
+            "DiffID": "sha256:3d1f72dc3978ebe4550b119c3e450c4169150da9d5f7fa16dfcc78da8526a69a"
+          },
+          "Locations": [
+            {
+              "StartLine": 581,
+              "EndLine": 586
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Target": "usr/share/dotnet/shared/Microsoft.NETCore.App/10.0.12/Microsoft.NETCore.App.deps.json",
+      "Class": "lang-pkgs",
+      "Type": "dotnet-core",
+      "Packages": [
+        {
+          "ID": "Microsoft.NETCore.App.Runtime.linux-arm64/10.0.12",
+          "Name": "Microsoft.NETCore.App.Runtime.linux-arm64",
+          "Identifier": {
+            "PURL": "pkg:nuget/Microsoft.NETCore.App.Runtime.linux-arm64@10.0.12",
+            "UID": "3ebdfb18cb48a80d"
+          },
+          "Version": "10.0.12",
+          "Layer": {
+            "DiffID": "sha256:c8b1baf880b5847771702a0c6de0c87494d86a723a329dcfed52b582c7e03197"
+          },
+          "Locations": [
+            {
+              "StartLine": 749,
+              "EndLine": 754
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

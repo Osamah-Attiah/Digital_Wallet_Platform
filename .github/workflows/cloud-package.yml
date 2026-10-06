@@ -1,0 +1,70 @@
+name: Signed cloud demonstration package
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: cloud-package
+  cancel-in-progress: false
+jobs:
+  package:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    environment: registry-release
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with: {persist-credentials: false}
+      - name: Require approved external publication
+        env: {APPROVED: '${{ vars.CLOUD_PUBLICATION_APPROVED }}'}
+        run: test "$APPROVED" = true
+      - uses: actions/setup-dotnet@26b0ec14cb23fa6904739307f278c14f94c95bf1
+        with: {global-json-file: global.json}
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with: {node-version-file: .nvmrc, package-manager-cache: false}
+      - uses: docker/setup-buildx-action@8d2750c68a42422c14e847fe6c8ac0403b4cbd6f
+      - uses: sigstore/cosign-installer@398d4b0eeef1380460a10c8013a76f728fb906ac
+        with: {cosign-release: v2.6.0}
+      - name: Full regression and real local packaging gates
+        env: {RELEASE_SHA: '${{ github.sha }}', RELEASE_REF: '${{ github.sha }}', WALLET_EVIDENCE_DIR: ops/validation/phase14}
+        run: |
+          mkdir -p .local/cloud-package
+          dotnet restore --locked-mode
+          dotnet build Digital_Wallet_Platform.sln -c Release --no-restore -warnaserror
+          dotnet test Digital_Wallet_Platform.sln -c Release --no-build --logger trx --results-directory .local/cloud-package/trx
+          npm ci --ignore-scripts --prefix apps/admin
+          npm test --prefix apps/admin -- --run --reporter=json --outputFile=../../.local/cloud-package/frontend.json
+          npm run build --prefix apps/admin
+          python3 ops/scripts/init-local.py
+          python3 ops/scripts/release.py
+          python3 ops/scripts/release-build.py
+          python3 ops/cloud/runtime/build-infrastructure.py
+          docker compose --profile observability build collector
+          docker compose up -d --wait --wait-timeout 240
+          python3 ops/scripts/migration-tests.py
+          python3 ops/scripts/smoke.py
+          python3 ops/scripts/scan.py
+      - name: Scan every exact image, publish and keyless sign digests
+        env:
+          REGISTRY_TOKEN: ${{ github.token }}
+          REGISTRY_ACTOR: ${{ github.actor }}
+          REGISTRY_REPOSITORY: ${{ github.repository }}
+          CLOUD_PUBLICATION_APPROVED: 'true'
+        run: python3 ops/cloud/runtime/package-release.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: signed-cloud-release
+          path: |
+            .local/cloud-package/release.json
+            .local/cloud-package/infrastructure/*.provenance.json
+            .local/cloud-package/infrastructure/SHA256SUMS
+            .local/release/*.provenance.json
+            .local/release/SHA256SUMS
+            ops/validation/phase14/*.scan.json
+          include-hidden-files: true
+          retention-days: 7
+          if-no-files-found: error

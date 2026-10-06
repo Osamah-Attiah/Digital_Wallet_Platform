@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "scope": "static resolved Compose validation; placeholder identities; no containers started; no cloud resource or TLS handshake tested",
+  "checks": {
+    "twelve-services": true,
+    "production-only-hosts": true,
+    "dependency-tls-enabled": true,
+    "fixtures-disabled": true,
+    "single-trusted-proxy": true,
+    "no-published-data-or-api-ports": true,
+    "grafana-loopback-only": true,
+    "private-data-networks": true,
+    "nonprivileged-readonly-services": true,
+    "migration-before-runtime": true,
+    "all-image-references-immutable": true,
+    "scoped-secrets": true,
+    "persistent-failure-blocks-reboot": true,
+    "all-repository-bind-sources-exist": true
+  },
+  "readyToDeploy": false
+}

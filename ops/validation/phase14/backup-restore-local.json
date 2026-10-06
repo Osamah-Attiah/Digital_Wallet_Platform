@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "scope": "local Docker synthetic data; not a Cloud backup/restore acceptance",
+  "passed": 4,
+  "checks": [
+    "consistent-custom-format-backup",
+    "restore-into-isolated-database-with-no-api-worker-connect",
+    "all-13-contexts-no-pending-on-restored-database",
+    "real-ledger-reconciliation-zero"
+  ],
+  "backupSha256": "d869e7bc324a46fb271bb0c4c49caa5cd1c14ccb35440ca598294ebc7d9a033f",
+  "rawBackupCommitted": false,
+  "restoreIsolated": true,
+  "reconciliationFindings": 0,
+  "restoredDatabaseDropped": true
+}

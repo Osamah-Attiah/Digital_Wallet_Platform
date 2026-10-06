@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "baseline": 534,
+  "added": 8,
+  "passed": 542,
+  "failed": 0,
+  "skipped": 0,
+  "suites": [
+    {
+      "file": ".local/test-results/phase13-accepted_net10.0_20261006020755.trx",
+      "sha256": "6cd4c85042879509d1b5835e400fb91b5e85603ac5471c75c8be524403967814",
+      "passed": 45,
+      "failed": 0,
+      "skipped": 0,
+      "total": 45
+    },
+    {
+      "file": ".local/test-results/phase13-accepted_net10.0_20261006021320.trx",
+      "sha256": "948eaeb193033ca06f351003bacfa4130e8950601ffb65b776ad7dcbcf8a6058",
+      "passed": 497,
+      "failed": 0,
+      "skipped": 0,
+      "total": 497
+    }
+  ],
+  "localCoverageCollected": false
+}

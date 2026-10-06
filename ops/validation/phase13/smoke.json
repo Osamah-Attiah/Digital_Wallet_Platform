@@ -1,0 +1,98 @@
+{
+  "suite": "phase13-real-compose-smoke",
+  "status": "passed",
+  "passed": 22,
+  "failed": 0,
+  "skipped": 0,
+  "postgresRecoveryReadAttempts": 1,
+  "checks": [
+    {
+      "name": "all-compose-services-healthy",
+      "status": "passed"
+    },
+    {
+      "name": "all-13-contexts-no-pending-migrations",
+      "status": "passed"
+    },
+    {
+      "name": "safe-api-readiness-and-liveness",
+      "status": "passed"
+    },
+    {
+      "name": "spa-fallback-and-security-headers",
+      "status": "passed"
+    },
+    {
+      "name": "registration-otp-login-customers-wallets",
+      "status": "passed"
+    },
+    {
+      "name": "real-beneficiary-otp-activation",
+      "status": "passed"
+    },
+    {
+      "name": "financial-transfer-history-receipt",
+      "status": "passed"
+    },
+    {
+      "name": "rabbit-delivery-one-logical-notification-per-recipient",
+      "status": "passed"
+    },
+    {
+      "name": "outbox-confirmed-publication",
+      "status": "passed"
+    },
+    {
+      "name": "worker-stopped-api-commits-money-and-durable-outbox",
+      "status": "passed"
+    },
+    {
+      "name": "worker-restart-resumes-pending-report-and-outbox",
+      "status": "passed"
+    },
+    {
+      "name": "report-worker-completion-shared-file-download",
+      "status": "passed"
+    },
+    {
+      "name": "administrative-mutation-durable-audit",
+      "status": "passed"
+    },
+    {
+      "name": "runtime-roles-deny-ddl-trigger-disable-truncate-audit-delete-history-update",
+      "status": "passed"
+    },
+    {
+      "name": "redis-outage-financial-path",
+      "status": "passed"
+    },
+    {
+      "name": "rabbit-outage-committed-transfer-pending-outbox",
+      "status": "passed"
+    },
+    {
+      "name": "rabbit-recovery-drains-original-outbox",
+      "status": "passed"
+    },
+    {
+      "name": "api-worker-redis-rabbit-restarts-no-duplicate-money-or-notification",
+      "status": "passed"
+    },
+    {
+      "name": "redis-recreated-with-empty-cache-preserves-receipt",
+      "status": "passed"
+    },
+    {
+      "name": "postgres-volume-durable-after-restart",
+      "status": "passed"
+    },
+    {
+      "name": "reconciliation-zero-after-outages-and-restarts",
+      "status": "passed"
+    },
+    {
+      "name": "all-application-runtime-containers-non-root",
+      "status": "passed"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup><TargetFramework>net10.0</TargetFramework><Nullable>enable</Nullable><ImplicitUsings>enable</ImplicitUsings></PropertyGroup>
+  <ItemGroup><ProjectReference Include="../DigitalWallet.Api/DigitalWallet.Api.csproj" /></ItemGroup>
+  <ItemGroup><Content Include="../../ops/postgres/runtime-grants.sql" Link="runtime-grants.sql" CopyToOutputDirectory="PreserveNewest" /></ItemGroup>
+</Project>

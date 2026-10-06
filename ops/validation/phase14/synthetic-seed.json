@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "scope": "isolated local CLI synthetic seeding; not Cloud acceptance",
+  "runs": 2,
+  "syntheticIdentities": 4,
+  "fundingJournals": 2,
+  "reconciliationFindings": 0,
+  "repeatedSeedDuplicates": 0,
+  "restoredDatabaseDropped": true,
+  "privatePasswordsRemoved": true
+}

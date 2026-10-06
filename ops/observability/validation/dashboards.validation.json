@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-06",
+  "engine": "Grafana 12.2.1",
+  "method": "Native file provisioning and per-dashboard HTTP retrieval",
+  "network": "none; no published ports",
+  "liveDatasourceConfigured": false,
+  "dashboards": [
+    {
+      "file": "ops/observability/dashboards/api-reliability.json",
+      "sha256": "de81c04637c32b1b01ac319aa4ca977de773be428f0ccd86b4acacf84d2283c7",
+      "uid": "wallet-api-reliability",
+      "title": "Digital Wallet · API Reliability",
+      "panels": 8,
+      "sourceSchema": 39,
+      "importedSchema": 39,
+      "imported": true,
+      "panelQueriesMatch": true
+    },
+    {
+      "file": "ops/observability/dashboards/cache-dependencies.json",
+      "sha256": "8828b243f88b9fdf790ab2218f1f785d38eb60d6820e780cf7e8a18337d9a459",
+      "uid": "wallet-cache-dependencies",
+      "title": "Digital Wallet · Cache & Dependencies",
+      "panels": 9,
+      "sourceSchema": 39,
+      "importedSchema": 39,
+      "imported": true,
+      "panelQueriesMatch": true
+    },
+    {
+      "file": "ops/observability/dashboards/financial-integrity.json",
+      "sha256": "cda2cf28d54c09eafb7bdb6a98734416497b79f667b657cd4733e75385876222",
+      "uid": "wallet-financial-integrity",
+      "title": "Digital Wallet · Financial Integrity",
+      "panels": 7,
+      "sourceSchema": 39,
+      "importedSchema": 39,
+      "imported": true,
+      "panelQueriesMatch": true
+    },
+    {
+      "file": "ops/observability/dashboards/identity-security.json",
+      "sha256": "9cfaf5d4e05b40e3f2b21ec041ca9516555634822ecf931ca07bd2865d1303f6",
+      "uid": "wallet-identity-security",
+      "title": "Digital Wallet · Identity & Security",
+      "panels": 8,
+      "sourceSchema": 39,
+      "importedSchema": 39,
+      "imported": true,
+      "panelQueriesMatch": true
+    },
+    {
+      "file": "ops/observability/dashboards/messaging.json",
+      "sha256": "3bc8047d4bba3f7cf0cddd3969ffa50ddceb1e51370a7472218518992c253d1e",
+      "uid": "wallet-messaging",
+      "title": "Digital Wallet · Messaging",
+      "panels": 8,
+      "sourceSchema": 39,
+      "importedSchema": 39,
+      "imported": true,
+      "panelQueriesMatch": true
+    }
+  ]
+}

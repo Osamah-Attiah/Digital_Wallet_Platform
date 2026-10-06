@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "services": 8,
+  "lockedProjects": 32,
+  "privatePorts": false,
+  "migrationGate": true,
+  "nonRootImages": 4
+}

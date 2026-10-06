@@ -1,0 +1,86 @@
+name: Package release
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: Publish to GHCR through the protected registry-release environment
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  package:
+    name: Build scan and checksum immutable images
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    outputs:
+      version: ${{ steps.release.outputs.version }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with: {persist-credentials: false}
+      - name: Fresh evidence for this release
+        run: python3 ops/scripts/prepare-ci.py
+      - uses: actions/setup-dotnet@26b0ec14cb23fa6904739307f278c14f94c95bf1 # v5
+        with: {global-json-file: global.json}
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with: {node-version-file: .nvmrc, package-manager-cache: false}
+      - uses: docker/setup-buildx-action@8d2750c68a42422c14e847fe6c8ac0403b4cbd6f # v3
+      - name: Derive safe immutable release metadata
+        id: release
+        env:
+          RELEASE_REF: ${{ github.ref_name }}
+          RELEASE_SHA: ${{ github.sha }}
+        run: |
+          python3 ops/scripts/release.py
+      - name: Build each image once with SBOM and provenance
+        run: python3 ops/scripts/release-build.py
+      - name: Scan the exact loaded release images
+        run: |
+          dotnet restore --locked-mode
+          npm ci --ignore-scripts --prefix apps/admin
+          make scan
+      - name: Checksums including SBOM and scan evidence
+        run: python3 ops/scripts/release-finalize.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: release-package
+          path: |
+            .local/release/
+            ops/validation/phase13/*.json
+            ops/validation/phase13/*.txt
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 14
+  publish:
+    name: Protected manual registry publication
+    if: github.event_name == 'workflow_dispatch' && inputs.publish
+    needs: package
+    environment: registry-release
+    permissions:
+      contents: read
+      packages: write # Short-lived GITHUB_TOKEN can publish GHCR images only in this manual job.
+      id-token: write # Request OIDC identity for keyless cosign signing only in this manual job.
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with: {persist-credentials: false}
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with: {name: release-package, path: .local/download}
+      - uses: sigstore/cosign-installer@398d4b0eeef1380460a10c8013a76f728fb906ac # v3
+        with: {cosign-release: v2.6.0}
+      - name: Publish existing images and keyless sign immutable digests
+        env:
+          REGISTRY_TOKEN: ${{ github.token }}
+          REGISTRY_ACTOR: ${{ github.actor }}
+          REGISTRY_REPOSITORY: ${{ github.repository }}
+          RELEASE_VERSION: ${{ needs.package.outputs.version }}
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y skopeo
+          python3 ops/scripts/publish-release.py

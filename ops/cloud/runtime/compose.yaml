@@ -1,0 +1,989 @@
+{
+  "name": "wallet-cloud-demo",
+  "services": {
+    "admin-web": {
+      "cap_drop": [
+        "ALL"
+      ],
+      "cpus": 1,
+      "command": null,
+      "entrypoint": null,
+      "image": "${ADMIN_IMAGE:?Reviewed digest required}",
+      "mem_limit": "128m",
+      "networks": {
+        "ingress": null
+      },
+      "pids_limit": 256,
+      "read_only": true,
+      "restart": "unless-stopped",
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "stop_grace_period": "30s",
+      "tmpfs": [
+        "/tmp:rw,noexec,nosuid,size=64m,uid=1654,gid=1654"
+      ],
+      "logging": {
+        "driver": "json-file",
+        "options": {
+          "max-size": "10m",
+          "max-file": "3"
+        }
+      }
+    },
+    "api": {
+      "cap_drop": [
+        "ALL"
+      ],
+      "cpus": 1,
+      "command": null,
+      "entrypoint": null,
+      "environment": {
+        "ASPNETCORE_ENVIRONMENT": "Production",
+        "AllowedHosts": "${DEMO_HOST};api;worker;127.0.0.1",
+        "Caching__Enabled": "true",
+        "Caching__Environment": "production",
+        "Hosting__Role": "Api",
+        "Hosting__SecretsDirectory": "/run/secrets",
+        "HttpSecurity__AdminOrigins__0": "https://${DEMO_HOST}",
+        "HttpSecurity__ExternalWorkersDecision": "PHASE14-REVIEWED separate Worker, migration before runtime",
+        "Identity__Jwt__Audience": "DigitalWallet.Api",
+        "Identity__Jwt__Issuer": "DigitalWallet",
+        "Messaging__MonitorDeclaresTopology": "false",
+        "Observability__ExportEnabled": "true",
+        "Release__GitSha": "${RELEASE_SHA}",
+        "Release__Version": "${RELEASE_VERSION}",
+        "Reporting__StoragePath": "/var/reports",
+        "Hosting__DependencyTls": "true",
+        "Observability__Endpoint": "https://collector:4318",
+        "Observability__AllowLocalContainerEndpoint": "false",
+        "SSL_CERT_FILE": "/run/tls/ca.crt",
+        "SSL_CERT_DIR": "/run/tls",
+        "HttpSecurity__KnownProxies__0": "172.28.0.3",
+        "SyntheticDemo__Enabled": "true",
+        "SyntheticDemo__DataClassification": "synthetic-only"
+      },
+      "image": "${API_IMAGE:?Reviewed digest required}",
+      "mem_limit": "768m",
+      "networks": {
+        "private": null,
+        "operations": null,
+        "ingress": {
+          "ipv4_address": "172.28.0.4"
+        }
+      },
+      "pids_limit": 256,
+      "read_only": true,
+      "restart": "unless-stopped",
+      "secrets": [
+        {
+          "source": "api_db_password",
+          "target": "/run/secrets/api_db_password"
+        },
+        {
+          "source": "jwt_key",
+          "target": "/run/secrets/jwt_key"
+        },
+        {
+          "source": "otp_key",
+          "target": "/run/secrets/otp_key"
+        },
+        {
+          "source": "token_key",
+          "target": "/run/secrets/token_key"
+        },
+        {
+          "source": "cache_key",
+          "target": "/run/secrets/cache_key"
+        },
+        {
+          "source": "redis_password",
+          "target": "/run/secrets/redis_password"
+        },
+        {
+          "source": "rabbit_api_password",
+          "target": "/run/secrets/rabbit_api_password"
+        }
+      ],
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "stop_grace_period": "30s",
+      "tmpfs": [
+        "/tmp:rw,noexec,nosuid,size=64m,uid=1654,gid=1654",
+        "/var/demo-otp:rw,noexec,nosuid,size=1m,mode=0700,uid=1654,gid=1654"
+      ],
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "${WALLET_DATA_DIR}/report-files",
+          "target": "/var/reports"
+        },
+        {
+          "type": "bind",
+          "source": "${WALLET_TLS_DIR}/client",
+          "target": "/run/tls",
+          "read_only": true
+        }
+      ],
+      "logging": {
+        "driver": "json-file",
+        "options": {
+          "max-size": "10m",
+          "max-file": "3"
+        }
+      },
+      "depends_on": {
+        "postgres": {
+          "condition": "service_healthy"
+        },
+        "migrate": {
+          "condition": "service_completed_successfully"
+        }
+      }
+    },
+    "collector": {
+      "cap_drop": [
+        "ALL"
+      ],
+      "cpus": 1,
+      "command": [
+        "--config=/etc/otel/config.yaml"
+      ],
+      "entrypoint": null,
+      "image": "${COLLECTOR_IMAGE:?Reviewed digest required}",
+      "mem_limit": "256m",
+      "networks": {
+        "operations": null
+      },
+      "pids_limit": 256,
+      "read_only": true,
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "stop_grace_period": "30s",
+      "user": "10001:10001",
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "./collector.yaml",
+          "target": "/etc/otel/config.yaml",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "${WALLET_TLS_DIR}/collector",
+          "target": "/run/tls",
+          "read_only": true
+        }
+      ],
+      "logging": {
+        "driver": "json-file",
+        "options": {
+          "max-size": "10m",
+          "max-file": "3"
+        }
+      }
+    },
+    "grafana": {
+      "cap_drop": [
+        "ALL"
+      ],
+      "cpus": 1,
+      "command": null,
+      "entrypoint": null,
+      "environment": {
+        "GF_AUTH_ANONYMOUS_ENABLED": "false",
+        "GF_SECURITY_ADMIN_PASSWORD__FILE": "/run/secrets/grafana_password",
+        "GF_SECURITY_ADMIN_USER": "wallet_observer",
+        "GF_USERS_ALLOW_SIGN_UP": "false",
+        "GF_ANALYTICS_REPORTING_ENABLED": "false",
+        "GF_ANALYTICS_CHECK_FOR_UPDATES": "false",
+        "GF_PLUGINS_CHECK_FOR_UPDATES": "false"
+      },
+      "healthcheck": {
+        "test": [
+          "CMD",
+          "wget",
+          "-q",
+          "-O",
+          "/dev/null",
+          "http://127.0.0.1:3000/api/health"
+        ],
+        "timeout": "4s",
+        "interval": "10s",
+        "retries": 20
+      },
+      "image": "${GRAFANA_IMAGE:?Reviewed digest required}",
+      "mem_limit": "256m",
+      "networks": {
+        "operations": null,
+        "monitoring-access": null
+      },
+      "pids_limit": 256,
+      "read_only": true,
+      "secrets": [
+        {
+          "source": "grafana_password",
+          "target": "/run/secrets/grafana_password"
+        }
+      ],
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "stop_grace_period": "30s",
+      "tmpfs": [
+        "/tmp:rw,noexec,nosuid,size=16m,uid=472,gid=472"
+      ],
+      "user": "472:472",
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "${WALLET_DATA_DIR}/grafana-data",
+          "target": "/var/lib/grafana"
+        },
+        {
+          "type": "bind",
+          "source": "../../../ops/observability/provisioning",
+          "target": "/etc/grafana/provisioning",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "../../../ops/observability/provisioning/resolved-dashboards",
+          "target": "/var/lib/grafana/dashboards",
+          "read_only": true,
+          "bind": {}
+        }
+      ],
+      "logging": {
+        "driver": "json-file",
+        "options": {
+          "max-size": "10m",
+          "max-file": "3"
+        }
+      },
+      "ports": [
+        {
+          "target": 3000,
+          "published": "3000",
+          "host_ip": "127.0.0.1",
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "migrate": {
+      "cap_drop": [
+        "ALL"
+      ],
+      "cpus": 1,
+      "command": null,
+      "entrypoint": null,
+      "environment": {
+        "ASPNETCORE_ENVIRONMENT": "Production",
+        "AllowedHosts": "${DEMO_HOST};api;worker;127.0.0.1",
+        "Caching__Enabled": "true",
+        "Caching__Environment": "production",
+        "Hosting__Role": "Migrator",
+        "Hosting__SecretsDirectory": "/run/secrets",
+        "HttpSecurity__AdminOrigins__0": "https://${DEMO_HOST}",
+        "Identity__Jwt__Audience": "DigitalWallet.Api",
+        "Identity__Jwt__Issuer": "DigitalWallet",
+        "Migration__ApplyRuntimeGrants": "true",
+        "Observability__ExportEnabled": "true",
+        "Release__GitSha": "${RELEASE_SHA}",
+        "Release__Version": "${RELEASE_VERSION}",
+        "Reporting__StoragePath": "/var/reports",
+        "Hosting__DependencyTls": "true",
+        "Observability__Endpoint": "https://collector:4318",
+        "Observability__AllowLocalContainerEndpoint": "false",
+        "SSL_CERT_FILE": "/run/tls/ca.crt",
+        "SSL_CERT_DIR": "/run/tls",
+        "HttpSecurity__ExternalWorkersDecision": "PHASE14-REVIEWED separate Worker, migration before runtime",
+        "SyntheticDemo__Enabled": "true",
+        "SyntheticDemo__DataClassification": "synthetic-only"
+      },
+      "image": "${MIGRATOR_IMAGE:?Reviewed digest required}",
+      "mem_limit": "768m",
+      "networks": {
+        "private": null,
+        "operations": null
+      },
+      "pids_limit": 256,
+      "read_only": true,
+      "restart": "no",
+      "secrets": [
+        {
+          "source": "migrator_db_password",
+          "target": "/run/secrets/migrator_db_password"
+        },
+        {
+          "source": "jwt_key",
+          "target": "/run/secrets/jwt_key"
+        },
+        {
+          "source": "otp_key",
+          "target": "/run/secrets/otp_key"
+        },
+        {
+          "source": "token_key",
+          "target": "/run/secrets/token_key"
+        },
+        {
+          "source": "cache_key",
+          "target": "/run/secrets/cache_key"
+        },
+        {
+          "source": "redis_password",
+          "target": "/run/secrets/redis_password"
+        },
+        {
+          "source": "rabbit_password",
+          "target": "/run/secrets/rabbit_password"
+        },
+        {
+          "source": "demo_maker_password",
+          "target": "demo_maker_password"
+        },
+        {
+          "source": "demo_checker_password",
+          "target": "demo_checker_password"
+        },
+        {
+          "source": "demo_customer_a_password",
+          "target": "demo_customer_a_password"
+        },
+        {
+          "source": "demo_customer_b_password",
+          "target": "demo_customer_b_password"
+        }
+      ],
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "stop_grace_period": "30s",
+      "tmpfs": [
+        "/tmp:rw,noexec,nosuid,size=64m,uid=1654,gid=1654"
+      ],
+      "logging": {
+        "driver": "json-file",
+        "options": {
+          "max-size": "10m",
+          "max-file": "3"
+        }
+      },
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "${WALLET_TLS_DIR}/client",
+          "target": "/run/tls",
+          "read_only": true
+        }
+      ],
+      "depends_on": {
+        "postgres": {
+          "condition": "service_healthy"
+        }
+      }
+    },
+    "postgres": {
+      "cap_drop": [
+        "ALL"
+      ],
+      "cpus": 1,
+      "command": null,
+      "entrypoint": [
+        "/bin/sh",
+        "/run-config/postgres.sh"
+      ],
+      "environment": {
+        "POSTGRES_DB": "digital_wallet",
+        "POSTGRES_PASSWORD_FILE": "/run/secrets/bootstrap_password",
+        "POSTGRES_USER": "wallet_bootstrap"
+      },
+      "healthcheck": {
+        "test": [
+          "CMD-SHELL",
+          "pg_isready -U wallet_bootstrap -d digital_wallet"
+        ],
+        "timeout": "3s",
+        "interval": "5s",
+        "retries": 30
+      },
+      "image": "${POSTGRES_IMAGE:?Reviewed digest required}",
+      "mem_limit": "768m",
+      "networks": {
+        "private": null
+      },
+      "pids_limit": 256,
+      "restart": "unless-stopped",
+      "secrets": [
+        {
+          "source": "bootstrap_password",
+          "target": "/run/secrets/bootstrap_password"
+        },
+        {
+          "source": "api_db_password",
+          "target": "/run/secrets/api_db_password"
+        },
+        {
+          "source": "worker_db_password",
+          "target": "/run/secrets/worker_db_password"
+        },
+        {
+          "source": "migrator_db_password",
+          "target": "/run/secrets/migrator_db_password"
+        }
+      ],
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "stop_grace_period": "30s",
+      "user": "70:70",
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "${WALLET_DATA_DIR}/postgres-data",
+          "target": "/var/lib/postgresql/data"
+        },
+        {
+          "type": "bind",
+          "source": "../../../ops/postgres/roles.sql",
+          "target": "/docker-entrypoint-initdb.d/10-wallet.sql",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "./postgres.sh",
+          "target": "/run-config/postgres.sh",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "${WALLET_TLS_DIR}/postgres",
+          "target": "/run/tls",
+          "read_only": true
+        },
+        {
+          "type": "bind",
+          "source": "./pg_hba.conf",
+          "target": "/run-config/pg_hba.conf",
+          "read_only": true
+        }
+      ],
+      "logging": {
+        "driver": "json-file",
+        "options": {
+          "max-size": "10m",
+          "max-file": "3"
+        }
+      },
+      "read_only": true,
+      "tmpfs": [
+        "/var/run/postgresql:rw,noexec,nosuid,size=16m,uid=70,gid=70",
+        "/tmp:rw,noexec,nosuid,size=16m,uid=70,gid=70"
+      ]
+    },
+    "prometheus": {
+      "cap_drop": [
+        "ALL"
+      ],
+      "cpus": 1,
+      "command": [
+        "--config.file=/etc/prometheus/prometheus.yml",
+        "--storage.tsdb.path=/prometheus",
+        "--storage.tsdb.retention.time=7d",
+        "--storage.tsdb.retention.size=512MB"
+      ],
+      "entrypoint": null,
+      "healthcheck": {
+        "test": [
+          "CMD",
+          "wget",
+          "-q",
+          "-O",
+          "/dev/null",
+          "http://127.0.0.1:9090/-/ready"
+        ],
+        "timeout": "4s",
+        "interval": "10s",
+        "retries": 20
+      },
+      "image": "prom/prometheus:v3.15.0@sha256:efd719c99d83b060d9daefdcf00360461adf279f45ef5391f8d111892118753e",
+      "mem_limit": "512m",
+      "networks": {
+        "operations": null
+      },
+      "pids_limit": 256,
+      "read_only": true,
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "stop_grace_period": "30s",
+      "user": "65534:65534",
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "${WALLET_DATA_DIR}/prometheus-data",
+          "target": "/prometheus"
+        },
+        {
+          "type": "bind",
+          "source": "./prometheus.yaml",
+          "target": "/etc/prometheus/prometheus.yml",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "../../../ops/observability/alerts.rules.json",
+          "target": "/etc/prometheus/alerts.rules.json",
+          "read_only": true,
+          "bind": {}
+        }
+      ],
+      "logging": {
+        "driver": "json-file",
+        "options": {
+          "max-size": "10m",
+          "max-file": "3"
+        }
+      }
+    },
+    "rabbitmq": {
+      "cap_drop": [
+        "ALL"
+      ],
+      "cpus": 1,
+      "command": null,
+      "entrypoint": [
+        "/bin/sh",
+        "/run-config/rabbit.sh"
+      ],
+      "hostname": "rabbitmq",
+      "healthcheck": {
+        "test": [
+          "CMD",
+          "rabbitmq-diagnostics",
+          "-q",
+          "check_running"
+        ],
+        "timeout": "5s",
+        "interval": "10s",
+        "retries": 30
+      },
+      "image": "rabbitmq:4.1-management-alpine@sha256:b586ea9784425774ac56f3d4919e4f723edb3287ef8a6c4c8f0df8fe569747c3",
+      "mem_limit": "512m",
+      "networks": {
+        "private": null
+      },
+      "pids_limit": 256,
+      "restart": "unless-stopped",
+      "secrets": [
+        {
+          "source": "rabbit_password",
+          "target": "/run/secrets/rabbit_password"
+        },
+        {
+          "source": "rabbit_api_password",
+          "target": "/run/secrets/rabbit_api_password"
+        }
+      ],
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "stop_grace_period": "30s",
+      "tmpfs": [
+        "/tmp:rw,nosuid,size=32m,uid=999,gid=999"
+      ],
+      "user": "999:999",
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "${WALLET_DATA_DIR}/rabbit-data",
+          "target": "/var/lib/rabbitmq"
+        },
+        {
+          "type": "bind",
+          "source": "./rabbit.sh",
+          "target": "/run-config/rabbit.sh",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "${WALLET_TLS_DIR}/rabbitmq",
+          "target": "/run/tls",
+          "read_only": true
+        },
+        {
+          "type": "bind",
+          "source": "./rabbit-definitions.sh",
+          "target": "/run-config/rabbit-definitions.sh",
+          "read_only": true
+        }
+      ],
+      "logging": {
+        "driver": "json-file",
+        "options": {
+          "max-size": "10m",
+          "max-file": "3"
+        }
+      },
+      "read_only": true
+    },
+    "redis": {
+      "cap_drop": [
+        "ALL"
+      ],
+      "cpus": 1,
+      "command": null,
+      "entrypoint": [
+        "/bin/sh",
+        "/run-config/redis.sh"
+      ],
+      "healthcheck": {
+        "test": [
+          "CMD-SHELL",
+          "REDISCLI_AUTH=$$(cat /run/secrets/redis_password) redis-cli --tls --cacert /run/tls/ca.crt -p 6380 --user wallet_cache ping | grep -q PONG"
+        ],
+        "timeout": "3s",
+        "interval": "5s",
+        "retries": 20
+      },
+      "image": "${REDIS_IMAGE:?Reviewed digest required}",
+      "mem_limit": "192m",
+      "networks": {
+        "private": null
+      },
+      "pids_limit": 256,
+      "read_only": true,
+      "restart": "unless-stopped",
+      "secrets": [
+        {
+          "source": "redis_password",
+          "target": "/run/secrets/redis_password"
+        }
+      ],
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "stop_grace_period": "30s",
+      "tmpfs": [
+        "/tmp:rw,noexec,nosuid,size=16m,uid=999,gid=999",
+        "/data:rw,noexec,nosuid,size=64m,uid=999,gid=999"
+      ],
+      "user": "999:999",
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "./redis.sh",
+          "target": "/run-config/redis.sh",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "${WALLET_TLS_DIR}/redis",
+          "target": "/run/tls",
+          "read_only": true
+        }
+      ],
+      "logging": {
+        "driver": "json-file",
+        "options": {
+          "max-size": "10m",
+          "max-file": "3"
+        }
+      }
+    },
+    "worker": {
+      "cap_drop": [
+        "ALL"
+      ],
+      "cpus": 1,
+      "command": null,
+      "entrypoint": null,
+      "environment": {
+        "ASPNETCORE_ENVIRONMENT": "Production",
+        "AllowedHosts": "${DEMO_HOST};api;worker;127.0.0.1",
+        "Caching__Enabled": "true",
+        "Caching__Environment": "production",
+        "Hosting__Role": "Worker",
+        "Hosting__SecretsDirectory": "/run/secrets",
+        "HttpSecurity__AdminOrigins__0": "https://${DEMO_HOST}",
+        "Identity__Jwt__Audience": "DigitalWallet.Api",
+        "Identity__Jwt__Issuer": "DigitalWallet",
+        "Observability__ExportEnabled": "true",
+        "Release__GitSha": "${RELEASE_SHA}",
+        "Release__Version": "${RELEASE_VERSION}",
+        "Reporting__StoragePath": "/var/reports",
+        "Hosting__DependencyTls": "true",
+        "Observability__Endpoint": "https://collector:4318",
+        "Observability__AllowLocalContainerEndpoint": "false",
+        "SSL_CERT_FILE": "/run/tls/ca.crt",
+        "SSL_CERT_DIR": "/run/tls",
+        "HttpSecurity__ExternalWorkersDecision": "PHASE14-REVIEWED separate Worker, migration before runtime"
+      },
+      "image": "${WORKER_IMAGE:?Reviewed digest required}",
+      "mem_limit": "768m",
+      "networks": {
+        "private": null,
+        "operations": null
+      },
+      "pids_limit": 256,
+      "read_only": true,
+      "restart": "unless-stopped",
+      "secrets": [
+        {
+          "source": "worker_db_password",
+          "target": "/run/secrets/worker_db_password"
+        },
+        {
+          "source": "jwt_key",
+          "target": "/run/secrets/jwt_key"
+        },
+        {
+          "source": "otp_key",
+          "target": "/run/secrets/otp_key"
+        },
+        {
+          "source": "token_key",
+          "target": "/run/secrets/token_key"
+        },
+        {
+          "source": "cache_key",
+          "target": "/run/secrets/cache_key"
+        },
+        {
+          "source": "redis_password",
+          "target": "/run/secrets/redis_password"
+        },
+        {
+          "source": "rabbit_password",
+          "target": "/run/secrets/rabbit_password"
+        }
+      ],
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "stop_grace_period": "30s",
+      "tmpfs": [
+        "/tmp:rw,noexec,nosuid,size=64m,uid=1654,gid=1654"
+      ],
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "${WALLET_DATA_DIR}/report-files",
+          "target": "/var/reports"
+        },
+        {
+          "type": "bind",
+          "source": "${WALLET_TLS_DIR}/client",
+          "target": "/run/tls",
+          "read_only": true
+        }
+      ],
+      "logging": {
+        "driver": "json-file",
+        "options": {
+          "max-size": "10m",
+          "max-file": "3"
+        }
+      },
+      "depends_on": {
+        "postgres": {
+          "condition": "service_healthy"
+        },
+        "migrate": {
+          "condition": "service_completed_successfully"
+        }
+      }
+    },
+    "edge": {
+      "image": "caddy:2.11.7-alpine@sha256:1a81ac3d1a49b2b385a5bfafb8bd39fb40fa1d717461d825ee0d65df91a6e97b",
+      "user": "1000:1000",
+      "environment": {
+        "DEMO_HOST": "${DEMO_HOST}"
+      },
+      "command": [
+        "caddy",
+        "run",
+        "--config",
+        "/etc/caddy/Caddyfile"
+      ],
+      "cap_drop": [
+        "ALL"
+      ],
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "read_only": true,
+      "tmpfs": [
+        "/data:rw,noexec,nosuid,uid=1000,gid=1000",
+        "/config:rw,noexec,nosuid,uid=1000,gid=1000"
+      ],
+      "mem_limit": "128m",
+      "cpus": "0.25",
+      "pids_limit": 128,
+      "restart": "unless-stopped",
+      "ports": [
+        "443:8443"
+      ],
+      "volumes": [
+        "./Caddyfile:/etc/caddy/Caddyfile:ro",
+        "${WALLET_TLS_DIR}/edge:/run/edge:ro"
+      ],
+      "networks": {
+        "ingress": {
+          "ipv4_address": "172.28.0.3"
+        }
+      },
+      "depends_on": {
+        "api": {
+          "condition": "service_healthy"
+        },
+        "admin-web": {
+          "condition": "service_healthy"
+        }
+      },
+      "logging": {
+        "driver": "json-file",
+        "options": {
+          "max-size": "10m",
+          "max-file": "3"
+        }
+      }
+    },
+    "alertmanager": {
+      "image": "${ALERTMANAGER_IMAGE:?Reviewed digest required}",
+      "user": "65534:65534",
+      "command": [
+        "--config.file=/etc/alertmanager/config.yml",
+        "--storage.path=/alertmanager",
+        "--data.retention=24h"
+      ],
+      "cap_drop": [
+        "ALL"
+      ],
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "read_only": true,
+      "tmpfs": [
+        "/alertmanager:rw,noexec,nosuid,uid=65534,gid=65534"
+      ],
+      "mem_limit": "128m",
+      "cpus": "0.25",
+      "pids_limit": 128,
+      "restart": "unless-stopped",
+      "volumes": [
+        "./alertmanager.yaml:/etc/alertmanager/config.yml:ro"
+      ],
+      "networks": {
+        "operations": null
+      },
+      "logging": {
+        "driver": "json-file",
+        "options": {
+          "max-size": "10m",
+          "max-file": "3"
+        }
+      }
+    }
+  },
+  "secrets": {
+    "api_db_password": {
+      "file": "${WALLET_SECRETS_DIR}/api_db_password"
+    },
+    "bootstrap_password": {
+      "file": "${WALLET_SECRETS_DIR}/bootstrap_password"
+    },
+    "cache_key": {
+      "file": "${WALLET_SECRETS_DIR}/cache_key"
+    },
+    "grafana_password": {
+      "file": "${WALLET_SECRETS_DIR}/grafana_password"
+    },
+    "jwt_key": {
+      "file": "${WALLET_SECRETS_DIR}/jwt_key"
+    },
+    "migrator_db_password": {
+      "file": "${WALLET_SECRETS_DIR}/migrator_db_password"
+    },
+    "otp_key": {
+      "file": "${WALLET_SECRETS_DIR}/otp_key"
+    },
+    "rabbit_api_password": {
+      "file": "${WALLET_SECRETS_DIR}/rabbit_api_password"
+    },
+    "rabbit_password": {
+      "file": "${WALLET_SECRETS_DIR}/rabbit_password"
+    },
+    "redis_password": {
+      "file": "${WALLET_SECRETS_DIR}/redis_password"
+    },
+    "token_key": {
+      "file": "${WALLET_SECRETS_DIR}/token_key"
+    },
+    "worker_db_password": {
+      "file": "${WALLET_SECRETS_DIR}/worker_db_password"
+    },
+    "demo_maker_password": {
+      "file": "${WALLET_SECRETS_DIR}/demo_maker_password"
+    },
+    "demo_checker_password": {
+      "file": "${WALLET_SECRETS_DIR}/demo_checker_password"
+    },
+    "demo_customer_a_password": {
+      "file": "${WALLET_SECRETS_DIR}/demo_customer_a_password"
+    },
+    "demo_customer_b_password": {
+      "file": "${WALLET_SECRETS_DIR}/demo_customer_b_password"
+    }
+  },
+  "networks": {
+    "ingress": {
+      "ipam": {
+        "config": [
+          {
+            "subnet": "172.28.0.0/24"
+          }
+        ]
+      }
+    },
+    "private": {
+      "internal": true,
+      "ipam": {
+        "config": [
+          {
+            "subnet": "172.29.0.0/24"
+          }
+        ]
+      }
+    },
+    "operations": {
+      "internal": true,
+      "ipam": {
+        "config": [
+          {
+            "subnet": "172.30.0.0/24"
+          }
+        ]
+      }
+    },
+    "monitoring-access": {
+      "ipam": {
+        "config": [
+          {
+            "subnet": "172.31.0.0/24"
+          }
+        ]
+      }
+    }
+  }
+}

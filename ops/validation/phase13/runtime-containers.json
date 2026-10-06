@@ -1,0 +1,104 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "service": "admin-web",
+      "user": "1654:1654",
+      "imageId": "sha256:29414a82159769e82f91dedd3038907e4563fc663e726f5e40861df8eba05025",
+      "readOnlyRoot": true,
+      "state": "running",
+      "health": "healthy",
+      "exitCode": 0
+    },
+    {
+      "service": "api",
+      "user": "1654:1654",
+      "imageId": "sha256:b3a6824f76b15b1ffae6aaa08b7e23cbc8485feb38d2ddcb5cebe115dd3e3364",
+      "readOnlyRoot": true,
+      "state": "running",
+      "health": "healthy",
+      "exitCode": 0
+    },
+    {
+      "service": "collector",
+      "user": "10001:10001",
+      "imageId": "sha256:aa7182f3b181b83366b10cacc07e79a8c46f7b231bc3442dde4ae8b974d635ca",
+      "readOnlyRoot": true,
+      "state": "running",
+      "health": "healthy",
+      "exitCode": 0
+    },
+    {
+      "service": "grafana",
+      "user": "472:472",
+      "imageId": "sha256:52def22e4440f1ad747ea10b77aff83d82c888b0aac48f0d70928ac45f72ce5b",
+      "readOnlyRoot": true,
+      "state": "running",
+      "health": "healthy",
+      "exitCode": 0
+    },
+    {
+      "service": "migrate",
+      "user": "1654:1654",
+      "imageId": "sha256:b4f0b3bad60df35035bb9c434692e24ee078808a891553a88f19b09bd6b62f65",
+      "readOnlyRoot": true,
+      "state": "exited",
+      "health": null,
+      "exitCode": 0
+    },
+    {
+      "service": "notification-sink",
+      "user": "1654:1654",
+      "imageId": "sha256:29414a82159769e82f91dedd3038907e4563fc663e726f5e40861df8eba05025",
+      "readOnlyRoot": true,
+      "state": "running",
+      "health": "healthy",
+      "exitCode": 0
+    },
+    {
+      "service": "postgres",
+      "user": "70:70",
+      "imageId": "sha256:29e645e20571728f22df398b9954bb6c1cefec390d99ed4e26308fc2f52d6a37",
+      "readOnlyRoot": false,
+      "state": "running",
+      "health": "healthy",
+      "exitCode": 0
+    },
+    {
+      "service": "prometheus",
+      "user": "65534:65534",
+      "imageId": "sha256:5a1d4a6d0adfd8f785bb0f1243f2a90457e508eaf5eb7e958aa5ea1463020fcb",
+      "readOnlyRoot": true,
+      "state": "running",
+      "health": "healthy",
+      "exitCode": 0
+    },
+    {
+      "service": "rabbitmq",
+      "user": "999:999",
+      "imageId": "sha256:fb0a158d542dcc7080397502b067f98cb6d04851c216fe038eeab1ef9ec1707d",
+      "readOnlyRoot": false,
+      "state": "running",
+      "health": "healthy",
+      "exitCode": 0
+    },
+    {
+      "service": "redis",
+      "user": "999:999",
+      "imageId": "sha256:67d49cdb6df6f3fb9787ff1741d54d2d2ad48ab5cc73453d83b593731f860656",
+      "readOnlyRoot": true,
+      "state": "running",
+      "health": "healthy",
+      "exitCode": 0
+    },
+    {
+      "service": "worker",
+      "user": "1654:1654",
+      "imageId": "sha256:c57da1ae25c5e790a6dc71b8c8cf0de5ab1a82a11fcbda32700140b3e472ab40",
+      "readOnlyRoot": true,
+      "state": "running",
+      "health": "healthy",
+      "exitCode": 0
+    }
+  ]
+}

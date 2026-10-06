@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "checks": [
+    "migrator-twice-idempotent",
+    "two-concurrent-migrators-global-lock",
+    "phase12-schema-and-data-snapshot-upgrade",
+    "fresh-empty-database-bootstrap-and-migration",
+    "migration-failure-blocks-api-and-worker-startup"
+  ],
+  "passed": 5,
+  "failed": 0,
+  "skipped": 0
+}

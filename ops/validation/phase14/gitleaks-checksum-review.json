@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "initialFindings": 34,
+  "verifiedSha1DigestJsonLines": 33,
+  "verifiedUpstreamGitCommitUrl": 1,
+  "scope": "one exact Trivy evidence file and two exact public-checksum line shapes; Sourcegraph detector retained",
+  "checksumLinesAccepted": true,
+  "tokenInsideSameReportRejected": true,
+  "legacyTokenOutsideReportRejected": true,
+  "credentialExceptions": 0,
+  "upstreamRule": "https://github.com/gitleaks/gitleaks/blob/v8.28.0/config/gitleaks.toml"
+}

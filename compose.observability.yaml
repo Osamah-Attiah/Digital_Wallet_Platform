@@ -1,0 +1,13 @@
+services:
+  api:
+    environment:
+      Observability__ExportEnabled: "true"
+      Observability__Endpoint: http://collector:4318
+      Observability__AllowLocalContainerEndpoint: "true"
+    networks: [public, private, operations]
+  worker:
+    environment:
+      Observability__ExportEnabled: "true"
+      Observability__Endpoint: http://collector:4318
+      Observability__AllowLocalContainerEndpoint: "true"
+    networks: [private, operations]

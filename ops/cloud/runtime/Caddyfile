@@ -1,0 +1,21 @@
+{
+  admin off
+  auto_https off
+}
+https://{$DEMO_HOST}:8443 {
+  tls /run/edge/server.crt /run/edge/server.key
+  header Strict-Transport-Security "max-age=15552000"
+  header -Server
+  @api path /api/* /health/ready /health/live
+  handle @api {
+    reverse_proxy api:8080 {
+      header_up -Forwarded
+      header_up X-Forwarded-For {remote_host}
+      header_up X-Forwarded-Proto https
+      header_up -X-Forwarded-Host
+    }
+  }
+  handle {
+    reverse_proxy admin-web:8080
+  }
+}

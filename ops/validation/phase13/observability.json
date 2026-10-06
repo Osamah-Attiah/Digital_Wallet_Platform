@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "healthyServices": 3,
+  "dashboards": 5,
+  "rules": 19,
+  "apiAndWorkerMetricsReceived": true,
+  "datasourceUidResolved": true
+}

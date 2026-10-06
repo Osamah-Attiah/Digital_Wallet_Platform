@@ -1,0 +1,73 @@
+name: Pull request validation
+on:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pr-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  validate:
+    name: Backend frontend and Compose acceptance
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    env:
+      CI: "true"
+      COMPOSE_PARALLEL_LIMIT: "2"
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with: {persist-credentials: false}
+      - name: Fresh evidence for this CI run
+        run: python3 ops/scripts/prepare-ci.py
+      - uses: actions/setup-dotnet@26b0ec14cb23fa6904739307f278c14f94c95bf1 # v5
+        with:
+          global-json-file: global.json
+          cache: true
+          cache-dependency-path: '**/packages.lock.json'
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with: {node-version-file: .nvmrc, cache: npm, cache-dependency-path: apps/admin/package-lock.json}
+      - name: Locked restore
+        run: dotnet restore --locked-mode
+      - name: Formatting
+        run: python3 ops/scripts/format-check.py
+      - name: Release build
+        run: dotnet build -c Release --no-restore -warnaserror
+      - name: Architecture and all backend integration tests
+        run: dotnet test -c Release --no-build --logger trx --collect:"Code Coverage" --results-directory .local/test-results
+      - name: React, TypeScript and production build
+        working-directory: apps/admin
+        run: |
+          npm ci --ignore-scripts
+          npm test
+          npm run typecheck
+          npm run build
+      - name: Local packaging configuration
+        run: |
+          make init
+          docker compose config --quiet
+          python3 ops/scripts/validate-packaging.py
+      - name: Build images and start healthy Compose
+        run: make up
+      - name: Ordered, repeat and concurrent migrations and phase 12 snapshot upgrade
+        run: python3 ops/scripts/migration-tests.py
+      - name: Unified real Compose smoke, restarts and dependency outages
+        run: make smoke
+      - name: Image content and non-root validation
+        run: python3 ops/scripts/image-check.py
+      - name: No private local credentials in repository or validation artifacts
+        run: python3 ops/scripts/verify-no-secrets.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: pr-validation
+          path: |
+            .local/test-results/**/*.trx
+            .local/test-results/**/*.coverage
+            ops/validation/phase13/*.json
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 7
+      - name: Preserve volumes on shutdown
+        if: always()
+        run: docker compose down --remove-orphans

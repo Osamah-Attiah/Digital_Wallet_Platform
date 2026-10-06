@@ -1,0 +1,67 @@
+{
+  "buildx.build.provenance": {
+    "builder": {
+      "id": ""
+    },
+    "buildType": "https://mobyproject.org/buildkit@v1",
+    "materials": [
+      {
+        "uri": "pkg:docker/golang@1.26.8-alpine?digest=sha256:8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c\u0026platform=linux%2Farm64",
+        "digest": {
+          "sha256": "8ac98ca534ac3f51e1f420a1dd2c15e74c75cfa0f23f3ad27eb5d7236c349a0c"
+        }
+      },
+      {
+        "uri": "pkg:docker/node@24.19.0-bookworm-slim?digest=sha256:a9f5f7c91a432850b2a8a7797adf5eadb6c733ceed61167806cee7ea7fbc29df\u0026platform=linux%2Farm64",
+        "digest": {
+          "sha256": "a9f5f7c91a432850b2a8a7797adf5eadb6c733ceed61167806cee7ea7fbc29df"
+        }
+      }
+    ],
+    "invocation": {
+      "configSource": {
+        "entryPoint": "admin.Dockerfile"
+      },
+      "parameters": {
+        "frontend": "dockerfile.v0",
+        "args": {
+          "build-arg:BUILD_DATE": "2026-10-05T23:26:06.735834+00:00",
+          "build-arg:GIT_SHA": "11a6fc9da785b24719ae59392ed795e80b448104",
+          "build-arg:VERSION": "13.0.0-local"
+        },
+        "locals": [
+          {
+            "name": "context"
+          },
+          {
+            "name": "dockerfile"
+          }
+        ],
+        "root": {
+          "configSource": {
+            "path": "admin.Dockerfile"
+          },
+          "request": {
+            "args": {
+              "build-arg:BUILD_DATE": "2026-10-05T23:26:06.735834+00:00",
+              "build-arg:GIT_SHA": "11a6fc9da785b24719ae59392ed795e80b448104",
+              "build-arg:VERSION": "13.0.0-local",
+              "vcs:localdir:context": ".",
+              "vcs:localdir:dockerfile": "ops/containers",
+              "vcs:revision": "11a6fc9da785b24719ae59392ed795e80b448104"
+            }
+          }
+        },
+        "compatibilityVersion": 30
+      },
+      "environment": {
+        "dockerfileVersion": "1.27.0",
+        "platform": "linux/arm64"
+      }
+    }
+  },
+  "buildx.build.ref": "desktop-linux/desktop-linux/3v7ohjloco63cjpwu4ae351go",
+  "containerimage.config.digest": "sha256:29414a82159769e82f91dedd3038907e4563fc663e726f5e40861df8eba05025",
+  "containerimage.digest": "sha256:29414a82159769e82f91dedd3038907e4563fc663e726f5e40861df8eba05025",
+  "image.name": "docker.io/digitalwallet/admin:13.0.0-local"
+}

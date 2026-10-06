@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "passed": 546,
+  "failed": 0,
+  "skipped": 0,
+  "releaseBuild": "passed",
+  "releaseBuildWarnings": 0,
+  "releaseBuildErrors": 0,
+  "reports": [
+    {
+      "suite": "architecture",
+      "passed": 45,
+      "failed": 0,
+      "total": 45,
+      "trxSha256": "28e7500f4838eca3b9c1e0108470d0469a0c18ff58a35f3cb7773c121d5e220c"
+    },
+    {
+      "suite": "api-integration",
+      "passed": 501,
+      "failed": 0,
+      "total": 501,
+      "trxSha256": "8fff6f6b246afc69c172a2d39b3b0444694504da10ffd3ca24eebdb06db8a5ff"
+    }
+  ]
+}
