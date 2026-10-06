@@ -16,7 +16,7 @@
     <ProjectReference Include="../Modules/DigitalWallet.Messaging/DigitalWallet.Messaging.csproj" />
     <ProjectReference Include="../Modules/DigitalWallet.Messaging.Contracts/DigitalWallet.Messaging.Contracts.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.11" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.11">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.12">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
