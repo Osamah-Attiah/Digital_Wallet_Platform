@@ -22,7 +22,7 @@ jobs:
       - name: Require approved external publication
         env: {APPROVED: '${{ vars.CLOUD_PUBLICATION_APPROVED }}'}
         run: test "$APPROVED" = true
-      - uses: actions/setup-dotnet@26b0ec14cb23fa6904739307f278c14f94c95bf1
+      - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68
         with: {global-json-file: global.json}
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with: {node-version-file: .nvmrc, package-manager-cache: false}

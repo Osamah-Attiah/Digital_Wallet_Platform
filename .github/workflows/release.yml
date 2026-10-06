@@ -25,7 +25,7 @@ jobs:
         with: {persist-credentials: false}
       - name: Fresh evidence for this release
         run: python3 ops/scripts/prepare-ci.py
-      - uses: actions/setup-dotnet@26b0ec14cb23fa6904739307f278c14f94c95bf1 # v5
+      - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
         with: {global-json-file: global.json}
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with: {node-version-file: .nvmrc, package-manager-cache: false}
